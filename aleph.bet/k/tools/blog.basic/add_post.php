@@ -3,7 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 require_once(__DIR__ . '/../../configs/env_config.php');
-  $file = __DIR__ . '/../../../d/blog.basic/' . $_POST['mod'] . '_data.json';
+  $file = __DIR__ . '/../../../d/blog.basic/' . $_POST['dom'] . '_data.json';
 
   // Read existing data
   $json = file_get_contents($file);
@@ -15,6 +15,7 @@ require_once(__DIR__ . '/../../configs/env_config.php');
 
   // Create new post
   $newPost = [
+    "mod" => $_POST['mod'],
     "id" => time(),
     "title" => $_POST['title'],
     "date" => time(),
@@ -29,5 +30,4 @@ require_once(__DIR__ . '/../../configs/env_config.php');
 
 
 }
-?>
 

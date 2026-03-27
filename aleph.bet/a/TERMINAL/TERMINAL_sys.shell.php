@@ -1,7 +1,7 @@
 
 <?php 
- if (!empty($logicSlug) && file_exists($logicSlug)) {
-    include $logicSlug; 
+ if (!empty($pageLogic) && file_exists($pageLogic)) {
+    include $pageLogic; 
 }
 
 $location = b_root . '/' . $sys . '/' . $dom . '/';

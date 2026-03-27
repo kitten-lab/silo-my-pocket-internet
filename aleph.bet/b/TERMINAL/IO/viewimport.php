@@ -13,7 +13,8 @@ $mod = "SDK-808";  // define display site within the $sys/$dom....
 
 $pageLogic = $traceback . 'k/tools/blog.basic/post.php';
 
-$pageTitle = "Welcome Home!";
-$pageSlug = "";
+$pageTitle = "Active File";
+$pageSlug = $traceback . 'k/tools/json.reader/json.reader.php';
+
 require resolveShell($sys);
 ?>
