@@ -40,7 +40,7 @@ $location = b_root . '/' . $sys . '/' . $dom . '/';
    
 
 
-    </div></div></div
+    </div></div></div>
 
 <!-- END NOW THE 'BODY OF THE DIVINE PAGE' -->
 </div>
@@ -55,6 +55,7 @@ $location = b_root . '/' . $sys . '/' . $dom . '/';
   </div>
 
 </div>
+
 </body>
 </html>
 <!-- AMEN -->

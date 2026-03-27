@@ -8,7 +8,7 @@
   <li><a href="<?= $location ?>blog.postList.php">VIEW POSTS</a></li>
   <br>
   <h1>IMPORT KIT</h1>
-  <li><a href="<?= $location ?>viewimport.php">SELECTOR</a></li>
+  <li><a href="<?= $location ?>selector.php">SELECTOR</a></li>
   <li><a href="<?= $location ?>comingsoon.php">SPLITTER</a></li>
   <li><a href="<?= $location ?>comingsoon.php">CLASSIFIER</a></li>
   <li><a href="<?= $location ?>comingsoon.php">REDACTOR</a></li>
