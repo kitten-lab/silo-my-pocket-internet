@@ -3,5 +3,6 @@
 *.db
 
 /.obsidian/workspace.json
-/aleph.bet/z/
+/z/
+/**/z/
 /platform/z/
