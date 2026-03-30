@@ -3,12 +3,9 @@ $loversMark = "jk"; // UNUSED IMPERITIVE. Do not forget me.
 require_once '../_configs/config.php'; // SYS config
 
 $dom = "AB";  // locate domain within the primary module.....
-$mod = $_GET['mod'] ?? "UNDEFINED";
+$mod = $_GET['mod'] ?? "null";
 $location = b_root . '/' . $sys . '/' . $dom . '/';
 
- function linkIsMod($linkTo, $linkName, $mod) {
-    echo '<a href="' . $location . $linkTo . '?mod=' . $mod . '">' . $linkName . '</a>';
-} 
 
 $navCall = $traceback . 'a/' . $dom . '/asDom/nav.php';
 
@@ -23,6 +20,12 @@ $blogBasic = [
     "confirmMsg" => "Thank you. Contribution added to forrest.source.",
     "listSectTitle" => "Contribution Listings",
     "listSectText" => "Viewing all listings from $mod in $sys.$dom."
-]
+];
+
+$nav = [
+    [ "label" => "HOME", "path" => "index.php" ],
+    [ "label" => "NEW POST", "path" => "blog.addPost.php" ],
+    [ "label" => "VIEW POSTS", "path" => "blog.postList.php" ]
+];
 
 ?>

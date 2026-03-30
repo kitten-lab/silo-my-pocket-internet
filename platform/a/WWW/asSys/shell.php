@@ -22,13 +22,16 @@ position: fixed;
 top: 1.5vh;
 left: 1vh;
 right: 1vh;
-height: 4vh;
-background: blue;
+height: 3.5vh;
+background-image: linear-gradient(to top, blue, lightblue);
 overflow: hidden; /* Keeps screen content inside */
 box-shadow: 
-    inset -.25vh -.25vh 0 #00000033, 
-    inset .25vh .25vh 0 #FFFFFF66;
-
+    inset -.50vh -.50vh 0 #00000033, 
+    inset .50vh .50vh 0 #FFFFFF66,
+    .1vh .1vh 0 #FFFFFF66,
+    -.1vh -.1vh 0 #00000066;
+border: .15vh solid blue;
+padding: .25vh 1vh;
 }
 
 
@@ -49,7 +52,7 @@ top: 12vh;
 left: 1vh;
 right: 1vh;
 bottom: 4vh;
-background: #000000;
+background: black;
 overflow: scroll; /* Keeps screen content inside */
 }
 
