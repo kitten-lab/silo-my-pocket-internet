@@ -14,14 +14,14 @@
 <div class="emailBasic_flexRow">
   <span class="emailBasic_formEl">
 
-    <input name="toMod"
+    <input name="to_mod"
         class="emailBasic" 
         placeholder="<?= $config['toModLine'] ?? 'MOD'; ?>" 
         required>
   </span>
   <span class="emailBasic_formEl">
 
-    <input name="toDom" 
+    <input name="to_dom" 
         class="emailBasic" 
         placeholder="<?= $config['toDomLine'] ?? 'DOM'; ?>" 
         required>
@@ -29,20 +29,20 @@
   </div>
   <span class="blogBasic_formEl">
 
-    <input name="subject" 
+    <input name="branchTitle" 
         placeholder="<?= $config['subjectLine'] ?? 'Subject'; ?>" 
         required>
   </span>
     <br>
   <span class="blogBasic_formEl">
-    <textarea name="body" 
+    <textarea name="branchLeaf" 
     placeholder="<?= $config['placeholderBody'] ?? 'Body'; ?>" 
     required></textarea>
   </span>
     <br>
   <input type='hidden' name='sys' value='<?php echo "$sys";?>'/> 
-  <input type='hidden' name='fromDom' value='<?php echo "$dom";?>'/> 
-  <input type='hidden' name='fromMod' value='<?php echo "$mod";?>'/> 
+  <input type='hidden' name='from_dom' value='<?php echo "$dom";?>'/> 
+  <input type='hidden' name='from_mod' value='<?php echo "$mod";?>'/> 
 
   <button type="submit">Submit</button> 
 

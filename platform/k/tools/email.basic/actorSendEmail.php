@@ -20,13 +20,17 @@ if (!is_dir($dir)) {
 
   // Create new post
   $newPost = [
-    "toDom" => $_POST['toDom'],
-    "toMod" => $_POST['toMod'],
-    "fromDom" => $_POST['fromDom'],
-    "fromMod" => $_POST['fromMod'],
-    "chronoKey" => 'e:||' . date('Y|\Rm:\Cw:\Sd\@\Rg:\Ci:\Ss:') . $mod,
-    "subject" => $_POST['subject'],
-    "body" => $_POST['body']
+    "ID" => bin2hex(random_bytes(3)),
+    "ts" => time(), 
+    "chronoAddress" => 'EPO7 GAIA.' . date('\RY \E\Dm:\E\Tw:\E\Nd'),
+    "chronoTime" => date('\Dg:\Ti:\Ns'),
+    "betAddress" => 'b:||' . $_POST['sys'] . '|' . $_POST['from_dom'] . '^mod:' . $_POST['from_mod'],
+    "to_dom" => $_POST['to_dom'],
+    "to_mod" => $_POST['to_mod'],
+    "from_dom" => $_POST['from_dom'],
+    "from_mod" => $_POST['from_mod'],
+    "branchTitle" => $_POST['branchTitle'],
+    "branchLeaf" => $_POST['branchLeaf']
   ];
 
   // Add it
