@@ -30,7 +30,11 @@
 <h1 class="pageTitle"><?= $pageTitle ?></h1>
 
 <?php if (!empty($pageSlug) && file_exists($pageSlug)) {
-    include $pageSlug; } ?>
+    include $pageSlug; } 
+    
+    ?>
+
+
 
 </main>
 </div></div></div>

@@ -1,0 +1,3 @@
+<?php
+$sys = "WWW";  // routing to the primary module.....
+?>
