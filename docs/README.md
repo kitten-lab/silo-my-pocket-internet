@@ -1,1 +1,1 @@
-See architecture.md
+http://terminal.io.imported.to
