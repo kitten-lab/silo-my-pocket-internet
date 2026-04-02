@@ -8,7 +8,7 @@ if (!$posts) {
 }
 
 $filtered = array_filter($posts, function($post) use ($mod) {
-    return $post['mod'] === $mod;
+    return $post['bet.mod'] === $mod;
 });
 
 // newest first

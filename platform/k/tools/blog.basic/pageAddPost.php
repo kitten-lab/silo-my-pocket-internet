@@ -12,20 +12,21 @@
 
 <form method="POST" action="">
   <span class="blogBasic_formEl">
-    <input name="title" 
+    <input name="log_leafTopic" 
         placeholder="<?= $config['placeholderTitle'] ?? 'Subject'; ?>" 
         required>
   </span>
     <br>
   <span class="blogBasic_formEl">
-    <textarea name="body" 
+    <textarea name="log_leafText" 
     placeholder="<?= $config['placeholderBody'] ?? 'Body'; ?>" 
     required></textarea>
   </span>
     <br>
-  <input type='hidden' name='sys' value='<?php echo "$sys";?>'/> 
-  <input type='hidden' name='dom' value='<?php echo "$dom";?>'/> 
-  <input type='hidden' name='mod' value='<?php echo "$mod";?>'/> 
+  <input type='hidden' name='chIMP_EPC' value='EPO7 GAIA'/> 
+  <input type='hidden' name='betSys' value='<?php echo "$sys";?>'/> 
+  <input type='hidden' name='betDom' value='<?php echo "$dom";?>'/> 
+  <input type='hidden' name='betMod' value='<?php echo "$mod";?>'/> 
 
   <button type="submit">Submit</button> 
 

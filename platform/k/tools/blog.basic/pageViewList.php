@@ -12,7 +12,7 @@ $posts = array_reverse($posts);
 
 foreach ($filtered as $post) {
   echo "<a class='blogBasic_listing' href='blog.viewPost.php?id={$post['id']}'>";
-  echo $post['title'] . " — " . date("Y-m-d H:i", $post['date']);
+  echo $post['log.leafTopic'] . "</a><br><sup>" . $post['ch.IMP_EPC'] . ' ' . $post['ch.IMP_LIC'] . ' ' . $post['ch.IMP_TP'] . '</sup>';
   echo "</a><br>";
 }
 ?>
