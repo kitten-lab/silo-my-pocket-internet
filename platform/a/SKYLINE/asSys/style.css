@@ -39,7 +39,7 @@ header h1 {
     margin: 2rem 2rem;
     font-weight: 300;
     letter-spacing: .5rem;
-    font-size: 1rem;
+    font-size: .6rem;
     border-bottom: .05rem solid black;
 }
 
@@ -60,4 +60,42 @@ img.logo {
     left:1rem;
     margin: auto;
     height: 5rem;
+}
+
+input, textarea, select, button {
+    position: relative;
+    padding: .3rem;
+    margin: .1rem;
+    font-family:'Courier New', Courier, monospace;
+    border: darkblue solid 1px;
+    background-color: rgba(255, 255, 255, 0);
+    letter-spacing: .1rem;
+    font-size: .6rem;
+}
+
+.formLabel {
+    display: inline-block;
+    background-color: rgba(24, 75, 90, 0.36);
+    border-right: darkblue solid 1px;
+    color: darkblue;
+    font-family:'Courier New', Courier, monospace;
+    font-size: .8rem;
+    width: 6rem;
+    
+}
+
+.formLabel::after {
+    clear: left;
+}
+
+.wide {
+    background-color: rgba(24, 75, 90, 0.175);
+    border-right: none;
+    padding: .5rem;
+    width: 25rem;
+}
+
+venRegistrar_commonBox {
+    position: relative;
+    margin: auto;
 }
