@@ -16,7 +16,7 @@ CHEERS -chester >|
 ----------------------------------------------------------------
 
     [1] **/ $GLOBALS['sys'] = "SKYLINE"; /**
-    [1] **/ $GLOBALS['dom'] = ""; /**
+    [1] **/ $GLOBALS['dom'] = "PUBLIC_OFFICE"; /**
     [2] **/ $GLOBALS['mod'] = $_GET['mod'] ?? "PUBLIC_USER"; /**
     [3] ** $navCall = $traceback . 'a/' . $dom . '/asDom/nav.php'; /**
     [4] CONFIG CALLS: **/ require_once 'usables.php'; /**

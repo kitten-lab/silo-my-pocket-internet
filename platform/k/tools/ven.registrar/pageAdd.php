@@ -1,10 +1,10 @@
 
-<?php $config = $blogBasic ?? []; ?>
+<?php $config = $venRegistrar ?? []; ?>
 
 <div class="venRegistrar_commonBox">
 <form method="POST" action="">
 <span class="formLabel wide"><?= date('\RY \E\Dm:\E\Tw:\E\Nd') ?> 
-<select name="rmrEPC" id="rmrEPC">
+<select name="cwEPC" id="cwEPC">
   <option value="EPO7.GAIA">EPO7.GAIA</option>
 </select> </span><br>
 <span class="formLabel">ven.ID:</span>
@@ -15,10 +15,10 @@
     placeholder="VEN2"
     required> 
 <select name="keyType" id="keyType">
-  <option value="actAs.__UNDEFINED__">Unset Classifier</option>
-  <option value="actAs.LOCATION">Place</option>
-  <option value="actAs.OBJECT">Thing</option>
-  <option value="actAs.BEING">Person</option>
+  <option value="__UNDEFINED__">Unset Classifier</option>
+  <option value="LOCATION">Place</option>
+  <option value="OBJECT">Thing</option>
+  <option value="AGENT">Person</option>
 </select><br>
 <span class="formLabel">keyLabel:</span>
 <span><input name="keyLabel" placeholder="Reference Name(discreet but memorable)" size="40"></span><br>

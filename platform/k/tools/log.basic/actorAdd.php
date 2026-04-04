@@ -3,53 +3,42 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $chestUID = 'U-' . strtoupper(bin2hex(random_bytes(7)));
   $ms = round(microtime(true) * 1000);
-  $dir =  $GLOBALS['sonar'] . 'z/ven.registrar';
+  $dir =  $GLOBALS['sonar'] . 'd/log.basic/' . $_POST['betSys'] . '/' . $_POST['betDom'];
 
     if (!is_dir($dir)) { mkdir($dir, 0775, true); }   
 
-  $file = $dir . '/registry.json';
+  $file = $dir . '/data.json';
 
   // Read existing data
   $json = file_get_contents($file);
-  $vens = json_decode($json, true);
-  $venID = $_POST['VEN1'] . '-' . $_POST['VEN2'];
-  
+  $entries = json_decode($json, true);
 
-  if (!$vens) {
-    $vens = [];
+  if (!$entries) {
+    $entries = [];
   }
 
-
-    if (!isset($vens[$venID])) {
-        $vens[$venID] = [];
-    } else { die("No!"); }
-
   // Create new post
-  $vens[$venID] = [
-            "ven.keyTYPE" => $_POST['keyType'],
-            "ven.keyLABEL" => $_POST['keyLabel'],
-            "ven.keyNOTES" => $_POST['registryNote'],
-            "ven.scrubLABEL" => $_POST['scrubName'],
-        "meta.DATA" => [
-            "chest.UID" => $chestUID,
-                "acting.SYSTEM" => $_POST['betSys'],
-                "acting.CTRLS" => $_POST['betDom'],
-                "acting.DOLLY" => $_POST['betMod'],
-                "acting.VIEWPORT" => $_GET['pv'] ?? 'Unnamed',
-            "tps.REFS" => [
-                    "tps.gaiaDATE" => date('Ymd'), 
-                    "tps.gaiaUNIX" => time(), 
-                    "tps.cwEPC" => $_POST['cwEPC'],
-                    "tps.cwCYC" => date('\T\e\mY.\V\e\tW'),
-                    "tps.cwRND" => date('\E\dm.\E\tw.\E\nd'),
-                    "tps.cwPIM" => date('\d\ig.\t\ai.\n\es.\s\a') . $ms
-                    ],
-                ],
+  $entries[$chestUID] = [
+    "log.leafTopic" => $_POST['log_leafTopic'],
+    "log.leafText" => $_POST['log_leafText'],
+    "meta.DATA" => [
+    "acting.SYSTEM" => $_POST['betSys'],
+    "acting.CTRLS" => $_POST['betDom'],
+    "acting.DOLLY" => $_POST['betMod'],
+    "acting.VIEWPORT" => $_GET['pv'] ?? 'WATCHER',
+    "tps.REFS" => [
+    "tps.gaiaDATE" => date('Ymd'), 
+    "tps.gaiaUNIX" => time(),
+    "tps.cwEPC" => $_POST['cwEPC'],
+    "tps.cwCYC" => date('\T\e\mY.\V\e\tW'),
+    "tps.cwRND" => date('\E\dm.\E\tw.\E\nd'),
+    "tps.cwPIM" => date('\d\ig.\t\ai.\n\es.\s\a') . $ms,
+    ]]
   ];
 
-
   // Save it
-  file_put_contents($file, json_encode($vens, JSON_PRETTY_PRINT));
+  file_put_contents($file, json_encode($entries, JSON_PRETTY_PRINT));
+
 
 
 // DON'T FORGET YOUR TPS REPORT
@@ -71,8 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $betSYS = $_POST['betSys'];
   $betDOM = $_POST['betDom'];
   $betMOD = $_POST['betMod'];
-  $betACTION = "REGISTERED: VEN";
-  $reportHEAD = "ven.registrar|actorAdd";
+  $betACTION = "POSTED: LOG";
+  $reportHEAD = "log.basic|actorAdd";
   $tpsUID = 'tps >| ' . date('Ymd') . '.' . strtoupper(bin2hex(random_bytes(3)));
 
     if (!$tpss) {
@@ -83,6 +72,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $tpss[$betSYS] = [];
     }
 
+    if (!isset($tpss[$betSYS][$betDOM])) {
+        $tpss[$betSYS][$betDOM] = [];
+    }
 
     if (isset($tpss[$betSYS][$betDOM][$betMOD][$tpsUID])) {
         die("Already exists in this Location.");
@@ -91,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tpss[$betSYS][$betDOM][$betMOD][$tpsUID] = [
     "chest.UID" => $chestUID,
     "chest.ACTION" => $betACTION,
-    "chest.EVENT: ven.UID" => $_POST['VEN1'] . '-' . $_POST['VEN2'],
+    "chest.EVENT: log.leafTOPIC" => $_POST['log_leafTopic'],
     "tps.gaiaDATE" => date('M d, Y h:i:s A'),
     "tps.gaiaUNIX" => time(),
     "acting.VIEWPORT" => $_GET['pv'] ?? 'UNDISCLOSED',
@@ -104,4 +96,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 }
-

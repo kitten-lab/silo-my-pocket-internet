@@ -2,7 +2,7 @@
 ==================== C O N F I G . f i l e  ==================== 
 ================================================================
 >| Do not forget me. */ $loversMark = "808ʞps"; /*
->| Do not remove me. */ require_once '../_configs/config.php'; /*
+>| Do not remove me. */ require_once '../_configs/asSys_config.php'; /*
 ----------------------------------------------------------------
 
 Welcome to the configuration file for TERMINAL SYSTEMS.
@@ -17,13 +17,9 @@ CHEERS -chester >|
 ----------------------------------------------------------------
 
     [1] **/ $dom = "IO"; /**
-    [2] **/ $mod = $_GET['mod'] ?? "IO"; /**
-    [3] **/ $navCall = $traceback . 'a/' . $dom . '/asDom/nav.php'; /**
-    [4] CONFIG CALLS: **/  
-        require_once 'config_nav.php';
-        require_once 'config_logger.basic.php';
-        require_once 'config_mail.basic.php'; 
-        require_once 'kde_config.php'; /**
+    [2] **/ $mod = $_GET['mod'] ?? "PUBLIC_USER"; /**
+    [3] **/ $navCall = $GLOBALS['sonar'] . 'a/' . $dom . '/asDom/nav.php'; /**
+    [4] CONFIG CALLS: **/ require_once 'usables.php'; /**
     
 
 -------------
