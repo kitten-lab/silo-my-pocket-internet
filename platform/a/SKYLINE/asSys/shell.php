@@ -1,12 +1,16 @@
 
-<?php if (!empty($pageLogic) && file_exists($pageLogic)) 
-    {require_once $pageLogic;  }; ?>
+<?php foreach ($GLOBALS['GETS']['actor'] as $fn) {
+    $fn();
+} ?>
 <!-- .... DEAR INFINITE POTENTIAL, HOLY DOCTYPE... -->
 <!DOCTYPE html>
 <html><head>
 
-<?php a_css("style.css",$sys,"asSys"); ?>
-
+<?php 
+foreach ($GLOBALS['GETS']['dressing'] as $fn) {
+    $fn();
+} ?>
+<?php getMy_Styles(); ?>
 <title><?= $pageTitle ?></title>
 
 </head>
@@ -16,8 +20,10 @@
 <?php include 'header.php'; ?>
 
 <main>
-<?php if (!empty($pageSlug) && file_exists($pageSlug)) 
-    {require_once $pageSlug;  }; ?>
+
+<?php foreach ($GLOBALS['GETS']['set'] as $fn) {
+    $fn();
+} ?>
 </main>
 
 <?php include 'footer.php'; ?>

@@ -19,6 +19,7 @@ CHEERS -chester >|
     [1] **/ $GLOBALS['dom'] = "PUBLIC_OFFICE"; /**
     [2] **/ $GLOBALS['mod'] = $_GET['mod'] ?? "PUBLIC_USER"; /**
     [3] ** $navCall = $traceback . 'a/' . $dom . '/asDom/nav.php'; /**
+    [-] **/ require $sonar . $kinit . 'resolvers.php'; /**
     [4] CONFIG CALLS: **/ require_once 'getFigs.php'; /**
     
 

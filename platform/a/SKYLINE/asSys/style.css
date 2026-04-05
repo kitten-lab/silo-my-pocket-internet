@@ -11,7 +11,7 @@ body {
     background: var(--backgroundColor);
     margin: 0;
     color: var(--accentColor-dark);
-    font-family:'Zen Dots', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family:'Zen Dots', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/
 }
 
 main {
@@ -60,32 +60,6 @@ img.logo {
     left:1rem;
     margin: auto;
     height: 5rem;
-}
-
-input, textarea, select, button {
-    position: relative;
-    padding: .3rem;
-    margin: .1rem;
-    font-family:'Courier New', Courier, monospace;
-    border: darkblue solid 1px;
-    background-color: rgba(255, 255, 255, 0);
-    letter-spacing: .1rem;
-    font-size: .6rem;
-}
-
-.formLabel {
-    display: inline-block;
-    background-color: rgba(24, 75, 90, 0.36);
-    border-right: darkblue solid 1px;
-    color: darkblue;
-    font-family:'Courier New', Courier, monospace;
-    font-size: .8rem;
-    width: 6rem;
-    
-}
-
-.formLabel::after {
-    clear: left;
 }
 
 .wide {

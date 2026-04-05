@@ -7,35 +7,49 @@
 ----------------------------------------------------------------
 Adjust to your preferred system language. If none are provided,
 the system defaults will be appended. */
+$plogBasic_gaia = false;
+$plogBasic_add = [
 
-$logBasic = [
-    "addSectTitle" =>/** 
+    "Title" =>/** 
     the Section Title
     DISPLAY: **/ "Skyline Public Recorder",
 
-    "addSectText" =>  /** 
+    "Content" =>  /** 
     the section text displayed below the header
-    DISPLAY: **/ "The SKYLINE May have eyes in every cell, but you
-    have your own eyes too. Do you have something to report? Consider
-    entering it below.",
+    DISPLAY: **/ "The SKYLINE May have eyes in every cell, but 
+    you have your own eyes too. Do you have something to report? 
+    Consider entering it below.",
 
-    "placeholderTitle" =>  /** 
+    "Leaf_Topic_placeholder" =>  /** 
     the display text inside the subject
     DISPLAY: **/ "$sys TOPIC REPORT",
 
-    "placeholderBody" =>  /** 
+    "Leaf_Text_placeholder" =>  /** 
     the display text inside the body box
     DISPLAY: **/ "BODY OF THE REPORT",
 
-    "confirmMsg" =>  /** 
+    "Confirmation_Msg" =>  /** 
     the confirmation message after POST
     DISPLAY: **/ "Your REPORT is OBSERVED.",
+
+    "Submit_Button" =>  /** 
+    the confirmation message after POST
+    DISPLAY: **/ "REPORT",
     
-    "listSectTitle" =>  /** 
+]; 
+
+$plogBasic_list = [
+
+    "Title" =>  /** 
     the section title for the listing of posts
     DISPLAY: **/ "Contribution Listings",
     
-    "listSectText" =>  /** 
+    "Content" =>  /** 
     the section text displayed on the listing page
-    DISPLAY: **/ "Viewing all listings from $mod in $sys.$dom."
-]; ?>
+    DISPLAY: **/ "Viewing all listings from $mod in $sys.$dom.",
+
+    "Page_Link" => /**
+    DISPLAY: **/ "view_reports"
+]
+
+?>

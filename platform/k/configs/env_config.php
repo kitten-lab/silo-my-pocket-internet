@@ -1,6 +1,5 @@
 <?php
 require_once 'auth_check.php';
-define('ROOT', realpath(__DIR__ . '/../../'));
 $ENV = 'local';
 date_default_timezone_set("America/New_York");
 

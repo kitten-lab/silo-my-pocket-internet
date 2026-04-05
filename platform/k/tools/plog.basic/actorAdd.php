@@ -3,7 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $chestUID = 'cUID-' . strtoupper(bin2hex(random_bytes(7)));
   $ms = round(microtime(true) * 1000);
-  $dir =  $GLOBALS['sonar'] . 'd/log.basic/' . $_POST['betSys'] . '/' . $_POST['betDom'];
+  $dir =  $sonar . 'd/plog.basic/' . $_POST['betSys'] . '/' . $_POST['betDom'];
 
     if (!is_dir($dir)) { mkdir($dir, 0775, true); }   
 
@@ -19,8 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   // Create new post
   $entries[$chestUID] = [
-    "log.leafTopic" => $_POST['log_leafTopic'],
-    "log.leafText" => $_POST['log_leafText'],
+    "log.leafTopic" => $_POST['plog_leafTopic'],
+    "log.leafText" => $_POST['plog_leafText'],
     "meta.DATA" => [
     "acting.SYSTEM" => $_POST['betSys'],
     "acting.CTRLS" => $_POST['betDom'],
@@ -60,8 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $betSYS = $_POST['betSys'];
   $betDOM = $_POST['betDom'];
   $betMOD = $_POST['betMod'];
-  $betACTION = "POSTED: LOG";
-  $reportHEAD = "log.basic|actorAdd";
+  $betACTION = "POSTED: plogBASIC";
+  $reportHEAD = "plog.basic|actorAdd";
   $tpsUID = 'tUID-' . date('Ymd') . '.' . strtoupper(bin2hex(random_bytes(3)));
 
     if (!$tpss) {
@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tpss[$betSYS][$betDOM][$betMOD][$tpsUID] = [
         "chest.UID" => $chestUID,
         "chest.ACTION" => $betACTION,
-        "log.leafTOPIC" => $_POST['log_leafTopic'],
+        "log.leafTOPIC" => $_POST['plog_leafTopic'],
         "meta.DATA" => [
             "tps.gaiaDATE" => date('M d, Y h:i:s A'),
             "tps.gaiaUNIX" => time(),

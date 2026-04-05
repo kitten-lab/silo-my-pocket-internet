@@ -1,8 +1,8 @@
 <?php 
 
-function a_css($css, $folder, $function, $alt = '',$class = '') {
-    $path = "/" . $folder . "/" . $function . "/" . $css;
-    $full = $GLOBALS['sonar'] . "/a/" . $path;
+function getA_Style($css, $folder, $function) {
+    $path = "/" . $folder . "/" . $function . "/" . $css . ".css";
+    $full = $GLOBALS['sonar'] . "a" . $path;
     if (is_file($full)) {
          echo '<link rel="stylesheet" type="text/css" href="' . a_root . $path . '">';
          } else {
@@ -11,5 +11,8 @@ function a_css($css, $folder, $function, $alt = '',$class = '') {
 
          }
 }
+
+
+
 
 ?>
