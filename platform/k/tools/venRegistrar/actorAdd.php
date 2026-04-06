@@ -4,10 +4,12 @@ require __DIR__ . '/../../incl/inits/nameSelf.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // CHANGE PER TOOL //
-  $chestNOTE = $_POST['plog_leafTopic']; 
-  $chestCONTENT = $_POST['plog_leafText']; 
-  $betACTION = "POSTED: plogBASIC";
-  $reportHEAD = "plog.basic|actorAdd";
+  $venID = $_POST['VEN1'] . '-' . $_POST['VEN2'];
+  $chestNOTE = $venID; 
+  $chestCONTENT = $_POST['keyType']; 
+  $betACTION = "REGISTERED: VEN";
+  $reportHEAD = "venRegistrar|actorAdd";
+
 
     // DO NOT TOUCHY //
   $tpsUID = 'tUID-' . date('Ymd') . '.' . strtoupper(bin2hex(random_bytes(3)));
@@ -55,42 +57,52 @@ function buildTPS($unix, $ms,$tzone) {
 }
 
 $tpsDATA = buildTPS($unix,$ms,$tzone);
-  
+
 // ============================================================================
 // OKAY LETS MAKE A CHESTER CRATE OF THIS BIT OF STUFFS! 
 // ============================================================================
 
-  $dir =  $GLOBALS['sonar'] . 'd/plogBasic/' . $_POST['betSys'] . '/' . $_POST['betDom'];
+  $dir =  $GLOBALS['sonar'] . 'z/venRegistrar';
+
     if (!is_dir($dir)) { mkdir($dir, 0775, true); }   
 
-  $file = $dir . '/data.json';
+  $file = $dir . '/registry.json';
 
+  // Read existing data
   $json = file_get_contents($file);
-  $entries = json_decode($json, true);
+  $vens = json_decode($json, true);
+  
 
-  if (!$entries) {
-    $entries = [];
+  if (!$vens) {
+    $vens = [];
   }
 
-  $entries[$chestUID] = [
-    "tps.REF" => $tpsUID, 
 
-    "log.leafTopic" => $_POST['plog_leafTopic'],
-    "log.leafText" => $_POST['plog_leafText'],
+    if (!isset($vens[$venID])) {
+        $vens[$venID] = [];
+    } else { die("No!"); }
 
-    "meta.DATA" => [
-        "chest.UNIX" => $unix,
-        "gaia.DATE" => date('Y/m/d'),
-        "gaia.TIME" => $localtime,
-        "gaia.TZONE" => $timezone,
-        "acting.SYSTEM" => $_POST['betSys'],
-        "acting.CTRLS" => $_POST['betDom'],
-        "acting.DOLLY" => $_POST['betMod'],
-        "acting.VIEWPORT" => $_GET['pv'] ?? '__UNDISCLOSED__',
-    ]
+  // Create new post
+  $vens[$venID] = [
+        "ven.keyTYPE" => $_POST['keyType'],
+        "ven.keyLABEL" => $_POST['keyLabel'],
+        "ven.keyNOTES" => $_POST['registryNote'],
+        "ven.scrubLABEL" => $_POST['scrubName'],
+        "meta.DATA" => [
+            "chest.UID" => $chestUID,
+            "tps.REF" => $tpsUID, 
+            "acting.SYSTEM" => $_POST['betSys'],
+            "acting.CTRLS" => $_POST['betDom'],
+            "acting.DOLLY" => $_POST['betMod'],
+            "acting.VIEWPORT" => $_GET['pv'] ?? '__UNDISCLOSED__',
+
+                ],
   ];
 
-  file_put_contents($file, json_encode($entries, JSON_PRETTY_PRINT));
+
+  // Save it
+  file_put_contents($file, json_encode($vens, JSON_PRETTY_PRINT));
+
 // ============================================================================
 // YAY DONE!
 
