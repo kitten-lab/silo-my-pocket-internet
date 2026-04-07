@@ -16,34 +16,38 @@ if (empty($_GET)) {
         $_GET[$segments[0]] = $segments[1];
         }
 }
+
+$foundKey = false;
+$foundRoom = false;
+
 foreach ($_GET as $room => $key) {
     $doors = $GLOBALS[$site]['room'] ?? [];
 
     foreach ($doors as $door){
         if ($room == $door['name']) {
-        $path = __DIR__ . '/_rooms_/' . $door['name'] .'/' . $key . '.php';
-            if (file_exists($path)) {
-        require $path;
-            } else {
-                skylite(openSky("Key Failure"));
-                skylite(bigHeading("Key not for this room."));
-                skylite(leaf("I am sorry to inform you that you are LOST."));
-            }
-        $found = true;
-        break;
+            
+            $foundRoom = true;
+            $path = __DIR__ . '/_rooms_/' . $door['name'] .'/' . $key . '.php';
+                if (file_exists($path)) {
+                    $foundKey = true;
+                    require $path;
+                    break;
+                } 
+                break;
         } 
-        }
-
-        if ($found) {
-        break;
-    }
-
-    if (!$found) {
-        $altpath = __DIR__ . '/_rooms_/' . $GLOBALS[$site]['frontDoor'] .'/' . $GLOBALS[$site]['key'] . '.php';
-        require $altpath;
-        break;
     }
 }
+    if (!$foundRoom & !$foundKey) {
+        skylite(openSky("LOST"));
+        skylite(bigHeading("That isn't a room in this house."));
+        skylite(leaf("Have you considered not guessing?"));
+    }
+    if ($foundRoom & !$foundKey) {
+        skylite(openSky("Key Failure"));
+        skylite(bigHeading("That isn't a key for this."));
+        skylite(leaf("Have you considered not guessing?"));
+    }
+
 
 /*
 foreach ($doors as $door) {
