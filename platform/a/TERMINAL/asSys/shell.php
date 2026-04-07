@@ -22,8 +22,8 @@ foreach ($GLOBALS['GETS']['dressing'] as $fn) {
 <div class="screen-content">
 <div class="iox_coreContainer">
 
-<?php if (!empty($navCall) && file_exists($navCall)) {
-    include $navCall; } ?>
+<?php if (!empty($GLOBALS[$site]['navCall']) && file_exists($GLOBALS[$site]['navCall'])) {
+    include $GLOBALS[$site]['navCall']; } ?>
 
 <main class="iox_coreContents">
 <div class="broken_header">

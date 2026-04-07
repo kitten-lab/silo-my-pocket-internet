@@ -9,19 +9,18 @@ Listen, you are going to need to TRUST THE [] colors. They
 don't lie. But sometimes, you will be confused by this nest.
 That's okay. Each time it WILL GET EASIER.  -abl 
 --------------------------------------------------------------*/
-$key = $GLOBALS['keyMaker'];
 $nav = [ "navSec" => 
 
     [ "name" => "COMM-U-CANS", "items" => [
 
-        [ "label" => "INBOX", "path" => "mailroom-in" ],
-        [ "label" => "OUTBOX", "path" => "mailroom-out" ],
-        [ "label" => "SEND MAIL", "path" => "mailroom-send" ]
+        [ "label" => "INBOX", "key" => "mailroom-in", "door" => "communications" ],
+        [ "label" => "OUTBOX", "key" => "mailroom-out", "door" => "communications"  ],
+        [ "label" => "SEND MAIL", "key" => "mailroom-send", "door" => "communications"  ]
     /* SECTION GROUP -------------------------------- */
     ]],
     [ "name" => "IM-PORT-ORS", "items" => [
 
         /* ITEM SECTION -------------------------------- */
-        [ "label" => "OBS-IMPORT0R", "path" => "plog-post" ],
-        [ "label" => "CHECK EXPORTS", "path" => "plog-list" ],
+        [ "label" => "OBS-IMPORT0R", "key" => "plog-post", "door" => "root" ],
+        [ "label" => "CHECK EXPORTS", "key" => "plog-list", "door" => "root" ],
     ] ]] ?>

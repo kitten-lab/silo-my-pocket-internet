@@ -1,10 +1,19 @@
 <?php 
 require_once '_configs/clrRoutes.php';
-$GLOBALS['keyMaker'] = $_GET['ROOT'];
-if ($_GET['ROOT'] === null){
-    $GLOBALS['keyMaker'] = 'ROOT';
+$doors = $GLOBALS[$site]['room'] ?? [];
+foreach ($doors as $door) {
+$GLOBALS['keyMaker'] = $_GET[$door['name']];
+$path = __DIR__ . '/_rooms_/' . $door['name'] .'/' . $GLOBALS['keyMaker'] . '.php';
+
+if (!empty($path) && file_exists($path)) {
+ require $path;
+    }
+    else {
+    $door['name'] = $GLOBALS[$site]["frontDoor"];
+    $GLOBALS['keyMaker'] = $GLOBALS[$site]['key'];
+    }
 }
 
-require __DIR__ . '/ROOT/' . $GLOBALS['keyMaker'] . '.php';
+
 require resolveShell($sys);
 ?>

@@ -14,12 +14,13 @@ $config = $nav['navSec'] ?? []; ?>
 <span class="navSec">
 <?php echo $section['name']; ?></span>
 <?php foreach ($section['items'] as $item): ?>
+
 <li>
-<a href="<?= '?ROOT=' . $item['path']  ?>"><?= $item['label']; ?></a>
+<a href="<?= '?' . $item['door'] . '=' . $item['key']  ?>"><?= $item['label']; ?></a>
 </li>
 <?php foreach ($item['subSec'] as $subItem): ?>
 <li> 
-<a href="<?= $subItem['path']  ?>" class="navSubSec"><?= $subItem['label']; ?></a>
+<a href="<?= $subItem['path']  ?>" class="navSubSec">REFACTOR<?= $subItem['label']; ?></a>
 </li>
 
 <?php endforeach; ?>
