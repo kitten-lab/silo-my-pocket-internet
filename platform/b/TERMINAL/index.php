@@ -1,18 +1,47 @@
 <?php 
 require_once '_configs/clrRoutes.php';
-$doors = $GLOBALS[$site]['room'] ?? [];
-foreach ($doors as $door) {
-$GLOBALS['keyMaker'] = $_GET[$door['name']];
-$path = __DIR__ . '/_rooms_/' . $door['name'] .'/' . $GLOBALS['keyMaker'] . '.php';
 
-if (!empty($path) && file_exists($path)) {
- require $path;
+foreach ($_GET as $room => $key) {
+    $doors = $GLOBALS[$site]['room'] ?? [];
+
+    foreach ($doors as $door){
+        if ($room == $door['name']) {
+        $path = __DIR__ . '/_rooms_/' . $door['name'] .'/' . $key . '.php';
+        require $path;
+        $found = true;
+        break;
+        } 
+        }
+
+        if ($found) {
+        break;
     }
-    else {
-    $door['name'] = $GLOBALS[$site]["frontDoor"];
-    $GLOBALS['keyMaker'] = $GLOBALS[$site]['key'];
+
+    if (!$found) {
+        $altpath = __DIR__ . '/_rooms_/' . $GLOBALS[$site]['frontDoor'] .'/' . $GLOBALS[$site]['key'] . '.php';
+        require $altpath;
+        break;
     }
 }
+
+/*
+foreach ($doors as $door) {
+
+    $path = __DIR__ . '/_rooms_/' . $door['name'] .'/' . $keyMaker . '.php';
+    $altpath = __DIR__ . '/_rooms_/' . $GLOBALS[$site]['frontDoor'] .'/' . $GLOBALS[$site]['key'] . '.php';
+
+
+    if ($door['name'] == $keyMaker) {
+        if (!empty($path) && file_exists($path)) {
+            require $path;
+            } else {
+            require $altpath; 
+            skylite("wrong way");
+            }
+        }
+    }
+*/
+
 
 
 require resolveShell($sys);
