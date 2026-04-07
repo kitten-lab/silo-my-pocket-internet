@@ -1,4 +1,4 @@
 <?php 
 $GLOBALS['sys'] = "TERMINAL";
-$GLOBALS['dom'] = "ROOT";
+$GLOBALS['dom'] = "SELF";
 $GLOBALS['mod'] = $_GET['mod'] ?? "ROOT";

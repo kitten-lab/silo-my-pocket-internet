@@ -18,7 +18,7 @@ CHEERS -chester >|
     [1] **/ $GLOBALS['sys'] = "TERMINAL"; /**
     [1] **/ $GLOBALS['dom'] = "ROOT"; /**
     [2] **/ $GLOBALS['mod'] = $_GET['mod'] ?? "ROOT"; /**
-    [2] **/ $GLOBALS['site'] = $GLOBALS[$sys]; /**
+    [2] **/ $GLOBALS['site'] = $GLOBALS['sys']; /**
     [3] **/ $GLOBALS[$site]['navCall'] = $GLOBALS['sonar'] . 'a/' . $sys . '/asSys/nav.php'; /**
     [1] **/ $GLOBALS[$site]['room'] = [
                     ["name" => "root"],
