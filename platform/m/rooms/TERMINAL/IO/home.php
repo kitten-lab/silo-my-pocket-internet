@@ -1,6 +1,6 @@
 <?php
 openSky("TERMINAL.ROOT");
-nameSelf("SDK-808");
+declareSelf($sys,"IO","SDK-808");
 bigHeading("runtime executing resequencing...");
 medHeading("TERMINAL BACK ONLINE.");
 closeSky();

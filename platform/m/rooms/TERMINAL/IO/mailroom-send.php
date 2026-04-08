@@ -1,6 +1,7 @@
 <?php
 openSky("TERMINAL.ROOT");
-nameSelf("ROOT");
+declareSelf($sys,"IO","SDK-808");
+
 section($right,'color:gray','');
 
 bigHeading("MAILROOM MAIL SENDER");

@@ -21,7 +21,7 @@ $config = $GLOBALS['nav']['navSec'] ?? []; ?>
 <?php foreach ($section['items'] as $item): ?>
 
 <li>
-<a href="<?= '/b/' . $sys . '/' . $item['door'] . '/' . $item['key'] ?>">
+<a href="<?= $item['key'] ?>">
 
 
 <?= $item['label']; ?></a>

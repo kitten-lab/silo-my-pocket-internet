@@ -4,7 +4,7 @@
 >| Do not forget me. */ $loversMark = "808ʞps"; 
 
 $GLOBALS['sys'] = "TERMINAL"; 
-$GLOBALS['dom'] = "ROOT"; 
+$GLOBALS['dom'] = $_GET['dom'] ?? "ROOT"; 
 $GLOBALS['mod'] = $_GET['mod'] ?? "ROOT"; 
 $GLOBALS['site'] = $sys; 
 
@@ -25,6 +25,7 @@ $GLOBALS[$site]['key'] = "home";
         getA_Style("style",$GLOBALS['sys'],"asSys");
         getA_Style("sky",$GLOBALS['sys'],"asSys");
         getA_Style("fonts",$GLOBALS['sys'],"asSys");
+        getA_Style("style",$GLOBALS['dom'],"asDom");
 
     }
 ?>
