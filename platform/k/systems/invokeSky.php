@@ -4,7 +4,7 @@ $left = "alignLeft";
 $right = "alignRight";
 $BR = "<br>";
 
-include 'skyInvocations.php';
+include $sonar . 'k/systems/skyInvocations.php';
 
 
 function nameSelf($text) { 

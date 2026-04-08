@@ -12,16 +12,19 @@ That's okay. Each time it WILL GET EASIER.  -abl
 $GLOBALS['IO']['navCall'] = $GLOBALS['sonar'] . 'a/' . $site . '/asDom/nav.php'; 
 $nav = [ "navSec" => 
 
-    [ "name" => "COMM-U-CANS", "items" => [
+    [ "name" => "COMM.SYSTEMS", "items" => [
 
-        [ "label" => "INBOX", "key" => "mailroom-in", "door" => "COMMS" ],
-        [ "label" => "OUTBOX", "key" => "mailroom-out", "door" => "COMMS"  ],
-        [ "label" => "SEND MAIL", "key" => "mailroom-send", "door" => "COMMS"  ]
+        [ "label" => "NEW MSG RELAY", "key" => "mailroom-send", "door" => "COMMS"  ],
+        [ "label" => "MSG INBOX", "key" => "mailroom-in", "door" => "COMMS" ],
+        [ "label" => "MSG OUTBOX", "key" => "mailroom-out", "door" => "COMMS"  ],
     /* SECTION GROUP -------------------------------- */
     ]],
-    [ "name" => "IM-PORT-ORS", "items" => [
+    [ "name" => "IMPORT.ANTS", "items" => [
 
         /* ITEM SECTION -------------------------------- */
-        [ "label" => "OBS-IMPORT0R", "key" => "plog-adder", "door" => "COMMS" ],
-        [ "label" => "CHECK EXPORTS", "key" => "plog-list", "door" => "COMMS" ],
-    ] ]] ?>
+        [ "label" => "PLOG INPUT", "key" => "plog-adder", "door" => "COMMS" ],
+        [ "label" => "CHECK PLOGS", "key" => "plog-list", "door" => "COMMS" ],
+        [ "label" => "OBS VAULT ANT", "key" => "plog-adder", "door" => "COMMS" ],
+        [ "label" => "ENOTE JUNK ANT", "key" => "plog-list", "door" => "COMMS" ],
+    ]],
+    ] ?>

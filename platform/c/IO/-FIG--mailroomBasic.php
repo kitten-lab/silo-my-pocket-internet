@@ -14,7 +14,7 @@ $GLOBALS['mailroomBasic_List'] = [
     DISPLAY: **/ "mail-viewer",
 
     "Page_Key" => /**
-    DISPLAY: **/ "communications"
+    DISPLAY: **/ "COMMS"
 ]
 
 ?>

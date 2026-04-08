@@ -1,6 +1,5 @@
 <?php
-openSky("TERMINAL.ROOT");
-declareSelf($sys,"IO","SDK-808");
+openSky($sys . '.' . $dom);
 
 section($right,'color:gray','');
 

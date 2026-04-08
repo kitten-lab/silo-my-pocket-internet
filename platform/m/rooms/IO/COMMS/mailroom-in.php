@@ -1,10 +1,9 @@
 <?php
-openSky("TERMINAL.ROOT");
-section($right,'color:gray','');
+openSky($sys . '.' . $dom);
+
+section($right,'','');
 
 bigHeading("MAILROOM INBOX");
-leaf("INGOING INTERA MAIL CHARLIE OMEGA 4.3.3
-$BR  .........");
 
 close_section();
 getTool('mailroomBasic', 'ViewInbox');

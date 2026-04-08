@@ -6,11 +6,12 @@
 $GLOBALS['sys'] = "TERMINAL"; 
 $GLOBALS['dom'] = "IO"; 
 $GLOBALS['mod'] = $_GET['mod'] ?? "SDK-808"; 
-$GLOBALS['site'] = $dom; 
+$GLOBALS['site'] = "IO"; 
 $GLOBALS['SITE_SLUG'] = "IO"; 
 
 $GLOBALS[$site]['room'] = [
-                    ["name" => "COMMS"]]; 
+                    ["name" => "COMMS"],
+                    ["name" => "window"]]; 
 $GLOBALS[$site]['key'] = "home"; 
 
     include __DIR__ . '/-FIG--nav.php';

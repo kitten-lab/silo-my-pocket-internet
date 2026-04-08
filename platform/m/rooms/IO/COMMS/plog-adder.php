@@ -1,6 +1,7 @@
 <?php
-openSky("TERMINAL." . $dom);
-nameSelf("SDK-808");
+openSky($sys . '.' . $dom);
+
+
 bigHeading("TERMINAL: " . $mod);
 
 leaf("TERMINAL BACK ONLINE.");

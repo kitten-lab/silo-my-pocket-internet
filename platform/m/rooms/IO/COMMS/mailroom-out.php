@@ -1,7 +1,6 @@
 <?php
-declareSelf("TERMINAL", "IO", "SDK-808");
+openSky($sys . '.' . $dom);
 
-openSky("TERMINAL.IO");
 section($right,'color:gray','');
 
 bigHeading("MAILROOM OUTBOX");

@@ -1,7 +1,6 @@
 <?php
-declareSelf($sys,"IO","SDK-808");
+openSky($sys . '.' . $dom);
 
-openSky("TERMINAL.ROOT");
 section($right,'color:gray','');
 
 bigHeading("MAILROOM VIEWER");
