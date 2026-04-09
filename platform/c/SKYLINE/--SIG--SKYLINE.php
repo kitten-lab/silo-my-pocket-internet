@@ -28,4 +28,8 @@ $GLOBALS[$site]['key'] = "home";
         getA_Style("style",$GLOBALS['dom'],"asDom");
 
     }
+
+    function getMy_WWW($www){
+        $GLOBALS['WWW']['bar'] = $www;
+    }
 ?>

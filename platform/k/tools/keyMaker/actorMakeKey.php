@@ -31,7 +31,7 @@ $page_content = ob_get_contents();
     // CHANGE PER TOOL //
   $chestNOTE = $_POST['openSky']; 
   $chestCONTENT = "rooms/" . $house . "/" . $room . "/" . $key; 
-  $betACTION = "KEY MADE: " $house . ' / ' . $key;
+  $betACTION = "KEY MADE: " . $house . ' / ' . $key;
   $reportHEAD = "keyMaker|makeKey";
 
     // DO NOT TOUCHY //
@@ -85,7 +85,7 @@ $tpsDATA = buildTPS($unix,$ms,$tzone);
 // OKAY LETS MAKE A CHESTER CRATE OF THIS BIT OF STUFFS! 
 // ============================================================================
 
-    $dir = $GLOBALS['sonar'] . 'd/rooms/' . $house . '/' . $room . '/';
+    $dir = $GLOBALS['sonar'] . 'd/rooms/' . $_POST['house'] . '/' . $_POST['room'] . '/';
    if (!is_dir($dir)) { mkdir($dir, 0775, true); }   
 
   $file = $dir . '/' . $key. '_data.json';
