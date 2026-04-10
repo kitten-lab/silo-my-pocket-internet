@@ -12,12 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $POST__PV =          $_GET['pv'] ?? '__UNDISCLOSED__';
     $POST__LOVERS_MARK = $_POST['LOVERS_MARK'];
     $POST__ACTING__AS =  $_POST['ACTING__AS'];
+    $POST__TIMEZONE =    $_POST['POST__TZ'];
 
     $GEN__WORLD_NAME =   $_POST['GEN__WORLD_NAME'];
     $GEN__WORLD_SYS =    $_POST['GEN__WORLD_SYS'];
     $GEN__WORLD_DOM =    $_POST['GEN__WORLD_DOM'];
     $GEN__WORLD_MOD =    $_POST['GEN__WORLD_MOD'];
     $GEN__ROOM =         $_POST['GEN__ROOM'];
+
 
     $VARIANT = "BASIC";
 
@@ -41,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $tUID = 'tUID-' . date('Ymd') . '.' . strtoupper(bin2hex(random_bytes(3)));
         $unix = time();
-        $tzone = $_POST['POST__TZ'];
+        $tzone = $POST__TIMEZONE;
         $ms = round(microtime(true) * 1000);
         $time = new DateTime("@$unix");
         $time->setTimezone(new DateTimeZone($tzone));
@@ -228,7 +230,7 @@ $dir = $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $ROUTE__LINE . 'ECHO/' . date('
 
   $echos[$localtime . ': ' . $CHEST__HEADER] = [
     "CUID__REF" => $cUID, 
-    "TUID__REF" => $tUID, 
+    "TUID__REF" => $tUID
     "CHEST__CONTEXT" => $CHEST__CONTEXT,
     "GAIA__DATE" => $simpledate,
     "GAIA__TIME" => $localtime,
@@ -263,7 +265,7 @@ $dir = $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $ROUTE__LINE . 'ECHO/' . date('
         $tpss = [];
     }
 
-    if (isset($tpss[$tpsUID])) {
+    if (isset($tpss[$tUID])) {
         die("Already exists in this Location.");
     }
 

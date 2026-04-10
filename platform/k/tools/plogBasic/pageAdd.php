@@ -7,24 +7,22 @@ $config = $GLOBALS['plogBasicAdd'] ?? [];
 <form method="POST" action="">
 
     <input 
-        name="plog_leafTopic" 
-        class="plogBasic_AddTopic" 
-        placeholder="<?= $config['Leaf_Topic_placeholder'] ?? 'Leaf Topic'; ?>" 
+        name="POST__LOG_TOPIC" 
+        placeholder="POST__LOG_TOPIC" 
         required>
     <br>
     <textarea 
     rows="10" 
-    class="plogBasic_AddTopic" 
-    name="plog_leafText" 
-    placeholder="<?= $config['Leaf_Text_placeholder'] ?? 'Leaf Text'; ?>" 
+    name="POST__LOG_TEXT" 
+    placeholder="POST__LOG_TEXT" 
     required>
     </textarea>
     <br>
 
-  <input type='hidden' name='betSys' value='<?= $sys; ?>''/> 
-  <input type='hidden' name='betDom' value='<?= $dom; ?>''/> 
-  <input type="hidden" name="betTZone" id="tz-input">
-  <input type='hidden' name='betMod' value='<?= $mod; ?>'/> 
+  <input type='hidden' name='POST__SYS' value='<?= $sys; ?>''/> 
+  <input type='hidden' name='POST__DOM' value='<?= $dom; ?>''/> 
+  <input type="hidden" name="POST__TZ" id="tz-input">
+  <input type='hidden' name='POST__MOD' value='<?= $mod; ?>'/> 
 
   <button 
     type="submit"

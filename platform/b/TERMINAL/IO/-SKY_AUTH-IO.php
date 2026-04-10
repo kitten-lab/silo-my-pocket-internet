@@ -9,5 +9,5 @@ require_once $sonar . 'complexRoutes.php';
 
 $SYSTEM_PATH = $sonar . $a[$dom];
 getSkyAUTH($SYSTEM_PATH, $c, $sonar, $sys);
-include $sonar . $c[$dom] . '--SIG--' . $site . '.php';
+include $sonar . $c[$sys] . '--SIG--' . $dom . '.php';
 ?>

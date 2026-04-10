@@ -1,38 +1,32 @@
 <?php 
 require __DIR__ . '/../../systems/rehydrateSelf.php';
-$config = $GLOBALS['plogBasicList'] ?? []; 
+require_once __DIR__ . '/../skyGenesis/functions.php'; //GET SHADOW PROD TOGGLE
+$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
+$ROUTE__LINE = ROUTE('d');
 
-$path = $sonar . 'd/plogBasic/' . $sys . '/' . $dom . '/data.json';
-$logs = json_decode(file_get_contents($path), true);
+    $TOOL_FUNC = "LOG__POST";
+    $TOOL_LOC = "plogBasic";
+    $TOOL_NAME = "actorAdd";
+
+$ROUTE = $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $ROUTE__LINE . $TOOL_LOC . '/' . $sys . '/' . $dom . '/';
+$CHEST = $ROUTE . '/' . $mod . '_data.json';
+
+$logs = json_decode(file_get_contents($CHEST), true);
 
 if (!$logs) {
   $logs = [];
 }
 
-$cUID = array_keys($logs);
-$cUID = $cUID[0];
-$filtered = array_filter($logs, function($log) use ($mod) {
-    return ($log['meta.DATA']['acting.DOLLY']) == $mod;
-});
-?>
+$config = $GLOBALS['plogBasicList'] ?? []; 
 
-
-<?php 
 foreach ($logs as $log) {
-  echo "<span class='plogBasic_listItem'><a href='window?" . $config['Page_Key'] . "=" . $config['Page_Link'] . '&go=' . $log['meta.DATA']['chest.UNIX'] . "'>";
-  echo $log['log.leafTopic'] . "</a> ";
+  echo "<span><a href='window?" . $config['Page_Key'] . "=" . $config['Page_Link'] . '&go=' . $log['META_DATA']['UNIX'] . "'>";
+  echo $log['LOG__LEAF_TOPIC'] . "</a> ";
   echo "<span class='plogBasic_metaData'>";
   echo "</span>";
-  if ($plogBasic_gaia == true) {
     echo "<span class='plogBasic_metaData'>";
-    echo $log['meta.DATA']['tps.REFS']['tps.gaiaDATE'];
+    echo $log['META_DATA']['GAIA_DATE'];
     echo "</span>";
-  } else {
-    echo "<span class='plogBasic_metaData'>";
-    echo $log['meta.DATA']['tps.REFS']['tps.cwCYC'];
-    echo $log['meta.DATA']['tps.REFS']['tps.cwRND'];
-    echo "</span>";
-  }
   echo "</span>";
 }
 ?>

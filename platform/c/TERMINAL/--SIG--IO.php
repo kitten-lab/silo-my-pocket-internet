@@ -3,16 +3,17 @@
 ================================================================
 >| Do not forget me. */ $loversMark = "808ʞps"; 
 
-$GLOBALS['SITE_SLUG'] = "TERMINAL"; 
+$GLOBALS['sys'] = "TERMINAL"; 
+$GLOBALS['dom'] = "IO"; 
+$GLOBALS['mod'] = $_GET['mod'] ?? "SDK-808"; 
+$GLOBALS['site'] = "IO"; 
+$GLOBALS['SITE_SLUG'] = "IO"; 
 
 $GLOBALS[$site]['room'] = [
-                    ["name" => "root"],
                     ["name" => "IO"],
-                    ["name" => "communications"],
-                    ["name" => "null"]]; 
+                    ]; 
 $GLOBALS[$site]['key'] = "home"; 
 
-    
     include __DIR__ . '/-FIG--nav.php';
     include __DIR__ . "/-FIG--plogBasic.php"; 
     include __DIR__ . "/-FIG--mailroomBasic.php"; 
@@ -23,6 +24,5 @@ $GLOBALS[$site]['key'] = "home";
         getA_Style("sky",$GLOBALS['sys'],"asSys");
         getA_Style("fonts",$GLOBALS['sys'],"asSys");
         getA_Style("style",$GLOBALS['dom'],"asDom");
-
     }
 ?>
