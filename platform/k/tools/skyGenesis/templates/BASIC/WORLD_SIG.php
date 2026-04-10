@@ -1,20 +1,16 @@
 <?php /* 
 ==================== C O N F I G . f i l e  ==================== 
 ================================================================
->| Do not forget me. */ $loversMark = "I-ALWAYS-LOVE-YOU"; 
+>| Do not forget me. */ $loversMark = "{{LOVERS_MARK}}"; 
 
-$GLOBALS['SITE_SLUG'] = "HOME"; 
+$GLOBALS['SITE_SLUG'] = "{{WORLD_NAME}}"; 
 
 $GLOBALS[$site]['room'] = [
                     ["name" => "WELCOME-HOME"],
-                    ["name" => "THE_ROOM"],
+                    ["name" => "{{ROOM}}"],
                     ];
-$GLOBALS[$site]['key'] = "HOME"; 
+$GLOBALS[$site]['key'] = "{{WORLD_NAME}}"; 
 
-    
-    include __DIR__ . "/-FIG--nav.php";
-    include __DIR__ . "/-FIG--plogBasic.php"; 
-    include __DIR__ . "/-FIG--mailroomBasic.php"; 
     include __DIR__ . "/-FIG--routeErrors.php"; 
     
     function getMy_Styles(){
@@ -25,6 +21,6 @@ $GLOBALS[$site]['key'] = "HOME";
     }
 
     function getMy_WWW($www){
-        $GLOBALS['HOME']['bar'] = $www;
+        $GLOBALS['{{WORLD_NAME}}']['bar'] = $www;
     }
 ?>

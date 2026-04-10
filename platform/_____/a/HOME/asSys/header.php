@@ -1,4 +1,0 @@
-
-<header>
-bigHeading("HOME");
-</header>

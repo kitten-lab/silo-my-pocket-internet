@@ -1,5 +1,5 @@
 <?php 
-require_once __DIR__ . '/-SKY_AUTH-HOME.php';
+require_once __DIR__ . '/-SKY_AUTH-{{WORLD_NAME}}.php';
 
 youAreHere($site, $sonar);
 keyMaker($YouAreHere, $sys, $site);

@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../systems/rehydrateSelf.php';
 require_once __DIR__ . '/functions.php';
-$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
+$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(true);
 
 ## TOOL SIG FILE
 $TOOL_FUNC = "GEN__WORLD";
@@ -24,52 +24,56 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $GEN__WORLD_MOD =    $_POST['GEN__WORLD_MOD'];
     $GEN__ROOM =         $_POST['GEN__ROOM'];
 
+    
     $POST__SYS =         $_POST['POST__SYS'];
     $POST__DOM =         $_POST['POST__DOM'];
     $POST__MOD =         $_POST['POST__MOD'];
     $POST__LOVERS_MARK = $_POST['LOVERS_MARK'];
     $POST__ACTING__AS = $_POST['ACTING__AS'];
+    $VARIANT = "BASIC";
 
 
-//  MAKE SKY_AUTH FILE //  BET ROUTE__LINE >>>>>>>>
+//  BET ROUTE__LINE >>>>>>>>>>>>>>>>>>>>>>>>
 $ROUTE__LINE = ROUTE("b");
 
     $ROUTE = $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $ROUTE__LINE . $GEN__WORLD_NAME . '/';
     
-        if (is_dir($ROUTE)) { KDE($KDE__ERROR_TYPE, $KDE__SOURCE, $KDE__ECHO_CHAIN, $KDE__ERROR); exit;}
+        if (is_dir($ROUTE)) { KDE($$KDE__ERROR_TYPE, $KDE__SOURCE, $KDE__ECHO_CHAIN, $KDE__ERROR);}
         else { mkdir($ROUTE, 0775, true); }
         
-        $CREATED_SKY_AUTH = CREATE_SKY_AUTH($GEN__WORLD_NAME);
+        $CREATED_SKY_AUTH = CREATE_SKY_AUTH($GEN__WORLD_NAME, $VARIANT);
         $SKY_AUTH = $ROUTE . '-SKY_AUTH-' . $GEN__WORLD_NAME . '.php';
 
     file_put_contents($SKY_AUTH, $CREATED_SKY_AUTH);
 
-        $CREATED_SKY_SIG = CREATE_SKY_SIG($GEN__WORLD_NAME, $GEN__WORLD_SYS, $GEN__WORLD_DOM, $GEN__WORLD_MOD);
+        $CREATED_SKY_SIG = CREATE_SKY_SIG($GEN__WORLD_NAME, $GEN__WORLD_SYS, $GEN__WORLD_DOM, $GEN__WORLD_MOD, $VARIANT);
         $SKY_SIG = $ROUTE . '-SKY_SIG-' . $GEN__WORLD_NAME . '.php';
 
     file_put_contents($SKY_SIG, $CREATED_SKY_SIG);
 
-        $CREATED_INDEX = MAKE_INDEX($GEN__WORLD_NAME);
+        $CREATED_INDEX = CREATE_INDEX($GEN__WORLD_NAME, $VARIANT);
         $INDEX = $ROUTE . 'index.php';
 
     file_put_contents($INDEX, $CREATED_INDEX);
 
+//  KHAF ROUTE LINE >>>>>>>>>>>>>>>>>>>>>>>>
 $ROUTE__LINE = ROUTE("c");
 
     $ROUTE = $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $ROUTE__LINE . $GEN__WORLD_NAME . '/';
     
-        if (is_dir($ROUTE)) { KDE($KDE__ERROR_TYPE, $KDE__SOURCE, $KDE__ECHO_CHAIN, $KDE__ERROR); }
+        if (is_dir($ROUTE)) { KDE($KDE__ERROR_TYPE, $KDE__SOURCE, $KDE__ECHO_CHAIN, $KDE__ERROR);}
         else { mkdir($ROUTE, 0775, true); }
-
-        $CREATE_WORLD_SIG = CREATE_WORLD_SIG($GEN__WORLD_NAME, $POST__LOVERS_MARK, $GEN__ROOM);
+        
+        $CREATED_WORLD_SIG = CREATE_WORLD_SIG($GEN__WORLD_NAME, $POST__LOVERS_MARK, $GEN__ROOM, $VARIANT);
         $WORLD_SIG = $ROUTE . '--SIG--' . $GEN__WORLD_NAME . '.php';
 
-        $CREATE_ERROR_FIG = CREATE_ERROR_FIG();
+        $CREATED_ERROR_FIG = CREATE_ERROR_FIG($VARIANT);
         $ERROR_FIG = $ROUTE . '-FIG--routeErrors.php';
             
-    file_put_contents($WORLD_SIG, $CREATE_WORLD_SIG);
-    file_put_contents($ERROR_FIG, $CREATE_ERROR_FIG);
+    file_put_contents($WORLD_SIG, $CREATED_WORLD_SIG);
+    file_put_contents($ERROR_FIG, $CREATED_ERROR_FIG);
 
+//  MEM ROUTE LINE >>>>>>>>>>>>>>>>>>>>>>>>
 $ROUTE__LINE = ROUTE("m");
 
     $ROUTE = $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $ROUTE__LINE . 'rooms/' . $GEN__WORLD_NAME .'/';
@@ -80,28 +84,29 @@ $ROUTE__LINE = ROUTE("m");
         if (!is_dir($WELCOME_ROOM)) { mkdir($WELCOME_ROOM, 0775, true); }
         if (!is_dir($FIRST_ROOM)) { mkdir($FIRST_ROOM, 0775, true); }
 
-        $CREATED_WELCOME_ROOM = CREATE_WELCOME_HOME($GEN__WORLD_NAME, $POST__LOVERS_MARK, $GEN__ROOM);
+        $CREATED_WELCOME_ROOM = CREATE_WELCOME_HOME($GEN__WORLD_NAME, $POST__LOVERS_MARK, $GEN__ROOM, $VARIANT);
         $WELCOME_HOME = $WELCOME_ROOM . 'hi-from-SKY.php';
 
     file_put_contents($WELCOME_HOME, $CREATED_WELCOME_ROOM);
 
+//  ALEPH ROUTE LINE >>>>>>>>>>>>>>>>>>>>>>>>
 $ROUTE__LINE = ROUTE('a');
 
     $ROUTE = $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $ROUTE__LINE . $GEN__WORLD_NAME . '/' . $POST__ACTING__AS . '/';
     
-        if (is_dir($ROUTE)) { KDE($KDE__ERROR_TYPE, $KDE__SOURCE, $KDE__ECHO_CHAIN, $KDE__ERROR); }
+        if (is_dir($ROUTE)) { KDE($$KDE__ERROR_TYPE, $KDE__SOURCE, $KDE__ECHO_CHAIN, $KDE__ERROR);}
         else { mkdir($ROUTE, 0775, true); }
 
-        $CREATED_SHELL = CREATE_BASE_SHELL();
+        $CREATED_SHELL = CREATE_BASE_SHELL($VARIANT);
         $SHELL = $ROUTE . 'shell.php';
 
-        $CREATED_HEADER = CREATE_BASE_HEADER($GEN__WORLD_NAME);
+        $CREATED_HEADER = CREATE_BASE_HEADER($GEN__WORLD_NAME, $VARIANT);
         $HEADER = $ROUTE . 'header.php';
 
-        $CREATED_FOOTER = CREATE_BASE_FOOTER();
+        $CREATED_FOOTER = CREATE_BASE_FOOTER($VARIANT);
         $FOOTER = $ROUTE . 'footer.php';
 
-        $CREATED_STYLESHEET = CREATE_BASIC_STYLE();
+        $CREATED_STYLESHEET = CREATE_BASIC_STYLE($VARIANT);
         $STYLE = $ROUTE . 'style.css'; //empty sheet
             
     file_put_contents($SHELL, $CREATED_SHELL);
