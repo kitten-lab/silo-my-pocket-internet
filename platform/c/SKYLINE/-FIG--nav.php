@@ -9,19 +9,69 @@ Listen, you are going to need to TRUST THE [] colors. They
 don't lie. But sometimes, you will be confused by this nest.
 That's okay. Each time it WILL GET EASIER.  -abl 
 --------------------------------------------------------------*/
-$GLOBALS["SKYLINE"]['navCall'] = $GLOBALS['sonar'] . 'a/' . $site . '/asSys/nav.php'; 
+$GLOBALS[$site]['GETS']['sideNav'] = $GLOBALS['sonar'] . 'a/' . $site . '/asSys/nav.php'; 
+$GLOBALS[$site]['GETS']['topNav'] = $GLOBALS['sonar'] . 'a/' . $site . '/asSys/top-nav.php'; 
+
+$GLOBALS[$site]['room'] = [
+                    ["name" => "PUBLIC-OFFICE"],
+                    ["name" => "REGISTRAR"],
+                    ["name" => "REPORT-DEPARTMENT"],
+                    ["name" => "window"]
+                    ]; 
+$GLOBALS[$site]['key'] = "home"; 
+
 $nav = [ "navSec" => 
 
-    [ "name" => "PUBLIC OFFICES", "items" => [
+    [ 
+        "DOOR" => "PUBLIC-OFFICE", 
+        "BUILDING" => "PUBLIC OFFICE", //DOM?
+        "KEY" => "FRONT-DESK", 
+        "ROOMS" => [
 
-        [ "label" => "FRONT DESK", "key" => "FRONT_DESK", "door" => "PUBLIC_OFFICE"  ],
-        [ "label" => "SKY DESK REPORTS", "key" => "REPORT_RECORDS", "door" => "PUBLIC_OFFICE"  ],
+            [ 
+                "ROOM" => "RECEPTION DESK", 
+                "KEY" => "FRONT-DESK", 
+            ],
+            [ 
+                "ROOM" => "SKY DESK REPORTS", 
+                "KEY" => "NEWS", 
+            ],
     /* SECTION GROUP -------------------------------- */
-    ]],[ "name" => "RECORDS", "items" => [
+    ]],[ 
+        "DOOR" => "REPORT-DEPARTMENT", 
+        "BUILDING" => "REPORT DEPARTMENT",  
+        "KEY" => "FRONT-DESK", 
+        "ROOMS" => [
 
-        [ "label" => "OMENS", "key" => "OMENS", "door" => "RECORDS"  ],
-        [ "label" => "SECRETS", "key" => "SECRETS_KEPT", "door" => "RECORDS"  ],
+        [ 
+            "ROOM" => "REPORT AN OMENS", 
+            "KEY" => "OMENS", 
+            ],
+        [ 
+            "ROOM" => "REPORT HYMN EVENT", 
+            "KEY" => "HYMNS", 
+            ],
+        [ 
+            "ROOM" => "REPORT A SECRET KNOWN", 
+            "KEY" => "SECRETS", 
+            ],
     /* SECTION GROUP -------------------------------- */
-    ]],
+    ]],[ 
+        "KEY" => "FRONT-DESK", 
+        "BUILDING" => "REGISTRAR",  
+        "DOOR" => "REGISTRAR", 
+        "ROOMS" => [
+
+        [ 
+            "ROOM" => "REGISTER KEY", 
+            "KEY" => "REGISTER_KEY", 
+            ],
+        [ 
+            "ROOM" => "REGISTER WORLD", 
+            "KEY" => "REGISTER_WORLD", 
+        ],
+    /* SECTION GROUP -------------------------------- */
+    ]]
     ];
+
 ?>

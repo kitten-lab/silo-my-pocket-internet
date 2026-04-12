@@ -4,17 +4,9 @@
 >| Do not forget me. */ $loversMark = "808ʞps"; 
 
 $GLOBALS['sys'] = "SKYLINE"; 
-$GLOBALS['dom'] = "PUBLIC_OFFICE"; 
+$GLOBALS['dom'] = "PUBLIC OFFICE"; 
 $GLOBALS['mod'] = $_GET['mod'] ?? "CLERK"; 
 $GLOBALS['site'] = "SKYLINE"; 
-$GLOBALS['SITE_SLUG'] = "SKYLINE"; 
-
-$GLOBALS[$site]['room'] = [
-                    ["name" => "PUBLIC_OFFICE"],
-                    ["name" => "REGISTRAR"],
-                    ["name" => "RECORDS"],
-                    ["name" => "window"]]; 
-$GLOBALS[$site]['key'] = "home"; 
 
     include __DIR__ . '/-FIG--nav.php';
     include __DIR__ . "/-FIG--plogBasic.php"; 

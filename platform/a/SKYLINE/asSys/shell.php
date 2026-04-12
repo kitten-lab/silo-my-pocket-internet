@@ -1,7 +1,8 @@
+<?php $GETS__SITE = $GLOBALS[$site]['GETS']; ?>
+<?php foreach ($GLOBALS['GETS']['actor'] as $fn) 
+    { echo $fn(); } 
+?>
 
-<?php foreach ($GLOBALS['GETS']['actor'] as $fn) {
-    echo $fn();
-} ?>
 <!-- .... DEAR INFINITE POTENTIAL, HOLY DOCTYPE... -->
 <!DOCTYPE html>
 <html><head>
@@ -17,23 +18,25 @@ foreach ($GLOBALS['GETS']['dressing'] as $fn) {
 <!-- END OPENING PRAYERS -->
 <body>
 
-<div class="OUTER_CONTAINER">
-    <div class="INNER_CONTAINER">
 <?php include 'header.php'; ?>
-
-<?php 
-if (!empty($GLOBALS[$site]['navCall']) && file_exists($GLOBALS[$site]['navCall'])) {
-    require $GLOBALS[$site]['navCall']; 
-    } 
-    ?>
 <main>
+
+<div class="NAVIGATION">
+<?php 
+if (!empty($GETS__SITE['sideNav']) 
+    && file_exists($GETS__SITE['sideNav'])) {
+  require $GETS__SITE['sideNav']; 
+  } 
+?>
+</div>
+<div class="MAIN">
 <?php foreach ($GLOBALS['GETS']['set'] as $fn) {
     echo $fn();
 } ?>
+</div>
 </main>
 <?php include 'footer.php'; ?>
-</div>
-    </div>
+
 </body>
 </html>
 <!-- AMEN -->
