@@ -21,7 +21,7 @@ $config = $GLOBALS['plogBasicList'] ?? [];
 
 foreach ($logs as $log) {
     $cUID = $log[0];
-  echo "<span><a href='window?" . $config['Page_Key'] . "=" . $config['Page_Link'] . '&TUID=' . $log['TUID__REF'] . "&MOD=" . $mod . "'>";
+  echo "<span><a href='window?" . $config['Page_Key'] . "=" . $config['Page_Link'] . '&TUID=' . $log['TUID__REF'] . "&ROOM=" . $GLOBALS['roomkey'] . "'>";
   echo $log['LOG__LEAF_TOPIC'] . "</a> ";
     echo "<span class='plogBasic_metaData'>";
     echo $log['META_DATA']['GAIA_DATE'];

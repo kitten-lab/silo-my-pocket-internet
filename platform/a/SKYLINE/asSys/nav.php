@@ -5,17 +5,11 @@ $config = $GLOBALS['nav']['navSec'] ?? []; ?>
 <nav>
 
 <DIV class="main_nav">
-<?php img($GLOBALS['mod'] . ".png", $sys, "LOGO","","room-logo"); ?>
+
+
 
 <ul>
-
-<div class="ROOM_ID">
-
-Attending: <?= $GLOBALS['mod'] ?><br>
-<?= $GLOBALS['roomkey'] ?><br>
 <?= $GLOBALS['dom'] ?><br>
-</div>
-<div class="SKY_ATTENDANT"></div>
 
 <?php foreach ($nav as $section): ?>
 <?php 
@@ -27,8 +21,17 @@ echo $item['ROOM'] . "</a></li>";
 }
 endforeach; ?>
 
+<div class="ROOM_ID">
+<?php img($GLOBALS['mod'] . ".png", $sys, "LOGO","","room-logo"); ?>
+
+Attending: <?= $GLOBALS['mod'] ?><br>
+<?= $GLOBALS['roomname'] ?><br>
+</div>
+<div class="SKY_ATTENDANT"></div>
+
+
+
 </DIV>
 </ul>
-    <?php img("main.png", "logos", "SKYLINE","","logo"); ?>
 
 </nav></aside>

@@ -30,6 +30,7 @@ if (!empty($GETS__SITE['sideNav'])
 ?>
 </div>
 <div class="MAIN">
+
 <?php foreach ($GLOBALS['GETS']['set'] as $fn) {
     echo $fn();
 } ?>

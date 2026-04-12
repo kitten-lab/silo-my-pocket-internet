@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../systems/rehydrateSelf.php';
 require_once __DIR__ . '/../skyGenesis/functions.php'; //GET SHADOW PROD TOGGLE
-$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
+$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(true);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
@@ -84,7 +84,7 @@ $ROUTE__LINE = ROUTE('d');
 $ROUTE = $GLOBALS['sonar'] . $SHADOW_PROD_TOGGLE . $ROUTE__LINE . $TOOL_LOC . '/' . $POST__SYS . '/' . $POST__DOM . '/';
     if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
     
-  $CHEST = $ROUTE . '/' . $POST__MOD . '_data.json';
+  $CHEST = $ROUTE . '/' . $GLOBALS['roomkey'] . '_data.json';
   
   $json = file_get_contents($CHEST);
   $CHEST_THINGS = json_decode($json, true);

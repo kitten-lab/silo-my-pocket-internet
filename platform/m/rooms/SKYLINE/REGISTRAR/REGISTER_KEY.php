@@ -3,7 +3,7 @@
 openSky('SKYLINE KEYMAKER');
 
 declareSelf("SKYLINE", "REGISTRAR", "KEYMASTER");
-nameRoomKey("REGISTER KEY");
+nameRoomKey("REGISTER KEY", "REGISTER_KEY");
 
 
 bigHeading('SKYLINE keyMaker');

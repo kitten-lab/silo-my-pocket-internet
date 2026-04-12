@@ -44,12 +44,12 @@ $nav = [ "navSec" =>
         "ROOMS" => [
 
         [ 
-            "ROOM" => "REPORT AN OMENS", 
+            "ROOM" => "REPORT AN OMEN", 
             "KEY" => "OMENS", 
             ],
         [ 
-            "ROOM" => "REPORT HYMN EVENT", 
-            "KEY" => "HYMNS", 
+            "ROOM" => "REPORT SENSE OF HYMN", 
+            "KEY" => "HYMN", 
             ],
         [ 
             "ROOM" => "REPORT A SECRET KNOWN", 
