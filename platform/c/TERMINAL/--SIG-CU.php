@@ -3,7 +3,7 @@
 ================================================================
 >| Do not forget me. */ $loversMark = "I will always know you, even in the dark,"; 
 
-$GLOBALS['SITE_SLUG'] = "CU"; 
+$GLOBALS['SITE_SLUG'] = "TERMINAL/CU"; 
 
 $GLOBALS[$site]['room'] = [
                     ["name" => "WELCOMEHOME"],
@@ -12,6 +12,7 @@ $GLOBALS[$site]['room'] = [
                     ];
 $GLOBALS[$site]['key'] = "CU"; 
 
+    include __DIR__ . '/CU/-FIG--nav.php';
     include __DIR__ . "/-FIG--routeErrors.php"; 
     
     function getMy_Styles(){

@@ -7,8 +7,10 @@ $GLOBALS['sys'] = "SKYLINE";
 $GLOBALS['dom'] = "PUBLIC OFFICE"; 
 $GLOBALS['mod'] = $_GET['mod'] ?? "CLERK"; 
 $GLOBALS['site'] = "SKYLINE"; 
+$GLOBALS['SITE_SLUG'] = "SKYLINE"; 
 
     include __DIR__ . '/-FIG--nav.php';
+    include __DIR__ . "/-FIG--postBASIC.php"; 
     include __DIR__ . "/-FIG--plogBasic.php"; 
     include __DIR__ . "/-FIG--mailroomBasic.php"; 
     include __DIR__ . "/-FIG--routeErrors.php"; 

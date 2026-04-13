@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../systems/rehydrateSelf.php';
 require_once __DIR__ . '/../skyGenesis/functions.php'; //GET SHADOW PROD TOGGLE
-$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(true);
+$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     

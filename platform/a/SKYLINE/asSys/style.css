@@ -120,16 +120,17 @@ nav ul {
 
 nav li a {
   text-decoration: none; /* Removes link underline */
+  color: blue;
 }
 nav li a::before {
-    content: ">| ";
+    content: "- ";
 }
 
 
 nav li {
   text-decoration: none; /* Removes link underline */
   display: block;        /* Makes the entire area clickable */
-  padding: 6px;
+  padding: 12px;
 }
 
 .SKY_ATTENDANT {
@@ -166,8 +167,8 @@ nav li {
     gap: 10px;
     left: 0;
     box-shadow: inset 0 0 1rem #fff;
-  background-color: var(--accentColor-light2);
-  border-bottom: 2px solid var(--accentColor-light2);
+    background-color: var(--accentColor-light2);
+    border-bottom: 2px solid var(--accentColor-light2);
     right: 0;
 
 }
@@ -176,7 +177,7 @@ nav li {
 .topNav span {
     display: inline-block;
   text-decoration: none; /* Removes link underline */
-  padding: 4px 12px;
+  padding: 8px 12px;
     
 }
 .selected {
@@ -187,6 +188,7 @@ nav li {
 
 }
 .topNav a {
+  text-decoration: none; /* Removes link underline */
   color: var(--accentColor-dark);
 
 }

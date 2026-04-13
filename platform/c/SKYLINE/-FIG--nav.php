@@ -13,17 +13,17 @@ $GLOBALS[$site]['GETS']['sideNav'] = $GLOBALS['sonar'] . 'a/' . $site . '/asSys/
 $GLOBALS[$site]['GETS']['topNav'] = $GLOBALS['sonar'] . 'a/' . $site . '/asSys/top-nav.php'; 
 
 $GLOBALS[$site]['room'] = [
-                    ["name" => "PUBLIC-OFFICE"],
+                    ["name" => "PUBLIC"],
                     ["name" => "REGISTRAR"],
-                    ["name" => "REPORT-DEPARTMENT"],
-                    ["name" => "window"]
+                    ["name" => "REPORT"],
+                    ["name" => "w"]
                     ]; 
 $GLOBALS[$site]['key'] = "home"; 
 
 $nav = [ "navSec" => 
 
     [ 
-        "DOOR" => "PUBLIC-OFFICE", 
+        "DOOR" => "PUBLIC", 
         "BUILDING" => "PUBLIC OFFICE", //DOM?
         "KEY" => "FRONT-DESK", 
         "ROOMS" => [
@@ -38,7 +38,7 @@ $nav = [ "navSec" =>
             ],
     /* SECTION GROUP -------------------------------- */
     ]],[ 
-        "DOOR" => "REPORT-DEPARTMENT", 
+        "DOOR" => "REPORT", 
         "BUILDING" => "REPORT DEPARTMENT",  
         "KEY" => "FRONT-DESK", 
         "ROOMS" => [

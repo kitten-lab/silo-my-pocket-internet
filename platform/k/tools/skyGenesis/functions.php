@@ -33,10 +33,6 @@ function KDE($ERROR_TYPE, $SOURCE, $ECHO_CHAIN, $ERROR) {
 }
 
 
-// ROUTER FUNCTIONS
-function ROUTE($LETTER){
-    return $LETTER . '/'; 
-    }
 
 // create a WORLD AUTH file //
 function CREATE_SKY_AUTH($WORLD_NAME, $VARIANT) {
