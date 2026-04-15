@@ -1,95 +1,83 @@
 
 <?php
 
-function keyMaker($YouAreHere,$sys,$site) {
-if (empty($_GET)) {
-    $uri = trim($_SERVER['REQUEST_URI'], '/');
-    $uri = strtok($uri, '?');
-    if (str_starts_with($uri, $GLOBALS['YouAreHere'])) {
-        $uri = substr($uri, strlen($GLOBALS['YouAreHere']));
-    }
-    $uri = trim($uri, '/');
 
-    $segments = explode('/', $uri);
+function interraLocation(){
+    $SITE = $GLOBALS['SITE'];
 
-    if (count($segments) >= 2) {
-        $_GET[$segments[0]] = $segments[1];
-    }
-
-    if (count($segments) == 1) {
-        $doors = $GLOBALS[$site]['room'] ?? [];
-        foreach ($doors as $door){
-            if ($segments[0] == $door['name']) {
-                aRoomWithNoKey();
-                require resolveShell($GLOBALS['sys'] ?? "TERMINAL");
+    $CHECK_ROUTE = $GLOBALS['ROUTE']['B']['URI'];
+    if (empty($CHECK_ROUTE)){
+        skylite(openSky("MISSING WORLD"));
+                require resolveShell($GLOBALS[$SITE]['SYS_SLUG']);
                 exit;
-            }
+    } else {
+        return $GLOBALS['SKY_LOCATION'] = 'b/' . $GLOBALS[$SITE]['URI'];
+    }
+}
+
+function keyMaker() {
+    $SITE = $GLOBALS['SITE'];
+
+    if (empty($_GET)) {
+        $uri = trim($_SERVER['REQUEST_URI'], '/');
+        $uri = strtok($uri, '?');
+        if (str_starts_with($uri, $GLOBALS['SKY_LOCATION'])) {
+            $uri = substr($uri, strlen($GLOBALS['SKY_LOCATION']));
         }
-    }
-}
-}
+        $uri = trim($uri, '/');
 
+        $segments = explode('/', $uri);
 
-function searchKeyAndLock($m, $site){
-if (empty($_GET)) {
-    $uri = trim($_SERVER['REQUEST_URI'], '/');
-    $uri = strtok($uri, '?');
-    if (str_starts_with($uri, $GLOBALS['YouAreHere'])) {
-        $uri = substr($uri, strlen($GLOBALS['YouAreHere']));
-    }
-    $uri = trim($uri, '/');
+        if (count($segments) >= 2) {
+            $_GET[$segments[0]] = $segments[1];
+        }
 
-    $segments = explode('/', $uri);
-
-    if (count($segments) >= 2) {
-        $_GET[$segments[0]] = $segments[1];
-    }
-
-    if (count($segments) == 1) {
-        $doors = $GLOBALS[$site]['room'] ?? [];
-        foreach ($doors as $door){
-            if ($segments[0] == $door['name']) {
-                aRoomWithNoKey();
-                require resolveShell($GLOBALS['sys'] ?? "TERMINAL");
-                exit;
+        if (count($segments) == 1) {
+            $doors = $GLOBALS[$SITE]['room'] ?? [];
+            foreach ($doors as $door){
+                if ($segments[0] == $door['name']) {
+                    aRoomWithNoKey();
+                    require resolveShell($GLOBALS[$SITE]['SYS_SLUG'] ?? "SKYLINE");
+                    exit;
+                }
             }
         }
     }
 }
 
-$foundKey = false;
-$foundRoom = false;
+function lockAndKey(){  
+    $SITE = $GLOBALS['SITE'];
 
-foreach ($_GET as $room => $key) {
-    $doors = $GLOBALS[$site]['room'] ?? [];
+    $foundKey = false;
+    $foundRoom = false;
 
-    foreach ($doors as $door){
-        if ($room == $door['name']) {
-            $foundRoom = true;
-            $path = $GLOBALS['sonar'] . $m['rooms'] . $GLOBALS['SITE_SLUG'] . '/' . $door['name'] .'/' . $key . '.php';
-            if (empty($key)) {
-                aRoomWithNoKey();
-                require resolveShell($GLOBALS['sys']);
-                exit;
-            }
-                if (file_exists($path)) {
-                    $foundKey = true;
-                    require $path;
+    foreach ($_GET as $room => $key) {
+        $doors = $GLOBALS[$SITE]['room'] ?? [];
+
+        foreach ($doors as $door){
+            if ($room == $door['name']) {
+                $foundRoom = true;
+                $path = $GLOBALS['ROUTE']['M']['URI'] . '/' . $door['name'] .'/' . $key . '.php';
+                if (empty($key)) {
+                    aRoomWithNoKey();
+                    require resolveShell($GLOBALS[$SITE]['SYS_SLUG']);
+                    exit;
+                }
+                    if (file_exists($path)) {
+                        $foundKey = true;
+                        require $path;
+                        break;
+                    } 
                     break;
-                } 
-                break;
-        } 
+            } 
+        }
     }
-}
-    if (!$foundRoom) {
-        notARoom();
-    }
-    if (!$foundKey && $foundRoom) {
-        noKeyFound();
-    }
+        if (!$foundRoom) { notARoom(); }
+        if (!$foundKey && $foundRoom) { noKeyFound(); }
 
-require resolveShell($GLOBALS['sys']);
+    require resolveShell($GLOBALS[$SITE]['SYS_SLUG']);
 }
+
 
 
 // ROUTER FUNCTIONS
@@ -117,41 +105,7 @@ function getSkyAUTH($SYSTEM_PATH) {
     exit;
 } }
 
-function lockAndKey($sonar,$site,$m,$sys,$navcall){  
 
-$foundKey = false;
-$foundRoom = false;
-
-foreach ($_GET as $room => $key) {
-    $doors = $GLOBALS[$site]['room'] ?? [];
-
-    foreach ($doors as $door){
-        if ($room == $door['name']) {
-            $foundRoom = true;
-            $path = $GLOBALS['sonar'] . $m['rooms'] . $GLOBALS['SITE_SLUG'] . '/' . $door['name'] .'/' . $key . '.php';
-            if (empty($key)) {
-                aRoomWithNoKey();
-                require resolveShell($GLOBALS['sys']);
-                exit;
-            }
-                if (file_exists($path)) {
-                    $foundKey = true;
-                    require $path;
-                    break;
-                } 
-                break;
-        } 
-    }
-}
-    if (!$foundRoom) {
-        notARoom();
-    }
-    if (!$foundKey && $foundRoom) {
-        noKeyFound();
-    }
-
-require resolveShell($GLOBALS['sys']);
-}
 
 
 function skylite($result) {
@@ -232,17 +186,6 @@ function loadTool_Style($tool) {
          }
 }
 
-function youAreHere($site,$sonar){
-    $mpath = $sonar . 'b/' . $site . '/';
-    if (empty($mpath)){
-        skylite(openSky("MISSING WORLD"));
-                require resolveShell($sys);
-                exit;
-
-    } else {
-        return $GLOBALS['YouAreHere'] = 'b/' . $site;
-    }
-}
 
 
 
@@ -262,6 +205,19 @@ function summonTool($tool, $function) {
 
 
 
+
+function youAreHere(){
+    $SITE = $GLOBALS['SITE'];
+
+    $CHECK_ROUTE = $GLOBALS['ROUTE']['B']['URI'];
+    if (empty($CHECK_ROUTE)){
+        skylite(openSky("MISSING WORLD"));
+                require resolveShell($sys);
+                exit;
+    } else {
+        return $GLOBALS['SKY_LOCATION'] = 'b/' . $GLOBALS[$SITE]['URI'];
+    }
+}
 
 
 

@@ -1,4 +1,4 @@
-<?php $GETS__SITE = $GLOBALS[$site]['GETS']; ?>
+<?php $GETS__SITE = $GLOBALS[$SITE]['GETS']; ?>
 <?php foreach ($GLOBALS['GETS']['actor'] as $fn) 
     { echo $fn(); } 
 

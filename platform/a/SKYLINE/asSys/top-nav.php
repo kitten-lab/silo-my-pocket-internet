@@ -13,7 +13,7 @@ $config = $GLOBALS['nav']['navSec'] ?? [];
 echo "<span>" . $GLOBALS[$SITE]['SYS_SLUG'] . "</span>";
 foreach ($topnav as $section) {
 echo "<span>"; 
-echo "<a href=" . b_root . '/' . $site . '/' . $section['DOOR'] . '/' . $section['KEY'] . ">";
+echo "<a href=" . b_root . '/' . $GLOBALS[$SITE]['URI'] . '/' . $section['DOOR'] . '/' . $section['KEY'] . ">";
 echo $section['BUILDING'] . "</a></span>";
 }
  ?>

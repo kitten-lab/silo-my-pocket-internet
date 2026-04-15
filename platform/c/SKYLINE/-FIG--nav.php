@@ -9,16 +9,16 @@ Listen, you are going to need to TRUST THE [] colors. They
 don't lie. But sometimes, you will be confused by this nest.
 That's okay. Each time it WILL GET EASIER.  -abl 
 --------------------------------------------------------------*/
-$GLOBALS[$site]['GETS']['sideNav'] = $GLOBALS['sonar'] . 'a/' . $site . '/asSys/nav.php'; 
-$GLOBALS[$site]['GETS']['topNav'] = $GLOBALS['sonar'] . 'a/' . $site . '/asSys/top-nav.php'; 
+$GLOBALS[$SITE]['GETS']['sideNav'] = $GLOBALS['sonar'] . 'a/' . $site . '/asSys/nav.php'; 
+$GLOBALS[$SITE]['GETS']['topNav'] = $GLOBALS['sonar'] . 'a/' . $site . '/asSys/top-nav.php'; 
 
-$GLOBALS[$site]['room'] = [
+$GLOBALS[$SITE]['room'] = [
                     ["name" => "PUBLIC"],
                     ["name" => "REGISTRAR"],
                     ["name" => "REPORT"],
                     ["name" => "w"]
                     ]; 
-$GLOBALS[$site]['key'] = "home"; 
+$GLOBALS[$SITE]['key'] = "home"; 
 
 $nav = [ "navSec" => 
 

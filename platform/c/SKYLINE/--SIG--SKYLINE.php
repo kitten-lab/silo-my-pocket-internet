@@ -3,20 +3,6 @@
 ================================================================
 >| Do not forget me. */ $loversMark = "808ʞps"; 
 
-$GLOBALS['sys'] = "SKYLINE"; 
-$GLOBALS['dom'] = "PUBLIC OFFICE"; 
-$GLOBALS['mod'] = $_GET['mod'] ?? "CLERK"; 
-$GLOBALS['site'] = "SKYLINE"; 
-$GLOBALS['SITE_SLUG'] = "SKYLINE"; 
-
-
-$GLOBALS['SITE'] = "SKYLINE";
-$GLOBALS[$SITE]['SYS'] = "SKYLINE";
-$GLOBALS[$SITE]['SYS_SLUG'] = "SKYLINE";
-$GLOBALS[$SITE]['DOM'] = "PUBLIC_OFFICE";
-$GLOBALS[$SITE]['MOD'] = "CLERK";
-$GLOBALS[$SITE]['URI'] = "SKYLINE";
-
     include __DIR__ . '/-FIG--nav.php';
     include __DIR__ . "/-FIG--postBASIC.php"; 
     include __DIR__ . "/-FIG--plogBasic.php"; 
@@ -24,14 +10,12 @@ $GLOBALS[$SITE]['URI'] = "SKYLINE";
     include __DIR__ . "/-FIG--routeErrors.php"; 
     
     function getMy_Styles(){
-        getA_Style("style",$GLOBALS['sys'],"asSys");
-        getA_Style("sky",$GLOBALS['sys'],"asSys");
-        getA_Style("fonts",$GLOBALS['sys'],"asSys");
-        getA_Style("style",$GLOBALS['dom'],"asDom");
+    $SITE = $GLOBALS['SITE'];
+        getA_Style("style", $GLOBALS[$SITE]['SYS'], "asSys");
+        getA_Style("sky",   $GLOBALS[$SITE]['SYS'], "asSys");
+        getA_Style("fonts", $GLOBALS[$SITE]['SYS'], "asSys");
+        getA_Style("style", $GLOBALS[$SITE]['DOM'], "asDom");
 
     }
-
-    function getMy_WWW($www){
-        $GLOBALS['WWW']['bar'] = $www;
-    }
+    
 ?>

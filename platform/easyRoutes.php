@@ -9,6 +9,7 @@ $GLOBALS['m']['rooms'] = 'm/rooms/';
 
 //better pathing
 $GLOBALS['INTERA']['SYSTEM'] = $GLOBALS['SONAR'] . 'k/systems/';
+$GLOBALS['INTERA']['TOOLS'] = $GLOBALS['SONAR'] . 'k/tools/';
 $GLOBALS['INTERA']['CONFIG'] = $GLOBALS['SONAR'] . 'k/configs/';
 
 

@@ -1,9 +1,8 @@
 <?php 
-$GLOBALS['sys'] = "SKYLINE";
-$GLOBALS['dom'] = "PUBLIC_OFFICE";
-$GLOBALS['mod'] = "CLERK";
-$GLOBALS['site'] = "SKYLINE";
-$GLOBALS['SITE_SLUG'] = "SKYLINE";
+# $GLOBALS['sys'] = "SKYLINE";
+# $GLOBALS['dom'] = "PUBLIC_OFFICE";
+# $GLOBALS['mod'] = "CLERK";
+ $GLOBALS['site'] = "SKYLINE";
 
 $GLOBALS['SITE'] = "SKYLINE";
 $GLOBALS[$SITE]['SYS_SLUG'] = "SKYLINE";

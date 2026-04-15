@@ -17,8 +17,10 @@ function resolveShell($sys) {
 //BETTER ROUTING
 
 $SYS = $GLOBALS[$SITE]['SYS'];
+$SITE = $GLOBALS[$SITE]['URI'];
 
-$GLOBALS['ROUTE']['A'][$SYS] = $SONAR . "b/" . $SYS . '/';
-
+$GLOBALS['ROUTE']['B']['URI'] = $SONAR . "b/" . $SITE . '/';
+$GLOBALS['ROUTE']['A'][$SYS] = $SONAR . "a/" . $SYS . '/';
 $GLOBALS['ROUTE']['C'][$SYS] = $SONAR . "c/" . $SYS . '/';
+$GLOBALS['ROUTE']['M']['URI'] = $SONAR . "m/rooms/" . $SITE . '/';
 ?>

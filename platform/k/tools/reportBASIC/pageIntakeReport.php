@@ -1,11 +1,12 @@
 
 <?php 
-require __DIR__ . '/-SIG--reportBASIC.php';
-require __DIR__ . '/../../systems/rehydrateSelf.php';
-$roomflavor = $GLOBALS[$site]["ROOM_FLAVOR"];
-$SIGFIG = $GLOBALS[$TOOL]['SIGFIG'][$roomflavor]['IntakeReport'] ?? []; 
+require __DIR__ . '/-SIG-reportBASIC.php';
+$SITE = $GLOBALS['SITE'];
 
+$THEME = $GLOBALS[$SITE]["ROOM_FLAVOR"];
+$SIGFIG = $GLOBALS['TOOL']['SIGFIG'][$THEME]['IntakeReport'] ?? []; 
 ?>
+
 <form method="POST" action="">
 <span class="">
     <label for="POST__REPORTER"><?= $SIGFIG['Reporter']; ?></label>
