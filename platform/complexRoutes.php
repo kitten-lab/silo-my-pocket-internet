@@ -14,4 +14,11 @@ function resolveShell($sys) {
     }
 // ----------------------------------------------------------------
 
+//BETTER ROUTING
+
+$SYS = $GLOBALS[$SITE]['SYS'];
+
+$GLOBALS['ROUTE']['A'][$SYS] = $SONAR . "b/" . $SYS . '/';
+
+$GLOBALS['ROUTE']['C'][$SYS] = $SONAR . "c/" . $SYS . '/';
 ?>

@@ -109,11 +109,11 @@ function SKY_AUTO_FAILURE(){
     skylite(leaf("Are you forgetting something?"));
 }
 
-function getSkyAUTH($SYSTEM_PATH, $c, $sonar, $sys) {
+function getSkyAUTH($SYSTEM_PATH) {
     
     if (!is_dir($SYSTEM_PATH)) {
     SKY_AUTO_FAILURE();
-    require resolveShell($sys);
+    require resolveShell($GLOBALS['SITE']['SYS']);
     exit;
 } }
 
