@@ -9,6 +9,13 @@ $GLOBALS['mod'] = $_GET['mod'] ?? "CLERK";
 $GLOBALS['site'] = "SKYLINE"; 
 $GLOBALS['SITE_SLUG'] = "SKYLINE"; 
 
+
+$GLOBALS['SITE'] = "SKYLINE";
+$GLOBALS[$SITE]['SYS'] = "SKYLINE";
+$GLOBALS[$SITE]['DOM'] = "PUBLIC_OFFICE";
+$GLOBALS[$SITE]['MOD'] = "CLERK";
+$GLOBALS[$SITE]['URI'] = "SKYLINE";
+
     include __DIR__ . '/-FIG--nav.php';
     include __DIR__ . "/-FIG--postBASIC.php"; 
     include __DIR__ . "/-FIG--plogBasic.php"; 

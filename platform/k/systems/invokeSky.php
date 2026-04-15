@@ -18,15 +18,16 @@ function nameRoomKey($text, $key) {
 }
 
 function SKY__AUTH($site, $SYS_SLUG, $SYS_DISPLAY, $MOD_SLUG, $MOD_DISPLAY, $DOM_SLUG, $DOM_DISPLAY, $ROOM_SLUG, $ROOM_DISPLAY,$ROOM_FLAVOR) {
-    $GLOBALS[$site]['SYS_SLUG'] = $SYS_SLUG;
-    $GLOBALS[$site]['SYS_DISPLAY'] = $SYS_DISPLAY;
-    $GLOBALS[$site]['MOD_SLUG'] = $MOD_SLUG;
-    $GLOBALS[$site]['MOD_DISPLAY'] = $MOD_DISPLAY;
-    $GLOBALS[$site]['DOM_SLUG'] = $DOM_SLUG;
-    $GLOBALS[$site]['DOM_DISPLAY'] = $DOM_DISPLAY;
-    $GLOBALS[$site]['ROOM_SLUG'] = $ROOM_SLUG;
-    $GLOBALS[$site]['ROOM_DISPLAY'] = $ROOM_DISPLAY;
-    $GLOBALS[$site]['ROOM_FLAVOR'] = $ROOM_FLAVOR;
+    $SITE = $GLOBALS['SITE'];
+    $GLOBALS[$SITE]['SYS_SLUG'] = $SYS_SLUG;
+    $GLOBALS[$SITE]['SYS_DISPLAY'] = $SYS_DISPLAY;
+    $GLOBALS[$SITE]['MOD_SLUG'] = $MOD_SLUG;
+    $GLOBALS[$SITE]['MOD_DISPLAY'] = $MOD_DISPLAY;
+    $GLOBALS[$SITE]['DOM_SLUG'] = $DOM_SLUG;
+    $GLOBALS[$SITE]['DOM_DISPLAY'] = $DOM_DISPLAY;
+    $GLOBALS[$SITE]['ROOM_SLUG'] = $ROOM_SLUG;
+    $GLOBALS[$SITE]['ROOM_DISPLAY'] = $ROOM_DISPLAY;
+    $GLOBALS[$SITE]['ROOM_FLAVOR'] = $ROOM_FLAVOR;
 }
 
 function SKY__ROUTE($TO__SYS, $TO__DOM, $TO__MOD, $TO__ROOM){
@@ -44,6 +45,7 @@ function declareSelf($sys,$dom,$mod) {
 
 function openSky($title){
     $GLOBALS['pageTitle'] = $title;
+
 }
 function bigHeading($text){
     $text = htmlspecialchars($text);
