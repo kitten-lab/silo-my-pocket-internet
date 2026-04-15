@@ -1,6 +1,8 @@
 <?php $GETS__SITE = $GLOBALS[$site]['GETS']; ?>
 <?php foreach ($GLOBALS['GETS']['actor'] as $fn) 
     { echo $fn(); } 
+
+$SITE = $GLOBALS['SITE'];
 ?>
 
 <!-- .... DEAR INFINITE POTENTIAL, HOLY DOCTYPE... -->
