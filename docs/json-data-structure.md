@@ -1,4 +1,4 @@
-# DEPO Data Documentation v1.0
+# INTERRA Data Documentation v1.0
 _CHESTER'S IMPORTS DATA FILE STRUCTURE_  
 
 This document covers the basic shapes of the data structure held in the json files used for Chester's Imports crating system.
@@ -11,9 +11,9 @@ TUID	=	chester's imports time chest id
 ```
 ## top level
 
-**`CUID`** - Chester's UNIQUE ID. The unique ID for the payload chests of all content recorded in the **DEPO**    
+**`CUID`** - Chester's UNIQUE ID. The unique ID for the payload chests of all content recorded on **INTERRA**    
 **`CUID-version`** - The current versioning number of the crate style, presently `3`  
-**`content`** - the **payload** of any given event in the DEPO.  
+**`content`** - the **payload** of any given event in the INTERRA.  
 **`route`** - route is used when a payload is moving from one environment to another inside the DEPO.  
 **`tags`** - tags explode at ;, use : for namespace, used all on ingestors for common shared query layer  
 **`environment`** - All context related to where the payload event occurred  
