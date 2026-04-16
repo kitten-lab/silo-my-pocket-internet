@@ -1,18 +1,18 @@
 <?php 
 openSky("SKYLINE SYSTEM REPORTS");
 SKY__AUTH(
-    $site,
-    $sys,
-    $site,
-    "SKYLINE-REPORTER", // storage slug of #MOD
-    "SKYLINE NEWS", // display name of MOD
-    "PUBLIC", // building slug #DOM
-    "PUBLIC OFFICE", // building display name
-    "NEWS", // room slug #ROOM
-    "THE NEWS ROOM",// room display name
-    "skyline-standard",
+    /*MOD_SLUG*/     "SKYLINE-REPORTER",
+    /*MOD_DISPLAY*/  "SKYLINE NEWS", 
+    
+    /*DOM_SLUG*/     "PUBLIC", 
+    /*DOM_DISPLAY*/  "PUBLIC OFFICES",
+
+    /*ROOM_SLUG*/    "NEWS", 
+    /*MOD_DISPLAY*/  "THE NEWS ROOM",
+
+    /*ROOM_FLAVOR*/  "skyline-standard"
 );
 
 bigHeading("Report a SKYLINE UPDATE");
-getTool("postBASIC","NewAdd");
+getTool("postBASIC","MakePost");
 closeSky();
