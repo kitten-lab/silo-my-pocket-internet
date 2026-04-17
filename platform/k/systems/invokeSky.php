@@ -34,6 +34,15 @@ function bigHeading($text){
     skylite("<h1>$text</h1>");
     }
 
+
+function title($text){
+    $text = htmlspecialchars($text);
+    skylite("<h1>$text</h1>");
+    }
+
+function hr(){
+    skylite("<hr>");
+    }
 function medHeading($text){
     $text = htmlspecialchars($text);
     skylite("<h2>$text</h2>");

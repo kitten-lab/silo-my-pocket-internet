@@ -3,16 +3,6 @@
 ================================================================
 >| Do not forget me. */ $loversMark = "808ʞps"; 
 
-$GLOBALS['SITE_SLUG'] = "WWW"; 
-
-$GLOBALS[$site]['room'] = [
-                    ["name" => "personal-log"],
-                    ["name" => "archived"],
-                    ["name" => "mystery"],
-                    ["name" => "programs"],
-                    ];
-$GLOBALS[$site]['key'] = "home"; 
-
     
     include __DIR__ . "/-FIG--nav.php";
     include __DIR__ . "/-FIG--plogBasic.php"; 
@@ -20,13 +10,12 @@ $GLOBALS[$site]['key'] = "home";
     include __DIR__ . "/-FIG--routeErrors.php"; 
     
     function getMy_Styles(){
-        getA_Style("style",$GLOBALS['sys'],"asSys");
-        getA_Style("sky",$GLOBALS['sys'],"asSys");
-        getA_Style("fonts",$GLOBALS['sys'],"asSys");
-        getA_Style("style",$GLOBALS['dom'],"asDom");
-    }
+    $SITE = $GLOBALS['SITE'];
+        getA_Style("style", $GLOBALS[$SITE]['SYS'], "asSys");
+        getA_Style("sky",   $GLOBALS[$SITE]['SYS'], "asSys");
+        getA_Style("fonts", $GLOBALS[$SITE]['SYS'], "asSys");
+        getA_Style("style", $GLOBALS[$SITE]['DOM'], "asDom");
 
-    function getMy_WWW($www){
-        $GLOBALS['WWW']['bar'] = $www;
     }
+    
 ?>

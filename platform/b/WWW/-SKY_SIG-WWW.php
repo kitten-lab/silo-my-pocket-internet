@@ -1,5 +1,10 @@
 <?php 
-$GLOBALS['sys'] = "WWW";
-$GLOBALS['dom'] = "WWW";
-$GLOBALS['mod'] = "WWW";
-$GLOBALS['site'] = "WWW";
+
+$GLOBALS['SITE'] = "WWW";
+$GLOBALS['site'] = $GLOBALS['SITE']; // HOLD OVER UNTIL WE FIND REMAINING LITTLE CASE 'site'
+$GLOBALS[$SITE]['SYS_SLUG'] = "WWW";
+$GLOBALS[$SITE]['SYS_DISPLAY'] = "WWW: POCKET ONLINE";
+$GLOBALS[$SITE]['SYS'] = "WWW";
+$GLOBALS[$SITE]['URI'] = "WWW";
+
+// 

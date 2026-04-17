@@ -1,0 +1,198 @@
+{
+    "cUID-A265BE497EBBD7D5": {
+        "CUID": "cUID-A265BE497EBBD7D5",
+        "chester_crate schema": 3,
+        "payload": {
+            "timber": {
+                "topic": "ALPHA ALEPH",
+                "leaf": "# Elpha aleph\r\n\r\nA L P H A\r\nA L E P H\r\nE L P H A\r\nA L A P H\r\n\r\nA L\r\nE L\r\n\r\nA E L P H A\r\nA E L E P H\r\n\r\nA E"
+            }
+        },
+        "route": [],
+        "tags": [
+            "aleph-bet",
+            "aleph",
+            "letter-boards"
+        ],
+        "environment": {
+            "viewport": null,
+            "sys": {
+                "slug": "TERMINAL",
+                "display": "TERMINAL.IO"
+            },
+            "dom": {
+                "slug": "IO",
+                "display": "IO"
+            },
+            "room": {
+                "slug": "FILES_ALEPH-BET_SDK-808",
+                "display": "SHARE YOUR MUSIC"
+            },
+            "mod": {
+                "slug": "SDK-808",
+                "display": "SDK-808"
+            }
+        },
+        "tool": {
+            "name": "postBASIC",
+            "type": "post",
+            "function": "MakePost",
+            "version": 2
+        },
+        "origin": {
+            "material": {
+                "type": "Obsidian Vault",
+                "source": {
+                    "name": "Terminal IO",
+                    "id": "_Chesters Imports\/Terminal IO",
+                    "created_on": 1757980800,
+                    "last_modified": 1734134400
+                },
+                "links": [
+                    "mod:sdk-808",
+                    "green",
+                    "terminal",
+                    "vault-material"
+                ],
+                "notes": "This SAM inherited the IMPORT SHOP, but can't remember Chester."
+            }
+        },
+        "TPS": {
+            "ingest_unix": 1776382536,
+            "event_unix": 1758144420,
+            "TUID": "tUID-1758144420.8451CE",
+            "timezone": "America\/New_York"
+        }
+    },
+    "cUID-AC310AA4BCC0C56C": {
+        "CUID": "cUID-AC310AA4BCC0C56C",
+        "chester_crate schema": 3,
+        "payload": {
+            "timber": {
+                "topic": "AVA EVE LIL",
+                "leaf": "```\nA V A\r\nV A V\r\n\r\nV A V connects\r\nA V A the mirror\r\n\r\nE V E = A V A\r\n\r\nA V A = L I L\r\n\r\nLIL\r ``` (\ud808\udda4) \r\nmeaning (contentious) ==winds as a weather phenomenon==\r\nof [Enlil, Sumerian Deity](https:\/\/en.wikipedia.org\/wiki\/Enlil)\r\n#deities\/sumaria #jupiter \r\n\r\n`the breath of god, the word`\r\n\r\nAVA = LIL \u2192 Lilith, the mirror\u2019s name\r\nLIL \r\n\r\n- **A V A** \u2192 the mirror. A at each edge, V as the split, the valley, the fold.\r\n    \r\n- **V A V** \u2192 the connector. V on each side, A at the center like a keystone. It\u2019s a bridge.\r\n    \r\n- Together: _the mirror (AVA) held by the bridge (VAV)._\r\n    \r\n\r\nAnd then the reveal:\r\n\r\n- **E V E = A V A.** Eve as the mirror-being, the reflection, the doubled one.\r\n    \r\n- Which folds back into: **AVA = LIL.** Lilith. The primal mirror, the hidden twin."
+            }
+        },
+        "route": [],
+        "tags": [
+            "name:ava",
+            "letter-boards",
+            "name:eve",
+            "word:vav"
+        ],
+        "environment": {
+            "viewport": null,
+            "sys": {
+                "slug": "TERMINAL",
+                "display": "TERMINAL.IO"
+            },
+            "dom": {
+                "slug": "IO",
+                "display": "IO"
+            },
+            "room": {
+                "slug": "FILES_ALEPH-BET_SDK-808",
+                "display": "SHARE YOUR MUSIC"
+            },
+            "mod": {
+                "slug": "SDK-808",
+                "display": "SDK-808"
+            }
+        },
+        "tool": {
+            "name": "postBASIC",
+            "type": "post",
+            "function": "MakePost",
+            "version": 2
+        },
+        "origin": {
+            "material": {
+                "type": "Obsidian Vault",
+                "source": {
+                    "name": "Terminal IO",
+                    "id": "_Chesters Imports\/Terminal IO",
+                    "created_on": 1757980800,
+                    "last_modified": 1734134400
+                },
+                "links": [
+                    "mod:sdk-808",
+                    "green",
+                    "terminal",
+                    "vault-material"
+                ],
+                "notes": "This SAM inherited the IMPORT SHOP, but can't remember Chester."
+            }
+        },
+        "TPS": {
+            "ingest_unix": 1776382623,
+            "event_unix": 1758275760,
+            "TUID": "tUID-1758275760.1C30A3",
+            "timezone": "America\/New_York"
+        }
+    },
+    "cUID-0EC525A38C3E7B1A": {
+        "CUID": "cUID-0EC525A38C3E7B1A",
+        "chester_crate schema": 3,
+        "payload": {
+            "timber": {
+                "topic": "JACKS DORM (DORN)",
+                "leaf": "FURTHER ALPHA EXPORATION OF NAMES IN RELATION TO MY PERSONAL ANIMA\/ANIMUS\r\nsee: [[JACKS JAX JCKAS]]\r\n```\r\nJ A C K S D O R M \r\n\r\nJSN   = ?\r\nARN   = Ava\r\nCST   = ?\r\nKDE   = Kat\r\nSHN   = Sam\r\nDRK   = Dan, DanYI\r\n?     = Or'iel\r\nRYN   = ?\r\nMKL   = ?\r\n```\r\n[[the GLASS]] throws us an interesting #glitch-slip and reads \"DORM in the above to be DORN\"\r\n\r\n**dorn** most commonly meaning: **\"thorn\"** in German and Dutch, referring to the sharp point of a plant or **a person who lived near a thorny place**."
+            }
+        },
+        "route": [],
+        "tags": [
+            "glitch-slip",
+            "animus-anima",
+            "comparisons"
+        ],
+        "environment": {
+            "viewport": null,
+            "sys": {
+                "slug": "TERMINAL",
+                "display": "TERMINAL.IO"
+            },
+            "dom": {
+                "slug": "IO",
+                "display": "IO"
+            },
+            "room": {
+                "slug": "FILES_ALEPH-BET_SDK-808",
+                "display": "SHARE YOUR MUSIC"
+            },
+            "mod": {
+                "slug": "SDK-808",
+                "display": "SDK-808"
+            }
+        },
+        "tool": {
+            "name": "postBASIC",
+            "type": "post",
+            "function": "MakePost",
+            "version": 2
+        },
+        "origin": {
+            "material": {
+                "type": "Obsidian Vault",
+                "source": {
+                    "name": "Terminal IO",
+                    "id": "_Chesters Imports\/Terminal IO",
+                    "created_on": 1757980800,
+                    "last_modified": 1734134400
+                },
+                "links": [
+                    "mod:sdk-808",
+                    "green",
+                    "terminal",
+                    "vault-material"
+                ],
+                "notes": "This SAM inherited the IMPORT SHOP, but can't remember Chester."
+            }
+        },
+        "TPS": {
+            "ingest_unix": 1776384053,
+            "event_unix": 1758156420,
+            "TUID": "tUID-1758156420.C1EAA1",
+            "timezone": "America\/New_York"
+        }
+    }
+}

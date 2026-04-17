@@ -62,10 +62,7 @@ function json_origin(){
             "created_on" => $GLOBALS['MATERIAL']['SOURCE']['CREATED'],
             "last_modified" => $GLOBALS['MATERIAL']['SOURCE']['LAST_MODIFIED'],
             ],
-    "reference" => [
-        "ref" => 
-            $GLOBALS['MATERIAL']['REFS'],
-    ],
+    "links" => $GLOBALS['MATERIAL']['REFS'],
     "notes" => $GLOBALS['MATERIAL']['DETAILS'],
 ],];
 }
@@ -101,4 +98,57 @@ $TOOL = $GLOBALS['TOOL'];
     "function" => $TOOL['FUNCTION'],
     "version" => $TOOL['VERSION'],
 ];
+}
+
+
+function crateTags($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID){
+    $SITE = $GLOBALS['SITE'];
+    $GLOBALS['TAGS'] = array_filter(array_map(function($q){
+        return strtolower(trim($q));
+    }, explode(';', $RAW_TAGS)));
+
+    foreach ($GLOBALS['TAGS'] as $TAG){
+
+    $TAG = strtolower(trim($TAG));
+
+        if (strpos($TAG, ':') !== false) {    
+            [$type, $value] = explode(':', $TAG, 2);
+            $type = trim($type);
+            $value = trim($value);
+        } else {
+            $type = null;
+            $value = trim($TAG);
+        }
+
+    $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
+
+        $ROUTE = $ROUTE__LINE . '/tags/';
+        if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
+
+        $TAG_CHEST = $ROUTE . '/tags.json';
+        $json = file_get_contents($TAG_CHEST);
+        $TAGS = json_decode($json, true);
+
+
+    if (!$TAGS) {
+        $TAGS = [];
+    }
+
+
+        if (!isset($TAGS[$TAG])) {
+        $TAGS[$TAG] = [
+            "type" => $type, 
+            "value" => $value, 
+            "used_by" => []
+            ];
+        }
+$ACTOR = $GLOBALS['TOOL']['ACTOR'];
+        if (!in_array($ACTOR, $TAGS[$TAG]['used_by'])){
+            $TAGS[$TAG]['used_by'][$ACTOR][] = $cUID;
+        }
+
+        
+
+    file_put_contents($TAG_CHEST, json_encode($TAGS));
+}
 }

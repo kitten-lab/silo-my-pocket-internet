@@ -4,7 +4,7 @@
 } ?>
     <!DOCTYPE html>
     <html><head>
-    <title><?= $GLOBALS['pageTitle'] ?></title>
+    <title><?= $GLOBALS[$SITE]['ROOM_DISPLAY'] ?></title>
     <!-- THE CALLING OF THE STYLESHEET PROCESSION -->
     <?php 
 foreach ($GLOBALS['GETS']['dressing'] as $fn) {
@@ -16,10 +16,10 @@ foreach ($GLOBALS['GETS']['dressing'] as $fn) {
 <!-- END OPENING PRAYERS -->
 
 <div class="wwwExplorer_mainShell"></div>
-<div class="wwwExplorer_windowTitleBar"><?= $GLOBALS['pageTitle'] ?></div>
+<div class="wwwExplorer_windowTitleBar"><?= $GLOBALS[$SITE]['ROOM_DISPLAY'] ?></div>
 <div class="wwwExplorer_windowToolBar">
 <div class="wwwExplorer_linkBar"><a href="#">< back</a> <a href="#">forward ></a>
-<span class="linkSlug"> m:>|<?= $GLOBALS['WWW']['bar'] ?></span> <a href="#">GO!</a></div>
+<span class="linkSlug"> <?= $GLOBALS[$SITE]['SYS_SLUG'] ?>/<?= $GLOBALS[$SITE]['DOM_SLUG'] ?>/<?= $GLOBALS[$SITE]['ROOM_SLUG'] ?></span> <a href="#">GO!</a></div>
 
 <div class="wwwExplorer_innerShell">
 

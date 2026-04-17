@@ -1,7 +1,7 @@
 <?php 
 openSky("SKYLINE SYSTEM REPORTS");
 SKY__AUTH(
-    /*MOD_SLUG*/     "SKYLINE-REPORTER",
+    /*MOD_SLUG*/     "SKYLINE-REPORTERB",
     /*MOD_DISPLAY*/  "SKYLINE NEWS", 
     
     /*DOM_SLUG*/     "PUBLIC", 

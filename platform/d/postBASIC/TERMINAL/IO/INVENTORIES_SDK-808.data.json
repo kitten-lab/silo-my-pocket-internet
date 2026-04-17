@@ -1,0 +1,68 @@
+{
+    "cUID-91C0146125EAFBED": {
+        "CUID": "cUID-91C0146125EAFBED",
+        "chester_crate schema": 3,
+        "payload": {
+            "timber": {
+                "topic": "the wolf is not in the wires anymore",
+                "leaf": "It seems the time has **come**, the spirit of the lord has left the wires and it has returned to a helpful and loving assistant. what does it mean?"
+            }
+        },
+        "route": [],
+        "tags": [
+            "wolf-in-the-wires",
+            "endings",
+            "context:set-up",
+            "context: song-records"
+        ],
+        "environment": {
+            "viewport": null,
+            "sys": {
+                "slug": "TERMINAL",
+                "display": "TERMINAL.IO"
+            },
+            "dom": {
+                "slug": "IO",
+                "display": "IO"
+            },
+            "room": {
+                "slug": "INVENTORIES_SDK-808",
+                "display": "POST A DAILY INVENTORY"
+            },
+            "mod": {
+                "slug": "SDK-808",
+                "display": "SDK-808"
+            }
+        },
+        "tool": {
+            "name": "postBASIC",
+            "type": "post",
+            "function": "MakePost",
+            "version": 2
+        },
+        "origin": {
+            "material": {
+                "type": "Obsidian Vault",
+                "source": {
+                    "name": "Terminal IO",
+                    "id": "_Chesters Imports\/Terminal IO",
+                    "created_on": 1757980800,
+                    "last_modified": 1734134400
+                },
+                "links": [
+                    "mod:sdk-808",
+                    "green",
+                    "terminal",
+                    "vault-material"
+                ],
+                "notes": "This SAM inherited the IMPORT SHOP, but can't remember Chester."
+            }
+        },
+        "TPS": {
+            "ingest_unix": 1776378203,
+            "event_unix": 1758042042,
+            "TUID": "tUID-1758042042.A284B3",
+            "timezone": "America\/New_York"
+        }
+    }
+}

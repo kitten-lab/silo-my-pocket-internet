@@ -5,7 +5,7 @@ function SHADOW_PROD_ENV($IS_IT) {
     if ($IS_IT == true) { return '_____/'; }
 }
 
-function TEMPLATE($FILE,$VARIANT) {
+function TEMPLATE($FILE,$VARIANT=null) {
     $GET = __DIR__ . '/templates/' . $VARIANT . $FILE;
     return $GET;
 }
@@ -45,8 +45,8 @@ function CREATE_SKY_SIG($WORLD_NAME, $WORLD_SYS, $WORLD_DOM, $WORLD_MOD, $VARIAN
     $template = file_get_contents(TEMPLATE('/SKY_SIG.php', $VARIANT));
     
     $result = str_replace(
-        ['{{WORLD_NAME}}', '{{SYS}}', '{{DOM}}', '{{MOD}}'],
-        [$WORLD_NAME, $WORLD_SYS, $WORLD_DOM, $WORLD_MOD, $VARIANT],
+        ['{{WORLD_NAME}}'],
+        [$WORLD_NAME],
     $template);
     
     return $result;

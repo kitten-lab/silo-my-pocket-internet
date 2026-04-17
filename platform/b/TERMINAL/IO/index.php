@@ -1,7 +1,8 @@
 <?php 
-require_once __DIR__ . '/-SKY_AUTH-IO.php';
+require_once __DIR__ . '/-SKY_AUTH-TERMINAL.php';
 
-youAreHere($SITE_SLUG, $sonar);
-searchKeyAndLock($m, $site);
+interraLocation();
+keyMaker();
+lockAndKey();
 
 ?>

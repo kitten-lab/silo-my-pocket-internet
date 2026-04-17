@@ -20,6 +20,7 @@ $Parsedown = new Parsedown();
 foreach ($CHEST_THINGS as $TIMBER) {
     $content = $TIMBER['payload']['timber'];
   if ($id == $TIMBER['CUID']) {
+    echo "<h3>" . $GLOBALS[$SITE]['ROOM_SLUG'] . ' ' . $TIMBER['CUID'] . "</h3><hr>";
     echo "<h2>" . $content['topic'] . "</h2>";
     echo $Parsedown->text($content['leaf']);
   }

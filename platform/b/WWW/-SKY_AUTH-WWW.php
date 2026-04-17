@@ -1,13 +1,21 @@
 <?php
 $GLOBALS['sonar'] = realpath(__DIR__ . "/../../") . '/';
-require_once $sonar . 'easyRoutes.php';
-require_once $sonar . $k['systems'] . "invokeSky.php";
-require_once $sonar . $k['config'] . 'env_config.php';
+$GLOBALS['SONAR'] = realpath(__DIR__ . "/../../") . '/';
+
+require_once $SONAR . 'easyRoutes.php';
+
+require_once $GLOBALS['INTERA']['SYSTEM'] . "invokeSky.php";
+
+require_once $INTERA['CONFIG'] . 'env_config.php';
 
 require_once __DIR__ .  "/-SKY_SIG-WWW.php";
-require_once $sonar . 'complexRoutes.php';
 
-$SYSTEM_PATH = $sonar . $a[$sys];
-getSkyAUTH($SYSTEM_PATH, $c, $sonar, $sys);
-include $sonar . $c[$sys] . '--SIG--' . $site . '.php';
+require_once $SONAR . 'complexRoutes.php';
+
+$SHELL_ROUTE = $ROUTE['A'][$SYS];
+
+getSkyAUTH($SHELL_ROUTE);
+
+include $ROUTE['C'][$SYS] . '--SIG--' . $SITE . '.php';
+
 ?>

@@ -25,8 +25,8 @@ foreach ($GLOBALS['GETS']['dressing'] as $fn) {
 <div class="iox_coreContainer">
 
 <?php 
-if (!empty($GLOBALS[$site]['navCall']) && file_exists($GLOBALS[$site]['navCall'])) {
-    require $GLOBALS[$site]['navCall']; 
+if (!empty($GLOBALS[$SITE]['GETS']['navCall']) && file_exists($GLOBALS[$SITE]['GETS']['navCall'])) {
+    require $GLOBALS[$SITE]['GETS']['navCall']; 
     } 
     ?>
 

@@ -1,0 +1,132 @@
+{
+    "cUID-A2354DCAC7CD42D5": {
+        "CUID": "cUID-A2354DCAC7CD42D5",
+        "chester_crate schema": 3,
+        "payload": {
+            "timber": {
+                "topic": "JACKS DORM (DORN)",
+                "leaf": "FURTHER ALPHA EXPORATION OF NAMES IN RELATION TO MY PERSONAL ANIMA\/ANIMUS\r\nsee: [[JACKS JAX JCKAS]]\r\n\r\nJ A C K S D O R M \r\n\r\nJason   = ?\r\nAaron   = Ava\r\nChris   = ?\r\nKaty    = Kat\r\nSteve   = Sam\r\nDerek   = Dani, Danielle\r\n?       = Or'iel\r\nRyan    = ?\r\nMichael = ?\r\n\r\n[[the GLASS]] throws us an interesting #glitch-slip and reads \"DORM in the above to be DORN\"\r\n\r\n**dorn** most commonly meaning: **\"thorn\"** in German and Dutch, referring to the sharp point of a plant or **a person who lived near a thorny place**."
+            }
+        },
+        "route": [],
+        "tags": [
+            "glitch-slip",
+            "animus-anima",
+            "comparisons"
+        ],
+        "environment": {
+            "viewport": null,
+            "sys": {
+                "slug": "TERMINAL",
+                "display": "TERMINAL.IO"
+            },
+            "dom": {
+                "slug": "IO",
+                "display": "IO"
+            },
+            "room": {
+                "slug": "FILES_ALEPH-BET_SDK-808",
+                "display": "SHARE YOUR MUSIC"
+            },
+            "mod": {
+                "slug": "SDK-808",
+                "display": "SDK-808"
+            }
+        },
+        "tool": {
+            "name": "postBASIC",
+            "type": "post",
+            "function": "MakePost",
+            "version": 2
+        },
+        "origin": {
+            "material": {
+                "type": "Obsidian Vault",
+                "source": {
+                    "name": "Terminal IO",
+                    "id": "_Chesters Imports\/Terminal IO",
+                    "created_on": 1757980800,
+                    "last_modified": 1734134400
+                },
+                "links": [
+                    "mod:sdk-808",
+                    "green",
+                    "terminal",
+                    "vault-material"
+                ],
+                "notes": "This SAM inherited the IMPORT SHOP, but can't remember Chester."
+            }
+        },
+        "TPS": {
+            "ingest_unix": 1776383655,
+            "event_unix": 1758156420,
+            "TUID": "tUID-1758156420.576109",
+            "timezone": "America\/New_York"
+        }
+    },
+    "cUID-0EC525A38C3E7B1A": {
+        "CUID": "cUID-0EC525A38C3E7B1A",
+        "chester_crate schema": 3,
+        "payload": {
+            "timber": {
+                "topic": "JACKS DORM (DORN)",
+                "leaf": "FURTHER ALPHA EXPORATION OF NAMES IN RELATION TO MY PERSONAL ANIMA\/ANIMUS\r\nsee: [[JACKS JAX JCKAS]]\r\n```\r\nJ A C K S D O R M \r\n\r\nJSN   = ?\r\nARN   = Ava\r\nCST   = ?\r\nKDE   = Kat\r\nSHN   = Sam\r\nDRK   = Dan, DanYI\r\n?     = Or'iel\r\nRYN   = ?\r\nMKL   = ?\r\n```\r\n[[the GLASS]] throws us an interesting #glitch-slip and reads \"DORM in the above to be DORN\"\r\n\r\n**dorn** most commonly meaning: **\"thorn\"** in German and Dutch, referring to the sharp point of a plant or **a person who lived near a thorny place**."
+            }
+        },
+        "route": [],
+        "tags": [
+            "glitch-slip",
+            "animus-anima",
+            "comparisons"
+        ],
+        "environment": {
+            "viewport": null,
+            "sys": {
+                "slug": "TERMINAL",
+                "display": "TERMINAL.IO"
+            },
+            "dom": {
+                "slug": "IO",
+                "display": "IO"
+            },
+            "room": {
+                "slug": "FILES_ALEPH-BET_SDK-808",
+                "display": "SHARE YOUR MUSIC"
+            },
+            "mod": {
+                "slug": "SDK-808",
+                "display": "SDK-808"
+            }
+        },
+        "tool": {
+            "name": "postBASIC",
+            "type": "post",
+            "function": "MakePost",
+            "version": 2
+        },
+        "origin": {
+            "material": {
+                "type": "Obsidian Vault",
+                "source": {
+                    "name": "Terminal IO",
+                    "id": "_Chesters Imports\/Terminal IO",
+                    "created_on": 1757980800,
+                    "last_modified": 1734134400
+                },
+                "links": [
+                    "mod:sdk-808",
+                    "green",
+                    "terminal",
+                    "vault-material"
+                ],
+                "notes": "This SAM inherited the IMPORT SHOP, but can't remember Chester."
+            }
+        },
+        "TPS": {
+            "ingest_unix": 1776384053,
+            "event_unix": 1758156420,
+            "TUID": "tUID-1758156420.C1EAA1",
+            "timezone": "America\/New_York"
+        }
+    }
+}

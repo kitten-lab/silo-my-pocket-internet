@@ -10,6 +10,7 @@ $GLOBALS['TOOL'] = [
 
     "NAME" => "reportBASIC",
     "FUNCTION" => "IntakeReport",
+    "ACTOR" => $_POST['POST__REPORTER'],
     "TYPE" => "post",
     "VERSION" => 2,
     "SIGFIG" => [

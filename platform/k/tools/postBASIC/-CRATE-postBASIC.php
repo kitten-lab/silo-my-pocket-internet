@@ -3,8 +3,8 @@
 function json_payload(){
     return [
     "timber" => [
-        "topic" => $GLOBALS['TEMP']['POST__TIMBER_TOPIC'],
-        "leaf" => $GLOBALS['TEMP']['POST__TIMBER_LEAF'],
+        "topic" => $_POST['POST__TIMBER_TOPIC'],
+        "leaf" => $_POST['POST__TIMBER_LEAF'],
     ]];
 }
 

@@ -3,16 +3,16 @@
 function json_payload(){
     return [
     "timber" => [
-        "topic" => $GLOBALS['TEMP']['POST__TIMBER_TOPIC'],
-        "leaf" => $GLOBALS['TEMP']['POST__TIMBER_LEAF'],
+        "topic" => $_POST['POST__TIMBER_TOPIC'],
+        "leaf" => $_POST['POST__TIMBER_LEAF'],
     ]];
 }
 
-function json_route(){
-$SITE = $GLOBALS['SITE'];
+function json_route(){ $SITE = $GLOBALS['SITE'];
+
     return [
     "from" => [
-        "mod" => $GLOBALS['TEMP']['FROM__REPORTER'] ?? $GLOBALS[$SITE]['MOD_SLUG'],
+        "mod" => $_POST['POST__REPORTER'] ?? $GLOBALS[$SITE]['MOD_SLUG'],
     ],
     "to" => [
         "mod" => $GLOBALS['TO']['MOD_SLUG'] ?? $GLOBALS[$SITE]['MOD_SLUG'],

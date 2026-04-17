@@ -3,36 +3,22 @@ require_once $GLOBALS['INTERA']['SYSTEM'] . 'rehydrateSelf.php';
 require_once $GLOBALS['INTERA']['SYSTEM'] . 'chestersCrates.php'; //GET SHADOW PROD TOGGLE
 require_once $GLOBALS['INTERA']['TOOLS'] . 'skyGenesis/functions.php'; //GET SHADOW PROD TOGGLE
 
+    $SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
+
 require_once __DIR__ . '/-SIG-postBASIC.php'; //GET SHADOW PROD TOGGLE
 require_once __DIR__ . '/-CRATE-postBASIC.php'; //GET SHADOW PROD TOGGLE
 
-$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    
-    $POST__TIMEZONE =    $_POST['POST__TZ'];
-
-    // CHANGE PER TOOL //
-        $GLOBALS['TEMP']['FROM__REPORTER'] = $_POST['POST__REPORTER']; 
-        $GLOBALS['TEMP']['POST__TIMBER_TOPIC'] = $_POST['POST__TIMBER_TOPIC']; 
-        $GLOBALS['TEMP']['POST__TIMBER_LEAF'] = $_POST['POST__TIMBER_LEAF']; 
 
 
-    ## GET TAGS
-    $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
-    $GLOBALS['TAGS'] = array_filter(array_map(function($q){
-        return strtolower(trim($q));
-    }, explode(';', $RAW_TAGS)));
-
-
-    $cUID = 'cUID-' . strtoupper(bin2hex(random_bytes(8)));
 
     // DO NOT TOUCHY // THE TPS MACHINE 
 
         $event_time = (int)filter_var($_POST['POST__EVENT_UNIX'], FILTER_SANITIZE_NUMBER_INT);
 
         $unix = time();
-        $tzone = $POST__TIMEZONE;
+        $tzone = $_POST['POST__TZ'];
         $ms = round(microtime(true) * 1000);
         $time = new DateTime("@$unix");
         $time->setTimezone(new DateTimeZone($tzone));
@@ -45,14 +31,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $tpstime = $unix;
             $event_time = $unix;
         }
-    $event_calc = new DateTime("@$event_time");
+    
+        $event_calc = new DateTime("@$event_time");
         $simpledate = $event_calc->format('Y-m-d');
         $simpleyear = $event_calc->format('Y');
 
         $tpsDATA = buildTPS($tpstime, $ms, $tzone, $event_time);
 
-    $tUID = 'tUID-' . $simpledate . '.' . strtoupper(bin2hex(random_bytes(3)));
-  
+$cUID = 'cUID-' . strtoupper(bin2hex(random_bytes(8)));
+$tUID = 'tUID-' . $event_time . '.' . strtoupper(bin2hex(random_bytes(3)));
+
+## GET TAGS
+$RAW_TAGS = $_POST['POST__TAGS'] ?? '';
+crateTags($RAW_TAGS,$SHADOW_PROD_TOGGLE,$cUID);
 
 // ============================================================================
 // OKAY LETS MAKE A CHESTER CRATE OF THIS BIT OF STUFFS! 

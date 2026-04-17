@@ -40,22 +40,15 @@
         },
         "origin": {
             "material": {
-                "type": "Obsidian Vault",
+                "type": null,
                 "source": {
-                    "name": "Terminal IO",
-                    "id": "_Chesters Imports\/Terminal IO",
-                    "created_on": 1757980800,
-                    "last_modified": 1734134400
+                    "name": null,
+                    "id": null,
+                    "created_on": null,
+                    "last_modified": null
                 },
-                "reference": {
-                    "ref": [
-                        "mod:sdk-808",
-                        "green",
-                        "terminal",
-                        "vault-material"
-                    ]
-                },
-                "notes": "This SAM inherited the IMPORT SHOP, but can't remember Chester."
+                "links": [],
+                "notes": null
             }
         },
         "TPS": {
