@@ -101,7 +101,7 @@ $TOOL = $GLOBALS['TOOL'];
 }
 
 
-function crateTags($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID){
+function crateTags($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX){
     $SITE = $GLOBALS['SITE'];
     $GLOBALS['TAGS'] = array_filter(array_map(function($q){
         return strtolower(trim($q));
@@ -116,16 +116,25 @@ function crateTags($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID){
             $type = trim($type);
             $value = trim($value);
         } else {
-            $type = null;
+            $type = "root_tags";
             $value = trim($TAG);
         }
 
+
+
+        if (strpos($value, ',') !== false) {
+            $values = explode(',', $value);
+        } else {
+            $values = [trim($value)];
+        }
+
+
     $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
 
-        $ROUTE = $ROUTE__LINE . '/tags/';
+        $ROUTE = $ROUTE__LINE . '/catalog/';
         if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
 
-        $TAG_CHEST = $ROUTE . '/tags.json';
+        $TAG_CHEST = $ROUTE . 'tags.catalog.json';
         $json = file_get_contents($TAG_CHEST);
         $TAGS = json_decode($json, true);
 
@@ -134,21 +143,146 @@ function crateTags($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID){
         $TAGS = [];
     }
 
+    $ACTOR = $GLOBALS['TOOL']['ACTOR'];
 
-        if (!isset($TAGS[$TAG])) {
-        $TAGS[$TAG] = [
-            "type" => $type, 
-            "value" => $value, 
-            "used_by" => []
-            ];
-        }
-$ACTOR = $GLOBALS['TOOL']['ACTOR'];
-        if (!in_array($ACTOR, $TAGS[$TAG]['used_by'])){
-            $TAGS[$TAG]['used_by'][$ACTOR][] = $cUID;
-        }
 
-        
+foreach ($values as $v){
 
-    file_put_contents($TAG_CHEST, json_encode($TAGS));
+#    if (!is_array($TAGS[$v])) {
+#        $TAGS[$v] = [];
+#    } 
+
+    if (!is_array($TAGS[$v])) {
+        $TAGS[$v] = ["label" => $v];
+
+    }
+
+if (!is_array($TAGS[$v]['used_as'][$type])) {
+    $TAGS[$v]['used_as'][$type] = [];
 }
+
+
+if (!in_array($cUID, $TAGS[$v]['used_as'][$type])) {
+    $TAGS[$v]['used_as'][$type][] = $cUID;
+} else { continue; }
+    
+
+}
+    
+         
+
+    file_put_contents($TAG_CHEST, json_encode($TAGS, JSON_PRETTY_PRINT));
+}
+}
+
+function unixCataloger($UNIX,$cUID, $SHADOW_PROD_TOGGLE){
+
+     $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
+
+        $ROUTE = $ROUTE__LINE . '/catalog/';
+        if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
+
+        $UNIX_CHEST = $ROUTE . 'unix.catalog.json';
+        $json = file_get_contents($UNIX_CHEST);
+        $payload = json_decode($json, true);
+
+
+
+
+    if (!is_array($payload[$UNIX])){
+        $payload[$UNIX][] = $cUID;
+    }
+
+    if (!in_array($cUID, $payload[$UNIX])){
+        $payload[$UNIX][] = $cUID;
+    }
+
+
+    file_put_contents($UNIX_CHEST, json_encode($payload, JSON_PRETTY_PRINT));
+    
+}
+
+
+
+function crateInput($RAW_ENTRY, $SHADOW_PROD_TOGGLE, $link, $artist, $song){
+    $GLOBALS['FORMATTED_INPUT'] = array_filter(array_map(function($q){
+        return strtolower(trim($q));
+    }, explode(';', $RAW_ENTRY)));
+
+
+    foreach ($GLOBALS['FORMATTED_INPUT'] as $TAG){
+
+    $TAG = strtolower(trim($TAG));
+
+        if (strpos($TAG, ':') !== false) {    
+            [$type, $value] = explode(':', $TAG, 2);
+            $type = trim($type);
+            $value = trim($value);
+        } else {
+            $type = "root_tags";
+            $value = trim($TAG);
+        }
+
+
+
+        if (strpos($value, ',') !== false) {
+            $values = explode(',', $value);
+        } else {
+            $values = [trim($value)];
+        }
+
+
+    $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
+
+        $ROUTE = $ROUTE__LINE . '/catalog/';
+        if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
+
+        $TAG_CHEST = $ROUTE . 'songs.catalog.json';
+        $json = file_get_contents($TAG_CHEST);
+        $TAGS = json_decode($json, true);
+
+
+    if (!is_array($TAGS)) {
+        $TAGS= [];
+    } 
+    
+$id = $GLOBALS['JUKEID']; 
+$ACTOR = $GLOBALS['TOOL']['ACTOR'];
+
+
+            foreach ($values as $v){
+
+    if (!is_array($TAGS[$artist])) {
+        $TAGS[$artist] = [ "artist" => $artist ];
+    } 
+
+
+    if (!is_array($TAGS[$artist][$id])) {
+        $TAGS[$artist][$id] = [ "song_title" => $song, "link" => $link];
+    } 
+
+if (!in_array($song, $TAGS[$artist][$id])) {
+    $TAGS[$artist][$id] = [ "song_title" => $song, "link" => $link];
+} 
+
+if (!is_array($TAGS[$artist][$id]['tagged_as'][$type])) {
+    $TAGS[$artist][$id]['tagged_as'][$type] = [];
+}
+
+
+if (!in_array($v, $TAGS[$artist][$id]['tagged_as'][$type])) {
+    $TAGS[$artist][$id]['tagged_as'][$type][] = $v;
+} else { continue; }
+
+
+        }
+        
+        
+    
+    
+
+
+
+    file_put_contents($TAG_CHEST, json_encode($TAGS, JSON_PRETTY_PRINT));
+    }
 }

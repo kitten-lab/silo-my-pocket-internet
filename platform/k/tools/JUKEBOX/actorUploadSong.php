@@ -5,11 +5,13 @@ require_once $GLOBALS['INTERA']['TOOLS'] . 'skyGenesis/functions.php'; //GET SHA
 
     $SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
 
-require_once __DIR__ . '/-SIG-postBASIC.php'; //GET SHADOW PROD TOGGLE
-require_once __DIR__ . '/-CRATE-postBASIC.php'; //GET SHADOW PROD TOGGLE
-
+require_once __DIR__ . '/-SIG-JUKEBOX.php'; //GET SHADOW PROD TOGGLE
+require_once __DIR__ . '/-CRATE-JUKEBOX.php'; //GET SHADOW PROD TOGGLE
+####
+####
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+$GLOBALS['JUKEID'] = strtolower($_POST['artist']) . '-' . strtolower($_POST['song_title']) . '.juke';
 
 
     // DO NOT TOUCHY // THE TPS MACHINE 
@@ -42,7 +44,13 @@ $tUID = 'tUID-' . $event_time . '.' . strtoupper(bin2hex(random_bytes(3)));
 
 ## GET TAGS
 $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
-crateTags($RAW_TAGS,$SHADOW_PROD_TOGGLE,$cUID);
+$link = $_POST['link'] ?? '';
+$artist = $_POST['artist'] ?? '';
+$song = $_POST['song_title'] ?? '';
+crateTags($RAW_TAGS,$SHADOW_PROD_TOGGLE,$cUID,$event_time);
+crateInput($RAW_TAGS,$SHADOW_PROD_TOGGLE,$link,$artist,$song);
+unixCataloger($event_time,$cUID,$SHADOW_PROD_TOGGLE);
+
 
 // ============================================================================
 // OKAY LETS MAKE A CHESTER CRATE OF THIS BIT OF STUFFS! 
@@ -50,13 +58,13 @@ crateTags($RAW_TAGS,$SHADOW_PROD_TOGGLE,$cUID);
 
 $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
 
- $ROUTE = $ROUTE__LINE . $GLOBALS['TOOL']['NAME'] . '/' . $GLOBALS[$SITE]['SYS_SLUG']  . '/' . $GLOBALS[$SITE]['DOM_SLUG'] . '/';
+ $ROUTE = $ROUTE__LINE . $GLOBALS['TOOL']['NAME'] . '/';
     if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
 
  $ECHO_ROUTE = $ROUTE__LINE . 'trackerKEEPER/' . $simpleyear . '/';
     if (!is_dir($ECHO_ROUTE)) { mkdir($ECHO_ROUTE, 0775, true); }   
  
-  $CHEST = $ROUTE . '/' . $GLOBALS[$SITE]['ROOM_SLUG'] . '.data.json';
+  $CHEST = $ROUTE . '/' . $GLOBALS[$SITE]['ROOM_SLUG'] . '.jukebox.json';
     $json = file_get_contents($CHEST);
     $CHEST_THINGS = json_decode($json, true);
 
