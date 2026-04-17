@@ -3,7 +3,7 @@ require_once $GLOBALS['INTERA']['SYSTEM'] . 'rehydrateSelf.php';
 require_once $GLOBALS['INTERA']['SYSTEM'] . 'chestersCrates.php'; //GET SHADOW PROD TOGGLE
 require_once $GLOBALS['INTERA']['TOOLS'] . 'skyGenesis/functions.php'; //GET SHADOW PROD TOGGLE
 
-    $SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
+    $SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(true);
 
 require_once __DIR__ . '/-SIG-JUKEBOX.php'; //GET SHADOW PROD TOGGLE
 require_once __DIR__ . '/-CRATE-JUKEBOX.php'; //GET SHADOW PROD TOGGLE
@@ -48,7 +48,7 @@ $link = $_POST['link'] ?? '';
 $artist = $_POST['artist'] ?? '';
 $song = $_POST['song_title'] ?? '';
 crateTags($RAW_TAGS,$SHADOW_PROD_TOGGLE,$cUID,$event_time);
-crateInput($RAW_TAGS,$SHADOW_PROD_TOGGLE,$link,$artist,$song);
+crateInput($RAW_TAGS,$SHADOW_PROD_TOGGLE,$link,$artist,$song,$cUID);
 unixCataloger($event_time,$cUID,$SHADOW_PROD_TOGGLE);
 
 

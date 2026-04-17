@@ -204,7 +204,7 @@ function unixCataloger($UNIX,$cUID, $SHADOW_PROD_TOGGLE){
 
 
 
-function crateInput($RAW_ENTRY, $SHADOW_PROD_TOGGLE, $link, $artist, $song){
+function crateInput($RAW_ENTRY, $SHADOW_PROD_TOGGLE, $link, $artist, $song, $cUID){
     $GLOBALS['FORMATTED_INPUT'] = array_filter(array_map(function($q){
         return strtolower(trim($q));
     }, explode(';', $RAW_ENTRY)));
@@ -228,9 +228,9 @@ function crateInput($RAW_ENTRY, $SHADOW_PROD_TOGGLE, $link, $artist, $song){
         if (strpos($value, ',') !== false) {
             $values = explode(',', $value);
         } else {
-            $values = [trim($value)];
+            $values = $value;
         }
-
+    
 
     $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
 
@@ -250,39 +250,53 @@ $id = $GLOBALS['JUKEID'];
 $ACTOR = $GLOBALS['TOOL']['ACTOR'];
 
 
-            foreach ($values as $v){
-
     if (!is_array($TAGS[$artist])) {
         $TAGS[$artist] = [ "artist" => $artist ];
-    } 
-
+    }
+    
 
     if (!is_array($TAGS[$artist][$id])) {
         $TAGS[$artist][$id] = [ "song_title" => $song, "link" => $link];
     } 
 
+
+
 if (!in_array($song, $TAGS[$artist][$id])) {
     $TAGS[$artist][$id] = [ "song_title" => $song, "link" => $link];
 } 
 
-if (!is_array($TAGS[$artist][$id]['tagged_as'][$type])) {
-    $TAGS[$artist][$id]['tagged_as'][$type] = [];
-}
 
 
-if (!in_array($v, $TAGS[$artist][$id]['tagged_as'][$type])) {
-    $TAGS[$artist][$id]['tagged_as'][$type][] = $v;
-} else { continue; }
+        if (!is_array($TAGS[$artist][$id]['tagged_as'][$type])) {
+            $TAGS[$artist][$id]['tagged_as'][$type] = [];
+        }
+
+    if (!in_array($values, $TAGS[$artist][$id]['tagged_as'][$type])) {
+        $TAGS[$artist][$id]['tagged_as'][$type] = $values;
+    } 
 
 
+
+        if (!isset($TAGS[$artist][$id]['played_by'])) {
+            $TAGS[$artist][$id]['played_by'] = [];
         }
         
         
+        $uploader = $_POST['UPLOADER'];
+
+        if (!in_array($uploader, $TAGS[$artist][$id]['played_by'])){
+            $TAGS[$artist][$id]['played_by'][$uploader] = [];
+        }
+
+
+        if (!isset($TAGS[$artist][$id]['played_by'][$uploader])) {
+            $TAGS[$artist][$id]['played_by'][$uploader]['played_in'] = [];
+        }
+
+        if (!in_array($cUID, $TAGS[$artist][$id]['played_by'][$uploader])){
+            $TAGS[$artist][$id]['played_by'][$uploader]['played_in'] = $cUID;
+        }
     
-    
-
-
-
     file_put_contents($TAG_CHEST, json_encode($TAGS, JSON_PRETTY_PRINT));
-    }
+}
 }
