@@ -7,11 +7,12 @@ function json_payload(){
         "artist" => $_POST['artist'],
         "song_title" => $_POST['song_title'],
         "spotify_link" => $_POST['link'],
-        "vibe_tags" => $GLOBALS['FORMATTED_INPUT'],
     ]];
 }
 
 function json_route(){
 $SITE = $GLOBALS['SITE'];
-    return [];
+    return [
+        "heard_by" => $_POST['UPLOADER']
+    ];
 }

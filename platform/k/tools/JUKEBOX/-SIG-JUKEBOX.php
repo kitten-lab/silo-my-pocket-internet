@@ -4,6 +4,7 @@ $GLOBALS['TOOL'] = [
     "FUNCTION" => "UploadSong",
     "ACTOR" => $_POST['UPLOADER'],
     "OBJECT" => $GLOBALS['JUKEID'],
+    "CATALOG_SLUG" => "JUKEBOX upload",
     "TYPE" => "post",
     "VERSION" => 2,
     "SIGFIG" => [

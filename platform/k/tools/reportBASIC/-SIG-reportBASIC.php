@@ -11,6 +11,7 @@ $GLOBALS['TOOL'] = [
     "NAME" => "reportBASIC",
     "FUNCTION" => "IntakeReport",
     "ACTOR" => $_POST['POST__REPORTER'],
+    "CATALOG_SLUG" => "reportBASIC report",
     "TYPE" => "post",
     "VERSION" => 2,
     "SIGFIG" => [

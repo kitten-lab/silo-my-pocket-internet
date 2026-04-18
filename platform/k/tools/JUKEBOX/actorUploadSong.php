@@ -10,8 +10,9 @@ require_once __DIR__ . '/-CRATE-JUKEBOX.php'; //GET SHADOW PROD TOGGLE
 ####
 ####
 
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-$GLOBALS['JUKEID'] = strtolower($_POST['artist']) . '-' . strtolower($_POST['song_title']) . '.juke';
 
 
     // DO NOT TOUCHY // THE TPS MACHINE 
@@ -42,13 +43,15 @@ $GLOBALS['JUKEID'] = strtolower($_POST['artist']) . '-' . strtolower($_POST['son
 $cUID = 'cUID-' . strtoupper(bin2hex(random_bytes(8)));
 $tUID = 'tUID-' . $event_time . '.' . strtoupper(bin2hex(random_bytes(3)));
 
-## GET TAGS
+## GET TAGS & FILL CATALOGS (__-SONG-CATALOG-__)
+$GLOBALS['JUKEID'] = getJUKED($_POST['artist']) . '_' . getJUKED($_POST['song_title']) . '.juke';
 $w = $GLOBALS[$SITE];
 $tagpath = '/b/' . $w['SYS_SLUG'] . '/' . $w['DOM_SLUG'] . '/' . $w['ROOM_SLUG'];
 $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
 $link = $_POST['link'] ?? '';
 $artist = $_POST['artist'] ?? '';
 $song = $_POST['song_title'] ?? '';
+
 crateTags($RAW_TAGS,$SHADOW_PROD_TOGGLE,$cUID,$event_time,$tagpath);
 crateInput($RAW_TAGS,$SHADOW_PROD_TOGGLE,$link,$artist,$song,$cUID,$tagpath);
 unixCataloger($event_time,$cUID,$SHADOW_PROD_TOGGLE);
@@ -82,8 +85,8 @@ $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
     $ECHO_CHEST_THINGS = [];
   }
 
-  $CHEST_THINGS[$cUID] = buildCHEST($cUID, $unix, $event_time, $tUID, $timezone);
-  $ECHO_CHEST_THINGS[$cUID] = buildCHEST($cUID, $unix, $event_time, $tUID, $timezone);
+  $CHEST_THINGS[$cUID] = buildCHEST($RAW_TAGS,$cUID, $unix, $event_time, $tUID, $timezone);
+  $ECHO_CHEST_THINGS[$cUID] = buildCHEST($RAW_TAGS,$cUID, $unix, $event_time, $tUID, $timezone);
   
 
   file_put_contents($CHEST, json_encode($CHEST_THINGS, JSON_PRETTY_PRINT));

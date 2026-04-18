@@ -3,6 +3,7 @@ $GLOBALS['TOOL'] = [
     "NAME" => "postBASIC",
     "FUNCTION" => "MakePost",
     "ACTOR" => $GLOBALS[$SITE]['MOD_SLUG'],
+    "CATALOG_SLUG" => "postBASIC post",
     "TYPE" => "post",
     "VERSION" => 2,
     "SIGFIG" => [
