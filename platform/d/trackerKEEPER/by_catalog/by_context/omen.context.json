@@ -1,0 +1,53 @@
+{
+    "slug": "omen",
+    "aliases": [],
+    "type": [],
+    "notes": [],
+    "total_count": 4,
+    "tag": {
+        "symbol": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        },
+        "spider": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        },
+        "cardinal": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.3133077EAB2CDE74": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        },
+        "birds": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.3133077EAB2CDE74": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,26 +6,29 @@ $FIG = getFIG("postBASIC", "MakePost");
 
 <form method="POST" action="">
 <span class="">
-    <label for="POST__TIMBER_TOPIC"><?= $FIG['Topic']; ?></label>
-    <input 
-        name="POST__TIMBER_TOPIC" 
-        placeholder="<?= $FIG['Topic_plhldr']; ?>" 
-        required>
-    <br>
-    <br>
-</span>
-<span class="">
-    <label for="POST__TIMBER_LEAF"><?= $FIG['Text']; ?></label><br>
+    <label for="POST__TIMBER_TOPIC"><?= $FIG['Topic']; ?></label><br>
     <textarea 
-    rows="10" cols="60"
-    name="POST__TIMBER_LEAF" 
-    placeholder="<?= $FIG['Text_plhldr']; ?>" 
+    rows="1" cols="60"
+    name="POST__TIMBER_TOPIC" 
+    placeholder="<?= $FIG['Topic_plhldr']; ?>" 
     required></textarea>
     <br>
 </span>
-    <input 
+<span class="">
+    <label for="POST__TIMBER_LEAF"><?= $FIG['Content']; ?></label><br>
+    <textarea 
+    rows="10" cols="60"
+    name="POST__TIMBER_LEAF" 
+    placeholder="<?= $FIG['Content_plhldr']; ?>" 
+    required></textarea>
+    <br>
+</span>
+    <label for="POST__TAGS"><?= $FIG['Tags']; ?></label><br>
+    <textarea 
+    rows="10" cols="60"
         name="POST__TAGS" 
         placeholder="Tags">
+        </textarea>
     <br>
 <span class="">
     <label for="POST__EVENT_UNIX"><?= $FIG['UNIX']; ?></label><br>
@@ -34,19 +37,6 @@ $FIG = getFIG("postBASIC", "MakePost");
         placeholder="<?= $FIG['UNIX_plhldr']; ?>"
         type="number">
     <br>
-
-    <input 
-        name="CERTAINTY_AMOUNT" 
-        placeholder="CERTAINTY_AMOUNT"
-        type="number">
-    <label for="CERTAINTY"><?= $FIG['CERTAINTY'] ?? "Certainty"; ?></label><br>
-<select name="CERTAINTY" id="CERTAINTY">
-    <option value="d">d</option>
-    <option value="h">h</option>
-    <option value="m">m</option>
-    <option value="s">s</option>
-</select>
-
 </span>
 
   <input type="hidden" name="POST__TZ" id="tz-input">

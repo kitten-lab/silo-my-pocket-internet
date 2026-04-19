@@ -1,0 +1,175 @@
+{
+    "k-street": {
+        "total_count": 2,
+        "context": {
+            "location": 2
+        }
+    },
+    "bathroom": {
+        "total_count": 3,
+        "context": {
+            "location": 1,
+            "symbol": 1,
+            "related-to": 1
+        }
+    },
+    "omen": {
+        "total_count": 2,
+        "context": {
+            "event-type": 1,
+            "related-to": 1
+        }
+    },
+    "symbol": {
+        "total_count": 1,
+        "context": {
+            "omen": 1
+        }
+    },
+    "spider": {
+        "total_count": 3,
+        "context": {
+            "omen": 1,
+            "symbol": 1,
+            "related-to": 1
+        }
+    },
+    "shocking": {
+        "total_count": 1,
+        "context": {
+            "felt": 1
+        }
+    },
+    "embarrassing": {
+        "total_count": 1,
+        "context": {
+            "felt": 1
+        }
+    },
+    "hilarious": {
+        "total_count": 1,
+        "context": {
+            "felt": 1
+        }
+    },
+    "prophetic": {
+        "total_count": 1,
+        "context": {
+            "felt": 1
+        }
+    },
+    "bladder": {
+        "total_count": 1,
+        "context": {
+            "related-to": 1
+        }
+    },
+    "cardinal": {
+        "total_count": 2,
+        "context": {
+            "omen": 1,
+            "symbol": 1
+        }
+    },
+    "birds": {
+        "total_count": 1,
+        "context": {
+            "omen": 1
+        }
+    },
+    "bedroom": {
+        "total_count": 1,
+        "context": {
+            "location": 1
+        }
+    },
+    "forgetting-house": {
+        "total_count": 1,
+        "context": {
+            "location": 1
+        }
+    },
+    "bird": {
+        "total_count": 1,
+        "context": {
+            "symbol": 1
+        }
+    },
+    "red": {
+        "total_count": 1,
+        "context": {
+            "symbol": 1
+        }
+    },
+    "spring": {
+        "total_count": 1,
+        "context": {
+            "context": 1
+        }
+    },
+    "change": {
+        "total_count": 1,
+        "context": {
+            "context": 1
+        }
+    },
+    "seeking-growth": {
+        "total_count": 1,
+        "context": {
+            "context": 1
+        }
+    },
+    "news(sky-news)": {
+        "total_count": 1,
+        "context": {
+            "media": 1
+        }
+    },
+    "charlie": {
+        "total_count": 1,
+        "context": {
+            "about": 1
+        }
+    },
+    "threads": {
+        "total_count": 1,
+        "context": {
+            "about": 1
+        }
+    },
+    "tag-system": {
+        "total_count": 1,
+        "context": {
+            "about": 1
+        }
+    },
+    "data-forestry": {
+        "total_count": 1,
+        "context": {
+            "about": 1
+        }
+    },
+    "0": {
+        "total_count": 231,
+        "context": {
+            "felt-sense": 42,
+            "symbol": 84,
+            "feeling": 21,
+            "loves": 42,
+            "kitten": 42
+        }
+    },
+    "1": {
+        "total_count": 42,
+        "context": {
+            "felt-sense": 21,
+            "symbol": 21
+        }
+    },
+    "2": {
+        "total_count": 21,
+        "context": {
+            "symbol": 21
+        }
+    }
+}

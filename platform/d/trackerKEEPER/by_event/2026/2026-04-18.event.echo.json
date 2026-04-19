@@ -1,0 +1,80 @@
+{
+    "crate.BBB198CD10F91D86": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "reportBASIC",
+            "function": "IntakeReport",
+            "type": "post",
+            "version": 2
+        },
+        "payload": {
+            "timber": {
+                "topic": "notable spider sighting 4\/19\/26",
+                "leaf": "bathroom, downstairs, k-street. going pee, and suddenly, large black spider lands on my lap!\r\ni panicked and stood up mid-stream, peeing on the floor while frantically attempting to remove my pants.\r\nthe spider went missing.\r\ni survived."
+            }
+        },
+        "route": {
+            "from": {
+                "mod": "daniel wake"
+            },
+            "to": {
+                "mod": "OM",
+                "room": "OMENS",
+                "dom": "REPORT",
+                "sys": "SKYLINE"
+            }
+        },
+        "tags": {
+            "location": [
+                "k-street",
+                "bathroom"
+            ],
+            "event-type": [
+                "omen"
+            ],
+            "omen": [
+                "symbol",
+                "spider"
+            ],
+            "symbol": [
+                "spider",
+                "bathroom"
+            ],
+            "felt": [
+                "shocking",
+                "embarrassing",
+                "hilarious",
+                "prophetic"
+            ],
+            "related-to": [
+                "bladder",
+                "spider",
+                "omen",
+                "bathroom"
+            ]
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SKYLINE",
+            "sys_display": "SKYLINE ON INTERA",
+            "dom_slug": "REPORT",
+            "dom_display": "REPORTING DEPARTMENT",
+            "room_slug": "OMENS",
+            "room_display": "OMAN'S OMENS",
+            "mod_slug": "OM",
+            "mod_display": "OMAN"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776500459.tps",
+            "time_certainty": {
+                "value": null,
+                "measurement": null
+            },
+            "ingest_unix": 1776574689,
+            "event_unix": 1776500459,
+            "timezone": "America\/New_York"
+        }
+    }
+}

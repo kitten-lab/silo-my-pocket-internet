@@ -1,0 +1,10 @@
+{
+    "spider": {
+        "total_count": 3,
+        "context": {
+            "omen": 1,
+            "symbol": 1,
+            "related-to": 1
+        }
+    }
+}

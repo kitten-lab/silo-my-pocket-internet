@@ -1,0 +1,11 @@
+{
+    "location": {
+        "total_count": 5,
+        "context": {
+            "k-street": 2,
+            "bathroom": 1,
+            "bedroom": 1,
+            "forgetting-house": 1
+        }
+    }
+}

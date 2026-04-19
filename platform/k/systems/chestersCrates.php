@@ -9,6 +9,10 @@ function getJUKED($string){
 } //HILARIOUSLY JUST BASICALLY ERASES YOUR INPUT. KEPT FOR PROSTERITY
 
 
+function aleph($ROUTE){
+    if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }
+}
+
 function SKY_GET_tUID($event_time){
     $tUID = $event_time . '.tps';
         return $tUID;
@@ -45,6 +49,52 @@ function buildTPS($unix, $ms,$tzone, $event_time) {
         "ms" => $ms % 1000,
     ];
     }
+
+//----------------------------------------------------------------------------------------------------
+function fileTPS($tUID, $cUID, $tzone, $event_time, $tpsDATA, $tpss){
+
+    if (!$tpss) {
+        $tpss = [];
+    }
+    
+  if (!isset($tpss[$tUID])){
+
+    $tpss[$tUID] = [
+        "tps_version" => 3,
+        "cUID" => [$cUID],
+        "event_slug" => [],
+        "import_unix" => [time()],
+        "time_certainty" => [
+            "radius" => 0,
+            "unit" => "seconds",
+            "confidence" => "exact",
+        ],
+        "event_timezone" => $tzone,
+        "tps_timzezone" => "UTC",
+        "tps_unix" => $event_time,
+        "tps_report" => $tpsDATA
+    ];
+    
+    } else {
+
+        if (!isset($tpss[$tUID]['cUID'])){
+            $tpss[$tUID]['cUID'] = [];
+        }
+
+        if (!in_array($cUID, $tpss[$tUID]['cUID'])){
+            $tpss[$tUID]['cUID'][] = $cUID;
+        }
+
+        if (!isset($tpss[$tUID]['import_unix'])){
+            $tpss[$tUID]['import_unix'] = [];
+        }
+
+        if (!in_array($cUID, $tpss[$tUID])){
+            $tpss[$tUID]['import_unix'][] = time();
+        }
+    }
+    return $tpss;
+}
 
 //==============================================================================================
 function json_environment(){
@@ -102,17 +152,53 @@ $TAGS = tagSPLICER($RAW_TAGS);
         "ref_material" => json_origin(),
         "tps" => [
             "tUID" => $tUID, 
-            "time_certainty" => [
-                "value" => $_POST['CERTAINTY_AMOUNT'],
-                "measurement" => $_POST['CERTAINTY'],
-                ],
             "ingest_unix" => $unix,
             "event_unix" => $event_time,
             "timezone" => $timezone,
         ]
     ];
 }
+//----------------------------------------------------------------------------------------------------
+function chestersCRATES($sha_env, $a, $cUID, $unix, $event_time, $tUID, $timezone){
 
+$route = ROUTE('d', $sha_env);
+    $BUILD_CHEST = buildCHEST($RAW_TAGS, $cUID, $unix, $event_time, $tUID, $timezone);
+
+    $router_1 = $route . $a['SYS_SLUG'] . '/';
+     aleph($router_1);
+
+    $router_2 = $route . 'trackerKEEPER/by_event/' . $syear . '/';
+     aleph($router_2);
+
+    $router_3 = $route . 'trackerKEEPER/by_ingest/' . date('Y') . '/';
+     aleph($router_3);
+
+    $CHEST = $router_1 . $a['DOM_SLUG'] . '-' . $a['ROOM_SLUG'] . '.post.json';    
+    $ECHO_CHEST = $router_2 . $sdate . '.event.echo.json';
+    $IM_ECHO_CHEST = $router_3 . date('Y-m-d') . '.ingest.echo.json';
+
+     $json = file_get_contents($CHEST);
+     $ECHO_json = file_get_contents($ECHO_CHEST);
+     $IM_ECHO_json = file_get_contents($IM_ECHO_CHEST);
+
+     $CHEST_THINGS = json_decode($json, true);
+     $ECHO_CHEST_THINGS = json_decode($ECHO_json, true);
+     $IM_ECHO_CHEST_THINGS = json_decode($IM_ECHO_json, true);
+    
+    if (!$CHEST_THINGS) { $CHEST_THINGS = []; }
+        $CHEST_THINGS[$cUID] = $BUILD_CHEST;
+    
+    if (!$ECHO_CHEST_THINGS) { $ECHO_CHEST_THINGS = []; }
+        $ECHO_CHEST_THINGS[$cUID] = $BUILD_CHEST;
+  
+    if (!$IM_ECHO_CHEST_THINGS) { $IM_ECHO_CHEST_THINGS = []; }
+        $IM_ECHO_CHEST_THINGS[$cUID] = $BUILD_CHEST;
+    
+    file_put_contents($CHEST, json_encode($CHEST_THINGS, JSON_PRETTY_PRINT));
+    file_put_contents($ECHO_CHEST, json_encode($ECHO_CHEST_THINGS, JSON_PRETTY_PRINT));
+    file_put_contents($IM_ECHO_CHEST, json_encode($ECHO_CHEST_THINGS, JSON_PRETTY_PRINT));
+
+}
 //==============================================================================================
 function json_tool(){
 
@@ -131,10 +217,10 @@ function catalogUNIX($UNIX,$cUID, $SHADOW_PROD_TOGGLE){
     //--## router settings ------- ##
 
     $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
-    $ROUTE = $ROUTE__LINE . '/trackerKEEPER/unix_quick_lookup/' . date('Y') . '/';
+    $ROUTE = $ROUTE__LINE . '/trackerKEEPER/unix_quick_lookup/' . date('Y') . '/' . date('m') . '/';
     if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
 
-    $UNIX_CHEST = $ROUTE . date('Y-m') . '.quicklookup.json';
+    $UNIX_CHEST = $ROUTE . date('Y-m-d') . '.quicklookup.json';
     $json = file_get_contents($UNIX_CHEST);
     $payload = json_decode($json, true);
 
@@ -152,45 +238,92 @@ function catalogUNIX($UNIX,$cUID, $SHADOW_PROD_TOGGLE){
 }
 
 //==============================================================================================
-function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
+function catalogTAGS($SHADOW_PROD_TOGGLE, $cUID, $UNIX){
 
   //--## special inserts ------- ##
     $ACTOR = $GLOBALS['TOOL']['ACTOR'];
     $SITE = $GLOBALS['SITE'];
+    $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
 
-  //--## router settings ------- ##
-    $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
-
-        $ROUTE = $ROUTE__LINE . '/trackerKEEPER/by_catalog/';
-        if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
-
-        $TAG_CHEST = $ROUTE . 'tags.catalog.json';
-        $json = file_get_contents($TAG_CHEST);
-        $TAGS = json_decode($json, true);
-
-    
-    $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
-
-        $ROUTE2 = $ROUTE__LINE . '/trackerKEEPER/by_catalog/';
-        if (!is_dir($ROUTE2)) { mkdir($ROUTE2, 0775, true); }   
-
-        $CONTEXT_CHEST = $ROUTE2 . 'context.catalog.json';
-        $json = file_get_contents($CONTEXT_CHEST);
-        $CONTEXTS = json_decode($json, true);
-
+    $w = $GLOBALS[$SITE];
+    $tagpath = '/b/' . $w['SYS_SLUG'] . '/' . $w['DOM_SLUG'] . '/' . $w['ROOM_SLUG'];
 
   //--## tag parser settings ------- ##
-
      $add = tagSPLICER($RAW_TAGS);
 
-  //------## tag filler ------- ##
-        if (!$TAGS) {
-            $TAGS = [];
-        }
+
+    $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
+
+        $MT_ROUTE = $ROUTE__LINE . '/trackerKEEPER/catalog/';
+        $MTAG_CHEST = $MT_ROUTE . 'master.tag.catalog.json';
+        $json1 = file_get_contents($MTAG_CHEST);
+        $MASTER_TAG = json_decode($json1, true);
+
+        $MT_ROUTE2 = $ROUTE__LINE . '/trackerKEEPER/catalog/';
+        $MCONTEXT_CHEST = $MT_ROUTE2 . 'master.context.catalog.json';
+        $json2 = file_get_contents($MCONTEXT_CHEST);
+        $MASTER_CONTEXT = json_decode($json2, true);
+
+    
 
     foreach ($add as $k => $values){
-        foreach ($values as $v){
+        foreach ($values as $v => $child){
+        foreach ($child as $c){
 
+        $route_1 = $ROUTE__LINE . '/trackerKEEPER/catalog/by_tag/';
+        $ROUTE2 = $ROUTE__LINE . '/trackerKEEPER/by_catalog/by_context/';
+        $TAG_CHEST = $route_1 . $v . '.tag.catalog.json';
+        $CONTEXT_CHEST = $ROUTE2 . $k . '.context.catalog.json';
+
+
+        $SECOND_ROUTE = $ROUTE__LINE . '/trackerKEEPER/by_catalog/by_tag/';
+        $THIRD_ROUTE = $ROUTE__LINE . '/trackerKEEPER/by_catalog/by_context/';
+
+        $COLLECTION = $SECOND_ROUTE . $v . '.tag.json';
+        $COLLECTION2 = $THIRD_ROUTE . $k . '.context.json';
+
+
+        $json3 = file_get_contents($TAG_CHEST);
+        $TAGS = json_decode($json3, true);
+
+
+        $json4 = file_get_contents($CONTEXT_CHEST);
+        $CONTEXTS = json_decode($json4, true);
+
+        $json5 = file_get_contents($COLLECTION);
+        $C = json_decode($json5, true);
+
+        $json6 = file_get_contents($COLLECTION2);
+        $C2 = json_decode($json6, true);
+    
+  //--## router settings ------- ##
+
+    if (!$MASTER_TAG) {
+        $MASTER_TAG = [];
+    }
+
+    if (!isset($MASTER_TAG[$v])){
+        $MASTER_TAG[$v] = [
+            'total_count' => 0,
+            'context' => []
+        ];
+    }
+    if (!isset($MASTER_TAG[$v]['context'])){
+        $MASTER_TAG[$v]['context'] = [];
+
+    }
+    if (!isset($MASTER_TAG[$v]['context'][$k])){
+        $MASTER_TAG[$v]['context'][$k] = 0;
+
+    } 
+
+    $MASTER_TAG[$v]['context'][$k]++;
+    $MASTER_TAG[$v]['total_count']++;
+
+
+         if (!$TAGS) {
+                $TAGS = [];
+            }
 
             if (!isset($TAGS[$v])){
                 $TAGS[$v] = [
@@ -198,7 +331,6 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
                     'context' => []
                 ];
             }
-
             if (!isset($TAGS[$v]['context'])){
                 $TAGS[$v]['context'] = [];
 
@@ -208,14 +340,12 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
 
             } 
 
-                $TAGS[$v]['context'][$k]++;
-                $TAGS[$v]['total_count']++;
+            $TAGS[$v]['context'][$k]++;
+            $TAGS[$v]['total_count']++;
 
-        if (!$CONTEXTS) {
-            $CONTEXTS = [];
-        }
-
-
+            if (!$CONTEXTS) {
+                $CONTEXTS = [];
+            }
 
             if (!isset($CONTEXTS[$k])){
                 $CONTEXTS[$k] = [
@@ -233,18 +363,37 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
 
             } 
 
-                $CONTEXTS[$k]['context'][$v]++;
-                $CONTEXTS[$k]['total_count']++;
+            $CONTEXTS[$k]['context'][$v]++;
+            $CONTEXTS[$k]['total_count']++;
 
 
-        $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
 
-            $SECOND_ROUTE = $ROUTE__LINE . '/trackerKEEPER/by_catalog/by_tag/';
-            if (!is_dir($SECOND_ROUTE)) { mkdir($SECOND_ROUTE, 0775, true); }   
+                    if (!$MASTER_CONTEXT) {
+                        $MASTER_CONTEXT = [];
+                    }
 
-            $COLLECTION = $SECOND_ROUTE . $v . '.tag.json';
-            $json = file_get_contents($COLLECTION);
-            $C = json_decode($json, true);
+                    if (!isset($MASTER_CONTEXT[$k])){
+                        $MASTER_CONTEXT[$k] = [
+                            'total_count' => 0,
+                            'context' => []
+                        ];
+                    }
+
+                    if (!isset($MASTER_CONTEXT[$k]['context'])){
+                        $MASTER_CONTEXT[$k]['context'] = [];
+
+                    }
+                    if (!isset($MASTER_CONTEXT[$k]['context'][$v])){
+                        $MASTER_CONTEXT[$k]['context'][$v] = 0;
+
+                    } 
+
+                        $MASTER_CONTEXT[$k]['context'][$v]++;
+                        $MASTER_CONTEXT[$k]['total_count']++;
+
+
+
+
 
             if (!isset($C)){
                 $C = [
@@ -279,13 +428,6 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
 
 
 
-            $THIRD_ROUTE = $ROUTE__LINE . '/trackerKEEPER/by_catalog/by_context/';
-            if (!is_dir($THIRD_ROUTE)) { mkdir($THIRD_ROUTE, 0775, true); }   
-
-            $COLLECTION2 = $THIRD_ROUTE . $k . '.context.json';
-            $json = file_get_contents($COLLECTION2);
-            $C2 = json_decode($json, true);
-
             if (!isset($C2)){
                 $C2 = [
                     'slug' => $k,
@@ -319,11 +461,16 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
 
             file_put_contents($COLLECTION, json_encode($C, JSON_PRETTY_PRINT));
             file_put_contents($COLLECTION2, json_encode($C2, JSON_PRETTY_PRINT));
+            file_put_contents($CONTEXT_CHEST, json_encode($CONTEXTS, JSON_PRETTY_PRINT));
+            file_put_contents($TAG_CHEST, json_encode($TAGS, JSON_PRETTY_PRINT));
             }
         }
+        }
+
+            file_put_contents($MCONTEXT_CHEST, json_encode($MASTER_CONTEXT, JSON_PRETTY_PRINT));
+            file_put_contents($MTAG_CHEST, json_encode($MASTER_TAG, JSON_PRETTY_PRINT));
+
   //--## fill that crate! ------- ##
-    file_put_contents($CONTEXT_CHEST, json_encode($CONTEXTS, JSON_PRETTY_PRINT));
-    file_put_contents($TAG_CHEST, json_encode($TAGS, JSON_PRETTY_PRINT));
 }
 
 //==============================================================================================
@@ -410,9 +557,38 @@ function tagSPLICER($RAW_TAGS){
             $values = [trim($value)];
         }
 
-        foreach ($values as $v){
-            $add[$type][] = trim($v);
+        foreach ($values as $tag){
+        
+            if (strpos($tag, '*') !== false) {
+                [$parent, $child] = explode('*', $tag, 2);
+                $parent = [trim($parent)];
+                $child = [trim($child)];
+            } else {
+                $parent = [trim($tag)];
+                $child = "";
+
+            }
+
+            foreach ($parent as $v){
+                    if (!is_array($add[$type]['_'])){
+                        $add[$type]['_'][] = $v;
+                    }
+                    if (!in_array($v, $add[$type]['_'])){
+                        $add[$type]['_'][] = $v;
+                    }
+                foreach ($child as $c){
+                    if (!is_array($add[$type][$v])){
+                        $add[$type][$v][] = $c;
+                    }
+                    if (!in_array($c, $add[$type][$v])){
+                        $add[$type][$v][] = $c;
+                    } 
+                    
+
+                }
+            }   
         }
+
     }
 
     return $add;

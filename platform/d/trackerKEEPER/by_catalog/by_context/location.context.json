@@ -1,0 +1,54 @@
+{
+    "slug": "location",
+    "aliases": [],
+    "type": [],
+    "notes": [],
+    "total_count": 5,
+    "tag": {
+        "k-street": {
+            "count": 2,
+            "used_by": {
+                "daniel wake": {
+                    "count": 2,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS",
+                        "crate.3133077EAB2CDE74": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        },
+        "bathroom": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        },
+        "bedroom": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.3133077EAB2CDE74": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        },
+        "forgetting-house": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.3133077EAB2CDE74": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        }
+    }
+}

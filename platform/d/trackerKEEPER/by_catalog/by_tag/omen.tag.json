@@ -1,0 +1,31 @@
+{
+    "slug": "omen",
+    "aliases": [],
+    "type": [],
+    "notes": [],
+    "total_count": 2,
+    "context": {
+        "event-type": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        },
+        "related-to": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -7,7 +7,7 @@ require_once $GLOBALS['INTERA']['TOOLS'] . 'skyGenesis/functions.php'; //GET SHA
 require_once __DIR__ . '/-SIG-reportBASIC.php'; //GET SHADOW PROD TOGGLE
 require_once __DIR__ . '/-CRATE-reportBASIC.php'; //GET SHADOW PROD TOGGLE
  
-$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(true);
+$SHADOW_PROD_TOGGLE = SHADOW_PROD_ENV(false);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
@@ -42,7 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $cUID = SKY_GET_cUID($event_time);
 $tUID = SKY_GET_tUID($event_time);
   
-$RAW_TAGS = $_POST['POST__TAGS'] ?? '';
 $w = $GLOBALS[$SITE];
 $tagpath = '/b/' . $w['SYS_SLUG'] . '/' . $w['DOM_SLUG'] . '/' . $w['ROOM_SLUG'];
 catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $event_time, $tagpath);
@@ -106,7 +105,7 @@ $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
 // ============================================================================
 // OH $@%! -- DON'T FORGET YOUR TPS REPORT
 // ============================================================================
-  $TRACKER_KEEPER = $ROUTE__LINE . 'tpsREPORTER/' . $simpleyear . '/';
+  $TRACKER_KEEPER = $ROUTE__LINE . 'trackerKEEPER/tps_reports/' . $simpleyear . '/';
     if (!is_dir($TRACKER_KEEPER)) { mkdir($TRACKER_KEEPER, 0775, true); }
   
   $tpsReport = $TRACKER_KEEPER . '/' . $simpledate . '.tps.json';
@@ -124,9 +123,10 @@ $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
         "event_slug" => [],
         "import_unix" => [time()],
         "time_certainty" => [
-            "value" => $_POST['CERTAINTY_AMOUNT'],
-            "measurement" => $_POST['CERTAINTY'],
-            ],
+            "radius" => 0,
+            "unit" => "seconds",
+            "confidence" => "exact",
+        ],
         "event_timezone" => $tzone,
         "tps_timzezone" => "UTC",
         "tps_unix" => $event_time,

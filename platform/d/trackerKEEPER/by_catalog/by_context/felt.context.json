@@ -1,0 +1,53 @@
+{
+    "slug": "felt",
+    "aliases": [],
+    "type": [],
+    "notes": [],
+    "total_count": 4,
+    "tag": {
+        "shocking": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        },
+        "embarrassing": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        },
+        "hilarious": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        },
+        "prophetic": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "slug": "bathroom",
+    "aliases": [],
+    "type": [],
+    "notes": [],
+    "total_count": 3,
+    "context": {
+        "location": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        },
+        "symbol": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        },
+        "related-to": {
+            "count": 1,
+            "used_by": {
+                "daniel wake": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.BBB198CD10F91D86": "\/b\/SKYLINE\/REPORT\/OMENS"
+                    }
+                }
+            }
+        }
+    }
+}

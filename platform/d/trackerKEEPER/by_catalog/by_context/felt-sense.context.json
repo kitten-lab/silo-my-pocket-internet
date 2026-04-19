@@ -1,0 +1,71 @@
+{
+    "slug": "felt-sense",
+    "aliases": [],
+    "type": [],
+    "notes": [],
+    "total_count": 63,
+    "tag": [
+        {
+            "count": 42,
+            "used_by": {
+                "SKYLINE-REPORTERB": {
+                    "count": 42,
+                    "cUID": {
+                        "crate.DE064860807CA5C7": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.CD8EB7E27A11E112": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.922F9510E04C908C": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.8314E51CCDC5CB59": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.0AD859A41F2A7AE5": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.4C0DBACC8E9CD8BC": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.8B329844C83BFB3B": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.5DBCF4CCDCBED875": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.85727DA3EA96F980": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.4312359CE71D898B": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.A6D477AC676D12CD": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.CD12F117E45CCCCB": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.B2D6DB3D04926446": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.25968E8D2CF36317": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.5D522BBC1EABD9EE": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.53442DEE83F02997": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.0CCEBDB212AA9E2C": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.B48D9C74BC82F89D": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.395FA5C79611AF2B": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.9F80AC3810CC7CE6": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.C22029A9D66F616A": "\/b\/SKYLINE\/PUBLIC\/NEWS"
+                    }
+                }
+            }
+        },
+        {
+            "count": 21,
+            "used_by": {
+                "SKYLINE-REPORTERB": {
+                    "count": 21,
+                    "cUID": {
+                        "crate.DE064860807CA5C7": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.CD8EB7E27A11E112": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.922F9510E04C908C": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.8314E51CCDC5CB59": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.0AD859A41F2A7AE5": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.4C0DBACC8E9CD8BC": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.8B329844C83BFB3B": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.5DBCF4CCDCBED875": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.85727DA3EA96F980": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.4312359CE71D898B": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.A6D477AC676D12CD": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.CD12F117E45CCCCB": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.B2D6DB3D04926446": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.25968E8D2CF36317": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.5D522BBC1EABD9EE": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.53442DEE83F02997": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.0CCEBDB212AA9E2C": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.B48D9C74BC82F89D": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.395FA5C79611AF2B": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.9F80AC3810CC7CE6": "\/b\/SKYLINE\/PUBLIC\/NEWS",
+                        "crate.C22029A9D66F616A": "\/b\/SKYLINE\/PUBLIC\/NEWS"
+                    }
+                }
+            }
+        }
+    ]
+}

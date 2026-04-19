@@ -1,0 +1,10 @@
+{
+    "bathroom": {
+        "total_count": 3,
+        "context": {
+            "location": 1,
+            "symbol": 1,
+            "related-to": 1
+        }
+    }
+}

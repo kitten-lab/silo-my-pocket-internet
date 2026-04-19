@@ -1,0 +1,105 @@
+{
+    "location": {
+        "total_count": 5,
+        "context": {
+            "k-street": 2,
+            "bathroom": 1,
+            "bedroom": 1,
+            "forgetting-house": 1
+        }
+    },
+    "event-type": {
+        "total_count": 1,
+        "context": {
+            "omen": 1
+        }
+    },
+    "omen": {
+        "total_count": 4,
+        "context": {
+            "symbol": 1,
+            "spider": 1,
+            "cardinal": 1,
+            "birds": 1
+        }
+    },
+    "symbol": {
+        "total_count": 131,
+        "context": {
+            "spider": 1,
+            "bathroom": 1,
+            "cardinal": 1,
+            "bird": 1,
+            "red": 1,
+            "0": 84,
+            "1": 21,
+            "2": 21
+        }
+    },
+    "felt": {
+        "total_count": 4,
+        "context": {
+            "shocking": 1,
+            "embarrassing": 1,
+            "hilarious": 1,
+            "prophetic": 1
+        }
+    },
+    "related-to": {
+        "total_count": 4,
+        "context": {
+            "bladder": 1,
+            "spider": 1,
+            "omen": 1,
+            "bathroom": 1
+        }
+    },
+    "context": {
+        "total_count": 3,
+        "context": {
+            "spring": 1,
+            "change": 1,
+            "seeking-growth": 1
+        }
+    },
+    "media": {
+        "total_count": 1,
+        "context": {
+            "news(sky-news)": 1
+        }
+    },
+    "about": {
+        "total_count": 4,
+        "context": {
+            "charlie": 1,
+            "threads": 1,
+            "tag-system": 1,
+            "data-forestry": 1
+        }
+    },
+    "felt-sense": {
+        "total_count": 63,
+        "context": [
+            42,
+            21
+        ]
+    },
+    "feeling": {
+        "total_count": 21,
+        "context": [
+            21
+        ]
+    },
+    "loves": {
+        "total_count": 42,
+        "context": [
+            42
+        ]
+    },
+    "kitten": {
+        "total_count": 42,
+        "context": [
+            42
+        ]
+    }
+}

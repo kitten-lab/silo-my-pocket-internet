@@ -1,0 +1,20 @@
+{
+    "slug": "charlie",
+    "aliases": [],
+    "type": [],
+    "notes": [],
+    "total_count": 1,
+    "context": {
+        "about": {
+            "count": 1,
+            "used_by": {
+                "SKYLINE-REPORTERB": {
+                    "count": 1,
+                    "cUID": {
+                        "crate.7DE13BD9BA0D4228": "\/b\/SKYLINE\/PUBLIC\/NEWS"
+                    }
+                }
+            }
+        }
+    }
+}
