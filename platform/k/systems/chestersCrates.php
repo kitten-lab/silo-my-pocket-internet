@@ -131,10 +131,10 @@ function catalogUNIX($UNIX,$cUID, $SHADOW_PROD_TOGGLE){
     //--## router settings ------- ##
 
     $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
-    $ROUTE = $ROUTE__LINE . '/catalog/';
+    $ROUTE = $ROUTE__LINE . '/trackerKEEPER/unix_quick_lookup/' . date('Y') . '/';
     if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
 
-    $UNIX_CHEST = $ROUTE . 'unix.catalog.json';
+    $UNIX_CHEST = $ROUTE . date('Y-m') . '.quicklookup.json';
     $json = file_get_contents($UNIX_CHEST);
     $payload = json_decode($json, true);
 
@@ -161,7 +161,7 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
   //--## router settings ------- ##
     $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
 
-        $ROUTE = $ROUTE__LINE . '/catalog/';
+        $ROUTE = $ROUTE__LINE . '/trackerKEEPER/by_catalog/';
         if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
 
         $TAG_CHEST = $ROUTE . 'tags.catalog.json';
@@ -176,31 +176,35 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
         if (!$TAGS) {
             $TAGS = [];
         }
-        
+
+
         foreach ($add as $k => $values){
-            foreach ($values as $v){
-                if (!is_array($TAGS[$v])) {
-                    $TAGS[$v]['total'] = 0;
-                }
+            foreach ($values as $v)
+            {
 
-                if (!is_array($TAGS[$v]['used_as'][$k])) {
-                    $TAGS[$v]['used_as'][$k] = [
-                        'count' => 0, 
-                        'used_by' => [
-                            $ACTOR => []
-                        ] 
-                    ];
-                }
-            }
 
-            if (!is_array($TAGS[$v]['used_as'][$k]['used_by'][$ACTOR][$cUID])) {
-                $TAGS[$v]['used_as'][$k]['used_by'][$ACTOR][$cUID] = [
-                    'room_path' => $tagpath, 
-                    "tagged_in" => $GLOBALS['TOOL']['CATALOG_SLUG']
-                    ];
-                $TAGS[$v]['total']++;
-                $TAGS[$v]['used_as'][$k]['count']++;
-            } 
+
+        if (!isset($TAGS[$v])){
+            $TAGS[$v] = [
+                'usage_count' => 0,
+                'context' => []
+            ];
+        }
+
+        if (!isset($TAGS[$v]['context'])){
+            $TAGS[$v]['context'] = [];
+
+        }
+        if (!isset($TAGS[$v]['context'][$k])){
+            $TAGS[$v]['context'][$k] = 0;
+
+        } 
+
+            $TAGS[$v]['context'][$k]++;
+            $TAGS[$v]['usage_count']++;
+
+        
+        }
         }
   //--## fill that crate! ------- ##
     file_put_contents($TAG_CHEST, json_encode($TAGS, JSON_PRETTY_PRINT));
@@ -216,7 +220,7 @@ function catalogJUKEBOX($RAW_TAGS, $SHADOW_PROD_TOGGLE, $link, $artist, $song, $
   //--## router settings ------- ##
     $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
 
-        $ROUTE = $ROUTE__LINE . '/catalog/';
+        $ROUTE = $ROUTE__LINE . '/trackerKEEPER/by_catalog/';
         if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
 
         $TAG_CHEST = $ROUTE . 'songs.catalog.json';
