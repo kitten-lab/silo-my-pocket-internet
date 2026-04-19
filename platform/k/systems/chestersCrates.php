@@ -169,6 +169,14 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
         $TAGS = json_decode($json, true);
 
     
+    $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
+
+        $ROUTE2 = $ROUTE__LINE . '/trackerKEEPER/by_catalog/';
+        if (!is_dir($ROUTE2)) { mkdir($ROUTE2, 0775, true); }   
+
+        $CONTEXT_CHEST = $ROUTE2 . 'context.catalog.json';
+        $json = file_get_contents($CONTEXT_CHEST);
+        $CONTEXTS = json_decode($json, true);
 
 
   //--## tag parser settings ------- ##
@@ -203,7 +211,30 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
                 $TAGS[$v]['context'][$k]++;
                 $TAGS[$v]['total_count']++;
 
-        
+        if (!$CONTEXTS) {
+            $CONTEXTS = [];
+        }
+
+
+
+            if (!isset($CONTEXTS[$k])){
+                $CONTEXTS[$k] = [
+                    'total_count' => 0,
+                    'context' => []
+                ];
+            }
+
+            if (!isset($CONTEXTS[$k]['context'])){
+                $CONTEXTS[$k]['context'] = [];
+
+            }
+            if (!isset($CONTEXTS[$k]['context'][$v])){
+                $CONTEXTS[$k]['context'][$v] = 0;
+
+            } 
+
+                $CONTEXTS[$k]['context'][$v]++;
+                $CONTEXTS[$k]['total_count']++;
 
 
         $ROUTE__LINE = ROUTE('d', $SHADOW_PROD_TOGGLE);
@@ -219,6 +250,8 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
                 $C = [
                     'slug' => $v,
                     'aliases' => [],
+                    'type' => [],
+                    'notes' => [],
                     'total_count' => 0,
                     'context' => []
                 ];
@@ -242,12 +275,54 @@ function catalogTAGS($RAW_TAGS, $SHADOW_PROD_TOGGLE, $cUID, $UNIX, $tagpath){
             $C['total_count']++;
             $C['context'][$k]['count']++;
             $C['context'][$k]['used_by'][$ACTOR]['count']++;
+
+
+
+
+            $THIRD_ROUTE = $ROUTE__LINE . '/trackerKEEPER/by_catalog/by_context/';
+            if (!is_dir($THIRD_ROUTE)) { mkdir($THIRD_ROUTE, 0775, true); }   
+
+            $COLLECTION2 = $THIRD_ROUTE . $k . '.context.json';
+            $json = file_get_contents($COLLECTION2);
+            $C2 = json_decode($json, true);
+
+            if (!isset($C2)){
+                $C2 = [
+                    'slug' => $k,
+                    'aliases' => [],
+                    'type' => [],
+                    'notes' => [],
+                    'total_count' => 0,
+                    'tag' => []
+                ];
+            }
+
+            if (!isset($C2['tag'][$v])){
+                $C2['tag'][$v] = [
+                    'count' => 0,
+                    'used_by' => []
+                ];
+            }
+
+            if (!isset($C2['tag'][$v]['used_by'][$ACTOR])){
+                $C2['tag'][$v]['used_by'][$ACTOR] = [
+                    'count' => 0,
+                    'cUID' => []
+                ];
+            }
+
+            $C2['tag'][$v]['used_by'][$ACTOR]['cUID'][$cUID] = $tagpath;
+            $C2['total_count']++;
+            $C2['tag'][$v]['count']++;
+            $C2['tag'][$v]['used_by'][$ACTOR]['count']++;
             
 
-    file_put_contents($COLLECTION, json_encode($C, JSON_PRETTY_PRINT));
+            file_put_contents($COLLECTION, json_encode($C, JSON_PRETTY_PRINT));
+            file_put_contents($COLLECTION2, json_encode($C2, JSON_PRETTY_PRINT));
             }
         }
   //--## fill that crate! ------- ##
+    file_put_contents($CONTEXT_CHEST, json_encode($CONTEXTS, JSON_PRETTY_PRINT));
     file_put_contents($TAG_CHEST, json_encode($TAGS, JSON_PRETTY_PRINT));
 }
 
