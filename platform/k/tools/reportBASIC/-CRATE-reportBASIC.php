@@ -2,9 +2,9 @@
 
 function json_payload(){
     return [
-    "timber" => [
+    "post" => [
         "topic" => $_POST['POST__TIMBER_TOPIC'],
-        "leaf" => $_POST['POST__TIMBER_LEAF'],
+        "content" => $_POST['POST__TIMBER_LEAF'],
     ]];
 }
 
