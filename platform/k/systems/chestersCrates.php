@@ -471,24 +471,27 @@ function charliesTHREADS($sha_env, $tpstime){
         
     if (!$tc) {
         $tc = [
-                'name' => $entity,
-                'gravity' => 0,
-                'tps_metadata' => [],
+            'name' => $entity,
+            'gravity' => 0,
+            'tps_metadata' => [],
         ];
-        
     }
-
 
     if (!isset($tc['contents'][$object]))
     $tc['contents'][$object] = [
-                'gravity' => 0,
-                'tps_metadata' => [],];
+            'gravity' => 0,
+            'tps_metadata' => [],
+            ];
 
     if (!isset($tc['contents'][$object]['bin'][$tag]))
     $tc['contents'][$object]['bin'][$tag] = [
-                'gravity' => 0,
-                'tps_metadata' => [],];
+            'gravity' => 0,
+            'tps_metadata' => [],
+            ];
 
+    if (!isset($tc['tps_metadata']['added']))
+        $tc['tps_metadata']['added'] = time();
+        
     $tc['contents'][$object]['bin'][$tag]['gravity']++;
     $tc['contents'][$object]['gravity']++;
     $tc['gravity']++;
