@@ -491,6 +491,14 @@ function charliesTHREADS($sha_env, $tpstime){
 
     if (!isset($tc['tps_metadata']['added']))
         $tc['tps_metadata']['added'] = time();
+
+    
+    if (!isset($tc['contents'][$object]['tps_metadata']['added']))
+        $tc['contents'][$object]['tps_metadata']['added'] = time();
+
+    
+    if (!isset($tc['contents'][$object]['bin'][$tag]['tps_metadata']['added']))
+        $tc['contents'][$object]['bin'][$tag]['tps_metadata']['added'] = time();
         
     $tc['contents'][$object]['bin'][$tag]['gravity']++;
     $tc['contents'][$object]['gravity']++;
