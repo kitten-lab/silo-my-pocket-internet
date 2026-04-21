@@ -446,6 +446,7 @@ function charlieTHREAD2($sha_env, $tpstime){
 //--------------------------------------------------------------------------------
 function charliesTHREADS($sha_env, $tpstime){
     
+$cUID = $GLOBALS['cUID'];
     $RAW_TAGS = $_POST['POST__TAGS'] ?? '';
     $router_1 = ROUTE('d', $sha_env);
     $add = tagSPLICER($RAW_TAGS);
@@ -490,16 +491,18 @@ function charliesTHREADS($sha_env, $tpstime){
             ];
 
     if (!isset($tc['tps_metadata']['added']))
-        $tc['tps_metadata']['added'] = time();
+        $tc['tps_metadata']['added'] = ['cUID' => $cUID, 'unix' => time()];
 
-    
     if (!isset($tc['contents'][$object]['tps_metadata']['added']))
-        $tc['contents'][$object]['tps_metadata']['added'] = time();
+        $tc['contents'][$object]['tps_metadata']['added']= ['cUID' => $cUID, 'unix' => time()];
 
-    
     if (!isset($tc['contents'][$object]['bin'][$tag]['tps_metadata']['added']))
-        $tc['contents'][$object]['bin'][$tag]['tps_metadata']['added'] = time();
+        $tc['contents'][$object]['bin'][$tag]['tps_metadata']['added'] = ['cUID' => $cUID, 'unix' => time()];
         
+        $tc['tps_metadata']['updated'] = ['cUID' => $cUID, 'unix' => time()];
+        $tc['contents'][$object]['tps_metadata']['updated']= ['cUID' => $cUID, 'unix' => time()];
+        $tc['contents'][$object]['bin'][$tag]['tps_metadata']['updated'] = ['cUID' => $cUID, 'unix' => time()];
+
     $tc['contents'][$object]['bin'][$tag]['gravity']++;
     $tc['contents'][$object]['gravity']++;
     $tc['gravity']++;
