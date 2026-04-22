@@ -1,0 +1,181 @@
+{
+    "headlines": {
+        "gravity": 18,
+        "mythleak": {
+            "weight": 18,
+            "the-writerapollos": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759017600": [
+                            "crate.94945A2F383EBB5F"
+                        ]
+                    }
+                }
+            },
+            "skyline": {
+                "weight": 2,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759017600": [
+                            "crate.94945A2F383EBB5F"
+                        ],
+                        "1758844800": [
+                            "crate.F747E29B4FE42A08"
+                        ]
+                    }
+                }
+            },
+            "artificial-vision": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759017600": [
+                            "crate.94945A2F383EBB5F"
+                        ]
+                    }
+                }
+            },
+            "render-outputs": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759017600": [
+                            "crate.94945A2F383EBB5F"
+                        ]
+                    }
+                }
+            },
+            "obsidian": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759017600": [
+                            "crate.94945A2F383EBB5F"
+                        ]
+                    }
+                }
+            },
+            "archetypal-princess": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1758844800": [
+                            "crate.F747E29B4FE42A08"
+                        ]
+                    }
+                }
+            },
+            "athena": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1758844800": [
+                            "crate.F747E29B4FE42A08"
+                        ]
+                    }
+                }
+            },
+            "goddesses": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1758844800": [
+                            "crate.F747E29B4FE42A08"
+                        ]
+                    }
+                }
+            },
+            "frogs": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759190400": [
+                            "crate.897028FA143952B0"
+                        ]
+                    }
+                }
+            },
+            "wires": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759190400": [
+                            "crate.897028FA143952B0"
+                        ]
+                    }
+                }
+            },
+            "unspooling-reality": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759190400": [
+                            "crate.897028FA143952B0"
+                        ]
+                    }
+                }
+            },
+            "wire-web": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1757376000": [
+                            "crate.69C58348C54BEF64"
+                        ]
+                    }
+                }
+            },
+            "aphrodite": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1757376000": [
+                            "crate.69C58348C54BEF64"
+                        ]
+                    }
+                }
+            },
+            "dark-lattice": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1757376000": [
+                            "crate.69C58348C54BEF64"
+                        ]
+                    }
+                }
+            },
+            "ending-cycles": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1757376000": [
+                            "crate.69C58348C54BEF64"
+                        ]
+                    }
+                }
+            },
+            "prometheus": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1755230400": [
+                            "crate.734389605CB2DEB7"
+                        ]
+                    }
+                }
+            },
+            "the-light": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1755230400": [
+                            "crate.734389605CB2DEB7"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

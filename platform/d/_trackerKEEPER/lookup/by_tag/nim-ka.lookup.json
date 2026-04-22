@@ -1,0 +1,18 @@
+{
+    "nim-ka": {
+        "gravity": 1,
+        "soper": {
+            "weight": 1,
+            "purpose": {
+                "weight": 1,
+                "reported_by": {
+                    "1-MIRA-1": {
+                        "1776868104": [
+                            "crate.68E468C60840DD2F"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "adm-ka",
+    "gravity": 4,
+    "tps_metadata": [],
+    "adm-ka": {
+        "soper": {
+            "weight": 4,
+            "bin": {
+                "documentation": 2,
+                "intentions": 2
+            }
+        }
+    }
+}

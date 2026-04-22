@@ -1,0 +1,18 @@
+{
+    "acts-of-god": {
+        "gravity": 1,
+        "mythleak": {
+            "weight": 1,
+            "mentions": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759190400": [
+                            "crate.897028FA143952B0"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

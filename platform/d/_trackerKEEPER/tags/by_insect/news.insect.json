@@ -1,0 +1,13 @@
+{
+    "name": "news",
+    "gravity": 3,
+    "tps_metadata": [],
+    "news": {
+        "media": {
+            "weight": 3,
+            "bin": {
+                "mythleak": 3
+            }
+        }
+    }
+}

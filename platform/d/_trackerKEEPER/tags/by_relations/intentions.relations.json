@@ -1,0 +1,44 @@
+{
+    "name": "intentions",
+    "gravity": 2,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.629B6E37AA3E1170",
+            "unix": 1776828085
+        },
+        "updated": {
+            "cUID": "crate.BF52F014828D3F84",
+            "unix": 1776861857
+        }
+    },
+    "contents": {
+        "adm-ka": {
+            "gravity": 2,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.629B6E37AA3E1170",
+                    "unix": 1776828085
+                },
+                "updated": {
+                    "cUID": "crate.BF52F014828D3F84",
+                    "unix": 1776861857
+                }
+            },
+            "bin": {
+                "soper": {
+                    "gravity": 2,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.629B6E37AA3E1170",
+                            "unix": 1776828085
+                        },
+                        "updated": {
+                            "cUID": "crate.BF52F014828D3F84",
+                            "unix": 1776861857
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

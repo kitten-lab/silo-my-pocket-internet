@@ -1,0 +1,100 @@
+{
+    "name": "mythleak",
+    "gravity": 5,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.94945A2F383EBB5F",
+            "unix": 1776885989
+        },
+        "updated": {
+            "cUID": "crate.734389605CB2DEB7",
+            "unix": 1776886650
+        }
+    },
+    "contents": {
+        "new": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.94945A2F383EBB5F",
+                    "unix": 1776885989
+                },
+                "updated": {
+                    "cUID": "crate.94945A2F383EBB5F",
+                    "unix": 1776885989
+                }
+            },
+            "bin": {
+                "media": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        },
+                        "updated": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        }
+                    }
+                }
+            }
+        },
+        "news": {
+            "gravity": 3,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.F747E29B4FE42A08",
+                    "unix": 1776886207
+                },
+                "updated": {
+                    "cUID": "crate.69C58348C54BEF64",
+                    "unix": 1776886492
+                }
+            },
+            "bin": {
+                "media": {
+                    "gravity": 3,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        },
+                        "updated": {
+                            "cUID": "crate.69C58348C54BEF64",
+                            "unix": 1776886492
+                        }
+                    }
+                }
+            }
+        },
+        "media": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.734389605CB2DEB7",
+                    "unix": 1776886650
+                },
+                "updated": {
+                    "cUID": "crate.734389605CB2DEB7",
+                    "unix": 1776886650
+                }
+            },
+            "bin": {
+                "news": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.734389605CB2DEB7",
+                            "unix": 1776886650
+                        },
+                        "updated": {
+                            "cUID": "crate.734389605CB2DEB7",
+                            "unix": 1776886650
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

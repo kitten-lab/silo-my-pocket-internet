@@ -1,0 +1,13 @@
+{
+    "name": "love",
+    "gravity": 1,
+    "tps_metadata": [],
+    "love": {
+        "topics": {
+            "weight": 1,
+            "bin": {
+                "true-loves-kiss": 1
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "nim-ka",
+    "gravity": 1,
+    "tps_metadata": [],
+    "nim-ka": {
+        "soper": {
+            "weight": 1,
+            "bin": {
+                "purpose": 1
+            }
+        }
+    }
+}

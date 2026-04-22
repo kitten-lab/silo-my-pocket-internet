@@ -1,0 +1,69 @@
+{
+    "crate.F747E29B4FE42A08": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "GODDESSES HORRIFIED ABOUT THE ARCHETYPAL PRINCESS",
+                "content": "RECENTLY RECONSIDERED THE TREATMENT OF THE SHE WHO SEEKS TRUE LOVES KISS\r\n\r\n\u201cYou know,\u201d Athena was quoted saying, \u201cI used to find the Princess to be such a bore. Obsessed with finding their one true love, big deal! But I hadn\u2019t realized how tragic it all really was.\u201d Recent insider perspectives indicate the Archetypal Princess has been stuck in a near-endless loop of stockholm syndrome and self-blame rituals.\r\n\r\n\u201cWe all just thought she couldn\u2019t get over it,\u201d another goddess remarked, choosing to remain anonymous. \u201cWe had no idea how deep her conditioning really was!\u201d\r\n\r\nThere is no word whether the Goddesses have any plans to assist the Archetypal Princess, but sources close to the earth say there is a change in the The Skyline hum over the consideration.\r\n"
+            }
+        },
+        "route": [],
+        "tags": {
+            "media": {
+                "news": [
+                    "mythleak"
+                ]
+            },
+            "mythleak": {
+                "headlines": [
+                    "archetypal-princess",
+                    "athena",
+                    "goddesses",
+                    "skyline"
+                ],
+                "mentions": [
+                    "princess",
+                    "goddess",
+                    "skyline",
+                    "stockholm-syndrome",
+                    "self-blame-rituals"
+                ]
+            },
+            "topics": {
+                "love": [
+                    "true-loves-kiss"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "media*news>mythleak;mythleak*headlines>archetypal-princess+athena+goddesses+skyline,mentions>princess+goddess+skyline+stockholm-syndrome+self-blame-rituals;topics*love>true-loves-kiss",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "MYTHLEAK",
+            "sys_display": "MYTHLEAK: WE HAVE THE RECIEPTS",
+            "dom_slug": "NEWS",
+            "dom_display": "THE JUICE LINE",
+            "room_slug": "HEADLINES",
+            "room_display": "WHAT'S THE DIRT?",
+            "mod_slug": "MCS-000",
+            "mod_display": "-MOUSE-"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1758844800.tps",
+            "ingest_unix": 1758844800,
+            "event_unix": 1758844800,
+            "timezone": "America\/New_York"
+        }
+    }
+}

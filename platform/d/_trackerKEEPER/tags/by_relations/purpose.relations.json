@@ -1,0 +1,44 @@
+{
+    "name": "purpose",
+    "gravity": 1,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.68E468C60840DD2F",
+            "unix": 1776868104
+        },
+        "updated": {
+            "cUID": "crate.68E468C60840DD2F",
+            "unix": 1776868104
+        }
+    },
+    "contents": {
+        "nim-ka": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.68E468C60840DD2F",
+                    "unix": 1776868104
+                },
+                "updated": {
+                    "cUID": "crate.68E468C60840DD2F",
+                    "unix": 1776868104
+                }
+            },
+            "bin": {
+                "soper": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.68E468C60840DD2F",
+                            "unix": 1776868104
+                        },
+                        "updated": {
+                            "cUID": "crate.68E468C60840DD2F",
+                            "unix": 1776868104
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

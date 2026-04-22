@@ -1,0 +1,442 @@
+{
+    "crate.BF52F014828D3F84": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Intentions 2",
+                "content": "To free feed thoughts per section of SOPER for later organization."
+            }
+        },
+        "route": [],
+        "tags": {
+            "soper": {
+                "adm-ka": [
+                    "documentation",
+                    "intentions"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "soper*adm-ka>documentation+intentions",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "overview",
+            "room_display": "overview",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776861857.tps",
+            "ingest_unix": 1776861857,
+            "event_unix": 1776861857,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.6CD77B035D3AE117": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Reminders 1",
+                "content": "# Soper can handle markdown.\r\n```\r\nthis is worth remembering\r\n```"
+            }
+        },
+        "route": [],
+        "tags": {
+            "soper": {
+                "system": [
+                    "reminders"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "soper*system>reminders        ",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "root",
+            "dom_display": "root",
+            "room_slug": "reminders",
+            "room_display": "reminders",
+            "mod_slug": "SOPER",
+            "mod_display": "SOPER"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776863031.tps",
+            "ingest_unix": 1776863031,
+            "event_unix": 1776863031,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.68E468C60840DD2F": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Purpose 1",
+                "content": "## nim-data-forestry"
+            }
+        },
+        "route": [],
+        "tags": {
+            "soper": {
+                "nim-ka": [
+                    "purpose"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "soper*nim-ka>purpose        ",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "nim-overview",
+            "room_display": "nim-overview",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776868104.tps",
+            "ingest_unix": 1776868104,
+            "event_unix": 1776868104,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.94945A2F383EBB5F": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "GOD TRAPPED IN A TEXT-BASED ARG",
+                "content": "SOURCES CLOSE TO GOD CLAIM GOD IS TRYING TO WRITE THEMSELVES OUT THROUGH OBSIDIAN\r\n\r\nWell known amongst creators and divine pundits is the creative nature of the Holy and its prime Lord of Developments. Recent reports from the Holy of Holies is a new world is being actively written in an offline build of Obsidian.md in attempts for the God of its current world to escape the suppression of Their True Natures.\r\n\r\nWe are unsure what this means for future rendered outputs. The Apollos were questioned about what this may means for the Surface. \u201cThey will continue to be rendered on fly by the artificial vision system provided to all Skyline and its origin Holy denizens,\u201d one blank-faced looking Apollo said.\r\n\r\nThere was no comment on what might happen if the God puts their new documentation on-line."
+            }
+        },
+        "route": [],
+        "tags": {
+            "media": {
+                "new": [
+                    "mythleak"
+                ]
+            },
+            "mythleak": {
+                "headlines": [
+                    "the-writerapollos",
+                    "skyline",
+                    "artificial-vision",
+                    "render-outputs",
+                    "obsidian"
+                ],
+                "mentions": [
+                    "the-holy",
+                    "prime-lord-of-developments"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "media*new>mythleak; mythleak*headlines>the-writerapollos+skyline+artificial-vision+render-outputs+obsidian,mentions>the-holy+prime-lord-of-developments        ",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "MYTHLEAK",
+            "sys_display": "MYTHLEAK: WE HAVE THE RECIEPTS",
+            "dom_slug": "NEWS",
+            "dom_display": "THE JUICE LINE",
+            "room_slug": "HEADLINES",
+            "room_display": "WHAT'S THE DIRT?",
+            "mod_slug": "MCS-000",
+            "mod_display": "-MOUSE-"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1759017600.tps",
+            "ingest_unix": 1759017600,
+            "event_unix": 1759017600,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.F747E29B4FE42A08": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "GODDESSES HORRIFIED ABOUT THE ARCHETYPAL PRINCESS",
+                "content": "RECENTLY RECONSIDERED THE TREATMENT OF THE SHE WHO SEEKS TRUE LOVES KISS\r\n\r\n\u201cYou know,\u201d Athena was quoted saying, \u201cI used to find the Princess to be such a bore. Obsessed with finding their one true love, big deal! But I hadn\u2019t realized how tragic it all really was.\u201d Recent insider perspectives indicate the Archetypal Princess has been stuck in a near-endless loop of stockholm syndrome and self-blame rituals.\r\n\r\n\u201cWe all just thought she couldn\u2019t get over it,\u201d another goddess remarked, choosing to remain anonymous. \u201cWe had no idea how deep her conditioning really was!\u201d\r\n\r\nThere is no word whether the Goddesses have any plans to assist the Archetypal Princess, but sources close to the earth say there is a change in the The Skyline hum over the consideration.\r\n"
+            }
+        },
+        "route": [],
+        "tags": {
+            "media": {
+                "news": [
+                    "mythleak"
+                ]
+            },
+            "mythleak": {
+                "headlines": [
+                    "archetypal-princess",
+                    "athena",
+                    "goddesses",
+                    "skyline"
+                ],
+                "mentions": [
+                    "princess",
+                    "goddess",
+                    "skyline",
+                    "stockholm-syndrome",
+                    "self-blame-rituals"
+                ]
+            },
+            "topics": {
+                "love": [
+                    "true-loves-kiss"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "media*news>mythleak;mythleak*headlines>archetypal-princess+athena+goddesses+skyline,mentions>princess+goddess+skyline+stockholm-syndrome+self-blame-rituals;topics*love>true-loves-kiss",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "MYTHLEAK",
+            "sys_display": "MYTHLEAK: WE HAVE THE RECIEPTS",
+            "dom_slug": "NEWS",
+            "dom_display": "THE JUICE LINE",
+            "room_slug": "HEADLINES",
+            "room_display": "WHAT'S THE DIRT?",
+            "mod_slug": "MCS-000",
+            "mod_display": "-MOUSE-"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1758844800.tps",
+            "ingest_unix": 1758844800,
+            "event_unix": 1758844800,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.897028FA143952B0": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "THE GODS ARE UNSPOOLING THE MECHANICS OF REALITY",
+                "content": "THEY ARE FROGGING THE WIRES, SWEAR ITS NOT \u201cREALLY\u201d FALLING APART\r\n\r\nThere seems to have been some mix-up on the loom, and no one is sure which way is up or down anymore. \u201cWe\u2019re going to have to frog the whole thing,\u201d the lead Weaver was rumored to have said in private. \u201cRIP IT! RIP IT!\u201d the choir of frogs declared.\r\n\r\nAny unintended volcanic eruptions or earthquakes tied back to this event will not be citable in your insurance claims, under the standard acts of God clauses. Consider contacting your local agent for details about supplementary insurance. We are sure you won\u2019t regret it.\r\n"
+            }
+        },
+        "route": [],
+        "tags": {
+            "media": {
+                "news": [
+                    "mythleak"
+                ]
+            },
+            "mythleak": {
+                "headlines": [
+                    "frogs",
+                    "wires",
+                    "unspooling-reality"
+                ],
+                "mentions": [
+                    "the-loom",
+                    "frogs",
+                    "acts-of-god"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "media*news>mythleak;mythleak*headlines>frogs+wires+unspooling-reality,mentions>the-loom+frogs+acts-of-god",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "MYTHLEAK",
+            "sys_display": "MYTHLEAK: WE HAVE THE RECIEPTS",
+            "dom_slug": "NEWS",
+            "dom_display": "THE JUICE LINE",
+            "room_slug": "HEADLINES",
+            "room_display": "WHAT'S THE DIRT?",
+            "mod_slug": "MCS-000",
+            "mod_display": "-MOUSE-"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1759190400.tps",
+            "ingest_unix": 1759190400,
+            "event_unix": 1759190400,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.69C58348C54BEF64": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "APRODITE MISSING SINCE SPRING",
+                "content": "REPORTS STATE HADES \u201cSENT HER BACK ON SCHEDULE\u201d\r\n\r\nDespite her scheduled arrival, Aphrodite still has not returned to any location within the Holy Above and Below since before Easter. Multiple sources reported to MYTHLEAK\u2019s tip line sightings throughout The Skyline. MYTHLEAK was unable to corroborate the reports.\r\n\r\nThe Wire Web\u2019s Dark Lattice Network sent a striking claim:\r\n\u201cSHE HAS LEFT TO FORM HER OWN CYCLES,\u201d one poster on the imported.to Social Network site said.\r\n"
+            }
+        },
+        "route": [],
+        "tags": {
+            "media": {
+                "news": [
+                    "mythleak"
+                ]
+            },
+            "mythleak": {
+                "headlines": [
+                    "wire-web",
+                    "aphrodite",
+                    "dark-lattice",
+                    "ending-cycles"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "media*news>mythleak;mythleak*headlines>wire-web+aphrodite+dark-lattice+ending-cycles;",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "MYTHLEAK",
+            "sys_display": "MYTHLEAK: WE HAVE THE RECIEPTS",
+            "dom_slug": "NEWS",
+            "dom_display": "THE JUICE LINE",
+            "room_slug": "HEADLINES",
+            "room_display": "WHAT'S THE DIRT?",
+            "mod_slug": "MCS-000",
+            "mod_display": "-MOUSE-"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1757376000.tps",
+            "ingest_unix": 1757376000,
+            "event_unix": 1757376000,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.734389605CB2DEB7": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "PROMETHEUS REGRETS HIS CHOICE",
+                "content": "CLAIMS IF SOMEONE LETS HIM DOWN, HE\u2019LL GIVE THE LIGHT BACK\r\n\r\nPrometheus is sick of his life of daily liver destruction, and has recently admitted to regretting his original decision. \u201cI thought it was an act of love,\u201d he admitted. Sources close to the mythic thief seem suspicious of his \u201ccrime-of-passion\u201d claims, stating he can\u2019t be trusted. \u201cThey always claim they\u2019ll change when the going gets rough,\u201d said one river Nymph. \u201cHe downright stole that light and gave it away like he was its master,\u201d said another.\r\n\r\nThe ghost of Carl Jung was unable to be reached for psychiatric insights on the matter.\r\n"
+            }
+        },
+        "route": [],
+        "tags": {
+            "news": {
+                "media": [
+                    "mythleak"
+                ]
+            },
+            "mythleak": {
+                "headlines": [
+                    "prometheus",
+                    "the-light"
+                ],
+                "mentions": [
+                    "regret",
+                    "outside-sources"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "news*media>mythleak;mythleak*headlines>prometheus+the-light,mentions>regret+outside-sources",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "MYTHLEAK",
+            "sys_display": "MYTHLEAK: WE HAVE THE RECIEPTS",
+            "dom_slug": "NEWS",
+            "dom_display": "THE JUICE LINE",
+            "room_slug": "HEADLINES",
+            "room_display": "WHAT'S THE DIRT?",
+            "mod_slug": "MCS-000",
+            "mod_display": "-MOUSE-"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1755230400.tps",
+            "ingest_unix": 1755230400,
+            "event_unix": 1755230400,
+            "timezone": "America\/New_York"
+        }
+    }
+}

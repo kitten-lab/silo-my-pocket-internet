@@ -33,9 +33,9 @@ function keyMaker() {
         }
 
         if (count($segments) == 1) {
-            $doors = $GLOBALS[$SITE]['room'] ?? [];
+            $doors = $GLOBALS[$SITE]['tDOM'] ?? [];
             foreach ($doors as $door){
-                if ($segments[0] == $door['name']) {
+                if ($segments[0] == $door['DOM']) {
                     aRoomWithNoKey();
                     require resolveShell($GLOBALS[$SITE]['SYS_SLUG'] ?? "SKYLINE");
                     exit;
@@ -52,12 +52,12 @@ function lockAndKey(){
     $foundRoom = false;
 
     foreach ($_GET as $room => $key) {
-        $doors = $GLOBALS[$SITE]['room'] ?? [];
+        $doors = $GLOBALS[$SITE]['tDOM'] ?? [];
 
         foreach ($doors as $door){
-            if ($room == $door['name']) {
+            if ($room == $door['DOM']) {
                 $foundRoom = true;
-                $path = $GLOBALS['ROUTE']['M']['URI'] . '/' . $door['name'] .'/' . $key . '.php';
+                $path = $GLOBALS['ROUTE']['M']['URI'] . '/' . $door['DOM'] .'/' . $key . '.php';
                 if (empty($key)) {
                     aRoomWithNoKey();
                     require resolveShell($GLOBALS[$SITE]['SYS_SLUG']);

@@ -283,5 +283,195 @@
             "event_unix": 1776819635,
             "timezone": "America\/New_York"
         }
+    },
+    "crate.629B6E37AA3E1170": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Intentions 1",
+                "content": "Intentions for this space:\r\nto produce chunks of the information by type for the project ADM-KA-MACHINA."
+            }
+        },
+        "route": [],
+        "tags": {
+            "soper": {
+                "adm-ka": [
+                    "documentation",
+                    "intentions"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "soper*adm-ka>documentation+intentions        ",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "overview",
+            "room_display": "overview",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776828085.tps",
+            "ingest_unix": 1776828085,
+            "event_unix": 1776828085,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.BF52F014828D3F84": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Intentions 2",
+                "content": "To free feed thoughts per section of SOPER for later organization."
+            }
+        },
+        "route": [],
+        "tags": {
+            "soper": {
+                "adm-ka": [
+                    "documentation",
+                    "intentions"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "soper*adm-ka>documentation+intentions",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "overview",
+            "room_display": "overview",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776861857.tps",
+            "ingest_unix": 1776861857,
+            "event_unix": 1776861857,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.6CD77B035D3AE117": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Reminders 1",
+                "content": "# Soper can handle markdown.\r\n```\r\nthis is worth remembering\r\n```"
+            }
+        },
+        "route": [],
+        "tags": {
+            "soper": {
+                "system": [
+                    "reminders"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "soper*system>reminders        ",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "root",
+            "dom_display": "root",
+            "room_slug": "reminders",
+            "room_display": "reminders",
+            "mod_slug": "SOPER",
+            "mod_display": "SOPER"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776863031.tps",
+            "ingest_unix": 1776863031,
+            "event_unix": 1776863031,
+            "timezone": "America\/New_York"
+        }
+    },
+    "crate.68E468C60840DD2F": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Purpose 1",
+                "content": "## nim-data-forestry"
+            }
+        },
+        "route": [],
+        "tags": {
+            "soper": {
+                "nim-ka": [
+                    "purpose"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "soper*nim-ka>purpose        ",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "nim-overview",
+            "room_display": "nim-overview",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776868104.tps",
+            "ingest_unix": 1776868104,
+            "event_unix": 1776868104,
+            "timezone": "America\/New_York"
+        }
     }
 }

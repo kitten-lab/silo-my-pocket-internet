@@ -1,0 +1,18 @@
+{
+    "outside-sources": {
+        "gravity": 1,
+        "mythleak": {
+            "weight": 1,
+            "mentions": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1755230400": [
+                            "crate.734389605CB2DEB7"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

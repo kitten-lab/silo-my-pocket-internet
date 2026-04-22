@@ -1,0 +1,44 @@
+{
+    "name": "self-blame-rituals",
+    "gravity": 1,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.F747E29B4FE42A08",
+            "unix": 1776886207
+        },
+        "updated": {
+            "cUID": "crate.F747E29B4FE42A08",
+            "unix": 1776886207
+        }
+    },
+    "contents": {
+        "mentions": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.F747E29B4FE42A08",
+                    "unix": 1776886207
+                },
+                "updated": {
+                    "cUID": "crate.F747E29B4FE42A08",
+                    "unix": 1776886207
+                }
+            },
+            "bin": {
+                "mythleak": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        },
+                        "updated": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

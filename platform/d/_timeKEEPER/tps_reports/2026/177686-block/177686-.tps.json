@@ -1,0 +1,107 @@
+{
+    "1776861857.tps": {
+        "tps_version": 3,
+        "cUID": [
+            "crate.BF52F014828D3F84"
+        ],
+        "event_slug": [],
+        "import_unix": [
+            1776861857
+        ],
+        "time_certainty": {
+            "radius": 0,
+            "unit": "seconds",
+            "confidence": "exact"
+        },
+        "event_timezone": "America\/New_York",
+        "tps_timzezone": "UTC",
+        "tps_unix": 1776861857,
+        "tps_report": {
+            "netLoop": 572,
+            "millennium": 2,
+            "century": 20,
+            "decade": 202,
+            "year": 2026,
+            "leap": 0,
+            "month": 4,
+            "week": 17,
+            "dayOfYear": 111,
+            "dayOfMonth": 22,
+            "dayOfWeek": 3,
+            "hour": 12,
+            "minute": 44,
+            "second": 17,
+            "ms": 720
+        }
+    },
+    "1776863031.tps": {
+        "tps_version": 3,
+        "cUID": [
+            "crate.6CD77B035D3AE117"
+        ],
+        "event_slug": [],
+        "import_unix": [
+            1776863031
+        ],
+        "time_certainty": {
+            "radius": 0,
+            "unit": "seconds",
+            "confidence": "exact"
+        },
+        "event_timezone": "America\/New_York",
+        "tps_timzezone": "UTC",
+        "tps_unix": 1776863031,
+        "tps_report": {
+            "netLoop": 586,
+            "millennium": 2,
+            "century": 20,
+            "decade": 202,
+            "year": 2026,
+            "leap": 0,
+            "month": 4,
+            "week": 17,
+            "dayOfYear": 111,
+            "dayOfMonth": 22,
+            "dayOfWeek": 3,
+            "hour": 13,
+            "minute": 3,
+            "second": 51,
+            "ms": 308
+        }
+    },
+    "1776868104.tps": {
+        "tps_version": 3,
+        "cUID": [
+            "crate.68E468C60840DD2F"
+        ],
+        "event_slug": [],
+        "import_unix": [
+            1776868104
+        ],
+        "time_certainty": {
+            "radius": 0,
+            "unit": "seconds",
+            "confidence": "exact"
+        },
+        "event_timezone": "America\/New_York",
+        "tps_timzezone": "UTC",
+        "tps_unix": 1776868104,
+        "tps_report": {
+            "netLoop": 644,
+            "millennium": 2,
+            "century": 20,
+            "decade": 202,
+            "year": 2026,
+            "leap": 0,
+            "month": 4,
+            "week": 17,
+            "dayOfYear": 111,
+            "dayOfMonth": 22,
+            "dayOfWeek": 3,
+            "hour": 14,
+            "minute": 28,
+            "second": 24,
+            "ms": 659
+        }
+    }
+}

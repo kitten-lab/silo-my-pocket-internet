@@ -1,0 +1,72 @@
+{
+    "name": "skyline",
+    "gravity": 3,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.94945A2F383EBB5F",
+            "unix": 1776885989
+        },
+        "updated": {
+            "cUID": "crate.F747E29B4FE42A08",
+            "unix": 1776886207
+        }
+    },
+    "contents": {
+        "headlines": {
+            "gravity": 2,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.94945A2F383EBB5F",
+                    "unix": 1776885989
+                },
+                "updated": {
+                    "cUID": "crate.F747E29B4FE42A08",
+                    "unix": 1776886207
+                }
+            },
+            "bin": {
+                "mythleak": {
+                    "gravity": 2,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        },
+                        "updated": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        }
+                    }
+                }
+            }
+        },
+        "mentions": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.F747E29B4FE42A08",
+                    "unix": 1776886207
+                },
+                "updated": {
+                    "cUID": "crate.F747E29B4FE42A08",
+                    "unix": 1776886207
+                }
+            },
+            "bin": {
+                "mythleak": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        },
+                        "updated": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

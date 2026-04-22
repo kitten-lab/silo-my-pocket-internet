@@ -64,9 +64,9 @@ function wordsx($text, $c="") {
     skylite("<span style='$c'>$text</span>");
 }
 
-function section($align, $instructions='', $section) {
-    $GLOBALS['SKY_STACK'][$section] = "on";
-    skylite("<div class='$section' style='$instructions'>");
+function section($instructions, $class) {
+    $GLOBALS['SKY_STACK'][$class] = "on";
+    skylite("<div class='$class' style='$instructions'>");
 }
 
 function close_section() {

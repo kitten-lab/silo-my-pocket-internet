@@ -1,0 +1,29 @@
+{
+    "name": "headlines",
+    "gravity": 18,
+    "tps_metadata": [],
+    "headlines": {
+        "mythleak": {
+            "weight": 18,
+            "bin": {
+                "the-writerapollos": 1,
+                "skyline": 2,
+                "artificial-vision": 1,
+                "render-outputs": 1,
+                "obsidian": 1,
+                "archetypal-princess": 1,
+                "athena": 1,
+                "goddesses": 1,
+                "frogs": 1,
+                "wires": 1,
+                "unspooling-reality": 1,
+                "wire-web": 1,
+                "aphrodite": 1,
+                "dark-lattice": 1,
+                "ending-cycles": 1,
+                "prometheus": 1,
+                "the-light": 1
+            }
+        }
+    }
+}

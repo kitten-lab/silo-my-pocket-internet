@@ -1,0 +1,18 @@
+{
+    "obsidian": {
+        "gravity": 1,
+        "mythleak": {
+            "weight": 1,
+            "headlines": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759017600": [
+                            "crate.94945A2F383EBB5F"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

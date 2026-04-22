@@ -1,0 +1,13 @@
+{
+    "name": "new",
+    "gravity": 1,
+    "tps_metadata": [],
+    "new": {
+        "media": {
+            "weight": 1,
+            "bin": {
+                "mythleak": 1
+            }
+        }
+    }
+}

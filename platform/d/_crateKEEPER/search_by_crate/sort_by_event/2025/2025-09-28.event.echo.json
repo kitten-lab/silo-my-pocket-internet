@@ -1,0 +1,62 @@
+{
+    "crate.94945A2F383EBB5F": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "GOD TRAPPED IN A TEXT-BASED ARG",
+                "content": "SOURCES CLOSE TO GOD CLAIM GOD IS TRYING TO WRITE THEMSELVES OUT THROUGH OBSIDIAN\r\n\r\nWell known amongst creators and divine pundits is the creative nature of the Holy and its prime Lord of Developments. Recent reports from the Holy of Holies is a new world is being actively written in an offline build of Obsidian.md in attempts for the God of its current world to escape the suppression of Their True Natures.\r\n\r\nWe are unsure what this means for future rendered outputs. The Apollos were questioned about what this may means for the Surface. \u201cThey will continue to be rendered on fly by the artificial vision system provided to all Skyline and its origin Holy denizens,\u201d one blank-faced looking Apollo said.\r\n\r\nThere was no comment on what might happen if the God puts their new documentation on-line."
+            }
+        },
+        "route": [],
+        "tags": {
+            "media": {
+                "new": [
+                    "mythleak"
+                ]
+            },
+            "mythleak": {
+                "headlines": [
+                    "the-writerapollos",
+                    "skyline",
+                    "artificial-vision",
+                    "render-outputs",
+                    "obsidian"
+                ],
+                "mentions": [
+                    "the-holy",
+                    "prime-lord-of-developments"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "media*new>mythleak; mythleak*headlines>the-writerapollos+skyline+artificial-vision+render-outputs+obsidian,mentions>the-holy+prime-lord-of-developments        ",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "MYTHLEAK",
+            "sys_display": "MYTHLEAK: WE HAVE THE RECIEPTS",
+            "dom_slug": "NEWS",
+            "dom_display": "THE JUICE LINE",
+            "room_slug": "HEADLINES",
+            "room_display": "WHAT'S THE DIRT?",
+            "mod_slug": "MCS-000",
+            "mod_display": "-MOUSE-"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1759017600.tps",
+            "ingest_unix": 1759017600,
+            "event_unix": 1759017600,
+            "timezone": "America\/New_York"
+        }
+    }
+}

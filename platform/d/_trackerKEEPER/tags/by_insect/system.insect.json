@@ -1,0 +1,13 @@
+{
+    "name": "system",
+    "gravity": 1,
+    "tps_metadata": [],
+    "system": {
+        "soper": {
+            "weight": 1,
+            "bin": {
+                "reminders": 1
+            }
+        }
+    }
+}

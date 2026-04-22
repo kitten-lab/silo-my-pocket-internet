@@ -5,7 +5,7 @@ require_once $GLOBALS['INTERA']['TOOLS'] . 'skyGenesis/functions.php'; // GET SH
 require_once __DIR__ . '/-SIG-postBASIC.php'; // ASSISTANT SETTINGS
 require_once __DIR__ . '/-CRATE-postBASIC.php'; // CRATE FILLER SETTINGS
 
-    $sha_env = SHADOW_PROD_ENV(false);
+    $sha_env = SHADOW_PROD_ENV(true);
     $a = $GLOBALS[$SITE];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

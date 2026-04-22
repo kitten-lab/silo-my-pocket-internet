@@ -1,0 +1,18 @@
+{
+    "reminders": {
+        "gravity": 1,
+        "soper": {
+            "weight": 1,
+            "system": {
+                "weight": 1,
+                "reported_by": {
+                    "SOPER": {
+                        "1776863031": [
+                            "crate.6CD77B035D3AE117"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

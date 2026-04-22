@@ -1,0 +1,61 @@
+{
+    "crate.897028FA143952B0": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "THE GODS ARE UNSPOOLING THE MECHANICS OF REALITY",
+                "content": "THEY ARE FROGGING THE WIRES, SWEAR ITS NOT \u201cREALLY\u201d FALLING APART\r\n\r\nThere seems to have been some mix-up on the loom, and no one is sure which way is up or down anymore. \u201cWe\u2019re going to have to frog the whole thing,\u201d the lead Weaver was rumored to have said in private. \u201cRIP IT! RIP IT!\u201d the choir of frogs declared.\r\n\r\nAny unintended volcanic eruptions or earthquakes tied back to this event will not be citable in your insurance claims, under the standard acts of God clauses. Consider contacting your local agent for details about supplementary insurance. We are sure you won\u2019t regret it.\r\n"
+            }
+        },
+        "route": [],
+        "tags": {
+            "media": {
+                "news": [
+                    "mythleak"
+                ]
+            },
+            "mythleak": {
+                "headlines": [
+                    "frogs",
+                    "wires",
+                    "unspooling-reality"
+                ],
+                "mentions": [
+                    "the-loom",
+                    "frogs",
+                    "acts-of-god"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "media*news>mythleak;mythleak*headlines>frogs+wires+unspooling-reality,mentions>the-loom+frogs+acts-of-god",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "MYTHLEAK",
+            "sys_display": "MYTHLEAK: WE HAVE THE RECIEPTS",
+            "dom_slug": "NEWS",
+            "dom_display": "THE JUICE LINE",
+            "room_slug": "HEADLINES",
+            "room_display": "WHAT'S THE DIRT?",
+            "mod_slug": "MCS-000",
+            "mod_display": "-MOUSE-"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1759190400.tps",
+            "ingest_unix": 1759190400,
+            "event_unix": 1759190400,
+            "timezone": "America\/New_York"
+        }
+    }
+}

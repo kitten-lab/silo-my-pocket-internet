@@ -1,0 +1,18 @@
+{
+    "topics": {
+        "gravity": 1,
+        "love": {
+            "weight": 1,
+            "true-loves-kiss": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1758844800": [
+                            "crate.F747E29B4FE42A08"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

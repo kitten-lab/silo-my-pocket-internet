@@ -1,0 +1,44 @@
+{
+    "name": "aphrodite",
+    "gravity": 1,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.69C58348C54BEF64",
+            "unix": 1776886492
+        },
+        "updated": {
+            "cUID": "crate.69C58348C54BEF64",
+            "unix": 1776886492
+        }
+    },
+    "contents": {
+        "headlines": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.69C58348C54BEF64",
+                    "unix": 1776886492
+                },
+                "updated": {
+                    "cUID": "crate.69C58348C54BEF64",
+                    "unix": 1776886492
+                }
+            },
+            "bin": {
+                "mythleak": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.69C58348C54BEF64",
+                            "unix": 1776886492
+                        },
+                        "updated": {
+                            "cUID": "crate.69C58348C54BEF64",
+                            "unix": 1776886492
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

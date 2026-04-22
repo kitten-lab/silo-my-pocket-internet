@@ -1,0 +1,49 @@
+{
+    "crate.68E468C60840DD2F": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Purpose 1",
+                "content": "## nim-data-forestry"
+            }
+        },
+        "route": [],
+        "tags": {
+            "soper": {
+                "nim-ka": [
+                    "purpose"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "soper*nim-ka>purpose        ",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "nim-overview",
+            "room_display": "nim-overview",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776868104.tps",
+            "ingest_unix": 1776868104,
+            "event_unix": 1776868104,
+            "timezone": "America\/New_York"
+        }
+    }
+}

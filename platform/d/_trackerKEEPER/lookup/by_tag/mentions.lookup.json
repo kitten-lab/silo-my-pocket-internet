@@ -1,0 +1,128 @@
+{
+    "mentions": {
+        "gravity": 12,
+        "mythleak": {
+            "weight": 12,
+            "the-holy": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759017600": [
+                            "crate.94945A2F383EBB5F"
+                        ]
+                    }
+                }
+            },
+            "prime-lord-of-developments": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759017600": [
+                            "crate.94945A2F383EBB5F"
+                        ]
+                    }
+                }
+            },
+            "princess": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1758844800": [
+                            "crate.F747E29B4FE42A08"
+                        ]
+                    }
+                }
+            },
+            "goddess": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1758844800": [
+                            "crate.F747E29B4FE42A08"
+                        ]
+                    }
+                }
+            },
+            "skyline": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1758844800": [
+                            "crate.F747E29B4FE42A08"
+                        ]
+                    }
+                }
+            },
+            "stockholm-syndrome": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1758844800": [
+                            "crate.F747E29B4FE42A08"
+                        ]
+                    }
+                }
+            },
+            "self-blame-rituals": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1758844800": [
+                            "crate.F747E29B4FE42A08"
+                        ]
+                    }
+                }
+            },
+            "the-loom": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759190400": [
+                            "crate.897028FA143952B0"
+                        ]
+                    }
+                }
+            },
+            "frogs": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759190400": [
+                            "crate.897028FA143952B0"
+                        ]
+                    }
+                }
+            },
+            "acts-of-god": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759190400": [
+                            "crate.897028FA143952B0"
+                        ]
+                    }
+                }
+            },
+            "regret": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1755230400": [
+                            "crate.734389605CB2DEB7"
+                        ]
+                    }
+                }
+            },
+            "outside-sources": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1755230400": [
+                            "crate.734389605CB2DEB7"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

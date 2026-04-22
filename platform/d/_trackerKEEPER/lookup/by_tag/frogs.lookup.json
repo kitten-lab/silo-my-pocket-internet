@@ -1,0 +1,28 @@
+{
+    "frogs": {
+        "gravity": 2,
+        "mythleak": {
+            "weight": 2,
+            "headlines": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759190400": [
+                            "crate.897028FA143952B0"
+                        ]
+                    }
+                }
+            },
+            "mentions": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1759190400": [
+                            "crate.897028FA143952B0"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "ending-cycles": {
+        "gravity": 1,
+        "mythleak": {
+            "weight": 1,
+            "headlines": {
+                "weight": 1,
+                "reported_by": {
+                    "MCS-000": {
+                        "1757376000": [
+                            "crate.69C58348C54BEF64"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

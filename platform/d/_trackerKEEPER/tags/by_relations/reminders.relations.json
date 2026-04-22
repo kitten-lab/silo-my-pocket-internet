@@ -1,0 +1,44 @@
+{
+    "name": "reminders",
+    "gravity": 1,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.6CD77B035D3AE117",
+            "unix": 1776863031
+        },
+        "updated": {
+            "cUID": "crate.6CD77B035D3AE117",
+            "unix": 1776863031
+        }
+    },
+    "contents": {
+        "system": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.6CD77B035D3AE117",
+                    "unix": 1776863031
+                },
+                "updated": {
+                    "cUID": "crate.6CD77B035D3AE117",
+                    "unix": 1776863031
+                }
+            },
+            "bin": {
+                "soper": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.6CD77B035D3AE117",
+                            "unix": 1776863031
+                        },
+                        "updated": {
+                            "cUID": "crate.6CD77B035D3AE117",
+                            "unix": 1776863031
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

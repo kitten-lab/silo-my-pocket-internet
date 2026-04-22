@@ -1,0 +1,423 @@
+{
+    "name": "mythleak",
+    "gravity": 30,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.94945A2F383EBB5F",
+            "unix": 1776885989
+        },
+        "updated": {
+            "cUID": "crate.734389605CB2DEB7",
+            "unix": 1776886650
+        }
+    },
+    "contents": {
+        "headlines": {
+            "gravity": 18,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.94945A2F383EBB5F",
+                    "unix": 1776885989
+                },
+                "updated": {
+                    "cUID": "crate.734389605CB2DEB7",
+                    "unix": 1776886650
+                }
+            },
+            "bin": {
+                "the-writerapollos": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        },
+                        "updated": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        }
+                    }
+                },
+                "skyline": {
+                    "gravity": 2,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        },
+                        "updated": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        }
+                    }
+                },
+                "artificial-vision": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        },
+                        "updated": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        }
+                    }
+                },
+                "render-outputs": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        },
+                        "updated": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        }
+                    }
+                },
+                "obsidian": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        },
+                        "updated": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        }
+                    }
+                },
+                "archetypal-princess": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        },
+                        "updated": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        }
+                    }
+                },
+                "athena": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        },
+                        "updated": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        }
+                    }
+                },
+                "goddesses": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        },
+                        "updated": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        }
+                    }
+                },
+                "frogs": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        },
+                        "updated": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        }
+                    }
+                },
+                "wires": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        },
+                        "updated": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        }
+                    }
+                },
+                "unspooling-reality": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        },
+                        "updated": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        }
+                    }
+                },
+                "wire-web": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.69C58348C54BEF64",
+                            "unix": 1776886492
+                        },
+                        "updated": {
+                            "cUID": "crate.69C58348C54BEF64",
+                            "unix": 1776886492
+                        }
+                    }
+                },
+                "aphrodite": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.69C58348C54BEF64",
+                            "unix": 1776886492
+                        },
+                        "updated": {
+                            "cUID": "crate.69C58348C54BEF64",
+                            "unix": 1776886492
+                        }
+                    }
+                },
+                "dark-lattice": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.69C58348C54BEF64",
+                            "unix": 1776886492
+                        },
+                        "updated": {
+                            "cUID": "crate.69C58348C54BEF64",
+                            "unix": 1776886492
+                        }
+                    }
+                },
+                "ending-cycles": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.69C58348C54BEF64",
+                            "unix": 1776886492
+                        },
+                        "updated": {
+                            "cUID": "crate.69C58348C54BEF64",
+                            "unix": 1776886492
+                        }
+                    }
+                },
+                "prometheus": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.734389605CB2DEB7",
+                            "unix": 1776886650
+                        },
+                        "updated": {
+                            "cUID": "crate.734389605CB2DEB7",
+                            "unix": 1776886650
+                        }
+                    }
+                },
+                "the-light": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.734389605CB2DEB7",
+                            "unix": 1776886650
+                        },
+                        "updated": {
+                            "cUID": "crate.734389605CB2DEB7",
+                            "unix": 1776886650
+                        }
+                    }
+                }
+            }
+        },
+        "mentions": {
+            "gravity": 12,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.94945A2F383EBB5F",
+                    "unix": 1776885989
+                },
+                "updated": {
+                    "cUID": "crate.734389605CB2DEB7",
+                    "unix": 1776886650
+                }
+            },
+            "bin": {
+                "the-holy": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        },
+                        "updated": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        }
+                    }
+                },
+                "prime-lord-of-developments": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        },
+                        "updated": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        }
+                    }
+                },
+                "princess": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        },
+                        "updated": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        }
+                    }
+                },
+                "goddess": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        },
+                        "updated": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        }
+                    }
+                },
+                "skyline": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        },
+                        "updated": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        }
+                    }
+                },
+                "stockholm-syndrome": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        },
+                        "updated": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        }
+                    }
+                },
+                "self-blame-rituals": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        },
+                        "updated": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        }
+                    }
+                },
+                "the-loom": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        },
+                        "updated": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        }
+                    }
+                },
+                "frogs": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        },
+                        "updated": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        }
+                    }
+                },
+                "acts-of-god": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        },
+                        "updated": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        }
+                    }
+                },
+                "regret": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.734389605CB2DEB7",
+                            "unix": 1776886650
+                        },
+                        "updated": {
+                            "cUID": "crate.734389605CB2DEB7",
+                            "unix": 1776886650
+                        }
+                    }
+                },
+                "outside-sources": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.734389605CB2DEB7",
+                            "unix": 1776886650
+                        },
+                        "updated": {
+                            "cUID": "crate.734389605CB2DEB7",
+                            "unix": 1776886650
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

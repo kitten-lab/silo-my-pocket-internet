@@ -283,5 +283,53 @@
             "event_unix": 1776819635,
             "timezone": "America\/New_York"
         }
+    },
+    "crate.629B6E37AA3E1170": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "Intentions 1",
+                "content": "Intentions for this space:\r\nto produce chunks of the information by type for the project ADM-KA-MACHINA."
+            }
+        },
+        "route": [],
+        "tags": {
+            "soper": {
+                "adm-ka": [
+                    "documentation",
+                    "intentions"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "soper*adm-ka>documentation+intentions        ",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "SOPER",
+            "sys_display": "SOPER",
+            "dom_slug": "adm-ka",
+            "dom_display": "adm-ka",
+            "room_slug": "overview",
+            "room_display": "overview",
+            "mod_slug": "1-MIRA-1",
+            "mod_display": "1-MIRA-1"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1776828085.tps",
+            "ingest_unix": 1776828085,
+            "event_unix": 1776828085,
+            "timezone": "America\/New_York"
+        }
     }
 }

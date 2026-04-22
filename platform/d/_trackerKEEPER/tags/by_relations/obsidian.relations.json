@@ -1,0 +1,44 @@
+{
+    "name": "obsidian",
+    "gravity": 1,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.94945A2F383EBB5F",
+            "unix": 1776885989
+        },
+        "updated": {
+            "cUID": "crate.94945A2F383EBB5F",
+            "unix": 1776885989
+        }
+    },
+    "contents": {
+        "headlines": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.94945A2F383EBB5F",
+                    "unix": 1776885989
+                },
+                "updated": {
+                    "cUID": "crate.94945A2F383EBB5F",
+                    "unix": 1776885989
+                }
+            },
+            "bin": {
+                "mythleak": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        },
+                        "updated": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

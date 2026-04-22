@@ -1,0 +1,113 @@
+{
+    "name": "soper",
+    "gravity": 6,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.629B6E37AA3E1170",
+            "unix": 1776828085
+        },
+        "updated": {
+            "cUID": "crate.68E468C60840DD2F",
+            "unix": 1776868104
+        }
+    },
+    "contents": {
+        "adm-ka": {
+            "gravity": 4,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.629B6E37AA3E1170",
+                    "unix": 1776828085
+                },
+                "updated": {
+                    "cUID": "crate.BF52F014828D3F84",
+                    "unix": 1776861857
+                }
+            },
+            "bin": {
+                "documentation": {
+                    "gravity": 2,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.629B6E37AA3E1170",
+                            "unix": 1776828085
+                        },
+                        "updated": {
+                            "cUID": "crate.BF52F014828D3F84",
+                            "unix": 1776861857
+                        }
+                    }
+                },
+                "intentions": {
+                    "gravity": 2,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.629B6E37AA3E1170",
+                            "unix": 1776828085
+                        },
+                        "updated": {
+                            "cUID": "crate.BF52F014828D3F84",
+                            "unix": 1776861857
+                        }
+                    }
+                }
+            }
+        },
+        "system": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.6CD77B035D3AE117",
+                    "unix": 1776863031
+                },
+                "updated": {
+                    "cUID": "crate.6CD77B035D3AE117",
+                    "unix": 1776863031
+                }
+            },
+            "bin": {
+                "reminders": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.6CD77B035D3AE117",
+                            "unix": 1776863031
+                        },
+                        "updated": {
+                            "cUID": "crate.6CD77B035D3AE117",
+                            "unix": 1776863031
+                        }
+                    }
+                }
+            }
+        },
+        "nim-ka": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.68E468C60840DD2F",
+                    "unix": 1776868104
+                },
+                "updated": {
+                    "cUID": "crate.68E468C60840DD2F",
+                    "unix": 1776868104
+                }
+            },
+            "bin": {
+                "purpose": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.68E468C60840DD2F",
+                            "unix": 1776868104
+                        },
+                        "updated": {
+                            "cUID": "crate.68E468C60840DD2F",
+                            "unix": 1776868104
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

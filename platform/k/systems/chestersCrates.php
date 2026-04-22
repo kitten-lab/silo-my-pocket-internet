@@ -140,6 +140,8 @@ function json_origin(){
 function buildCHEST($RAW_TAGS, $cUID, $unix, $event_time, $tUID, $timezone){
 
 $SITE = $GLOBALS['SITE'];
+    $RAW_TAGS = str_replace(["\r","\n", "\t"], '', $RAW_TAGS);
+    $RAW_TAGS = trim($RAW_TAGS);
 $TAGS = tagSPLICER($RAW_TAGS);
 
     return [
@@ -685,8 +687,8 @@ function tagSPLICER($RAW_TAGS){
         }
 
 
-        if (strpos($value, ',') !== false) {
-            $values = explode(',', $value);
+        if (strpos($value, '&') !== false) {
+            $values = explode('&', $value);
         } else {
             $values = [trim($value)];
         }
@@ -714,8 +716,8 @@ function tagSPLICER($RAW_TAGS){
                 }
 
                 foreach ($child as $c){
-                    if (strpos($c, '+') !== false) {
-                        $kid = explode('+', trim($c));
+                    if (strpos($c, ',') !== false) {
+                        $kid = explode(',', trim($c));
                     } else {
                         $kid = [trim($c)];
                     }

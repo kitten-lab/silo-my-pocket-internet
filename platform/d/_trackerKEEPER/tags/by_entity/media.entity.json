@@ -1,0 +1,72 @@
+{
+    "name": "media",
+    "gravity": 4,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.94945A2F383EBB5F",
+            "unix": 1776885989
+        },
+        "updated": {
+            "cUID": "crate.69C58348C54BEF64",
+            "unix": 1776886492
+        }
+    },
+    "contents": {
+        "new": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.94945A2F383EBB5F",
+                    "unix": 1776885989
+                },
+                "updated": {
+                    "cUID": "crate.94945A2F383EBB5F",
+                    "unix": 1776885989
+                }
+            },
+            "bin": {
+                "mythleak": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        },
+                        "updated": {
+                            "cUID": "crate.94945A2F383EBB5F",
+                            "unix": 1776885989
+                        }
+                    }
+                }
+            }
+        },
+        "news": {
+            "gravity": 3,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.F747E29B4FE42A08",
+                    "unix": 1776886207
+                },
+                "updated": {
+                    "cUID": "crate.69C58348C54BEF64",
+                    "unix": 1776886492
+                }
+            },
+            "bin": {
+                "mythleak": {
+                    "gravity": 3,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.F747E29B4FE42A08",
+                            "unix": 1776886207
+                        },
+                        "updated": {
+                            "cUID": "crate.69C58348C54BEF64",
+                            "unix": 1776886492
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "name": "frogs",
+    "gravity": 2,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.897028FA143952B0",
+            "unix": 1776886345
+        },
+        "updated": {
+            "cUID": "crate.897028FA143952B0",
+            "unix": 1776886345
+        }
+    },
+    "contents": {
+        "headlines": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.897028FA143952B0",
+                    "unix": 1776886345
+                },
+                "updated": {
+                    "cUID": "crate.897028FA143952B0",
+                    "unix": 1776886345
+                }
+            },
+            "bin": {
+                "mythleak": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        },
+                        "updated": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        }
+                    }
+                }
+            }
+        },
+        "mentions": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.897028FA143952B0",
+                    "unix": 1776886345
+                },
+                "updated": {
+                    "cUID": "crate.897028FA143952B0",
+                    "unix": 1776886345
+                }
+            },
+            "bin": {
+                "mythleak": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        },
+                        "updated": {
+                            "cUID": "crate.897028FA143952B0",
+                            "unix": 1776886345
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

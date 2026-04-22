@@ -1,0 +1,59 @@
+{
+    "crate.734389605CB2DEB7": {
+        "c_version": 4,
+        "viewport": "::the.woman.on.K.st::",
+        "assistant": {
+            "name": "postBASIC",
+            "function": "MakePost",
+            "type": "post",
+            "version": 3
+        },
+        "payload": {
+            "post": {
+                "topic": "PROMETHEUS REGRETS HIS CHOICE",
+                "content": "CLAIMS IF SOMEONE LETS HIM DOWN, HE\u2019LL GIVE THE LIGHT BACK\r\n\r\nPrometheus is sick of his life of daily liver destruction, and has recently admitted to regretting his original decision. \u201cI thought it was an act of love,\u201d he admitted. Sources close to the mythic thief seem suspicious of his \u201ccrime-of-passion\u201d claims, stating he can\u2019t be trusted. \u201cThey always claim they\u2019ll change when the going gets rough,\u201d said one river Nymph. \u201cHe downright stole that light and gave it away like he was its master,\u201d said another.\r\n\r\nThe ghost of Carl Jung was unable to be reached for psychiatric insights on the matter.\r\n"
+            }
+        },
+        "route": [],
+        "tags": {
+            "news": {
+                "media": [
+                    "mythleak"
+                ]
+            },
+            "mythleak": {
+                "headlines": [
+                    "prometheus",
+                    "the-light"
+                ],
+                "mentions": [
+                    "regret",
+                    "outside-sources"
+                ]
+            }
+        },
+        "tags_metadata": {
+            "raw_tags": "news*media>mythleak;mythleak*headlines>prometheus+the-light,mentions>regret+outside-sources",
+            "tag_parser": "charlieTHREADS",
+            "parser_version": 1
+        },
+        "notes": [],
+        "import_env": {
+            "sys_slug": "MYTHLEAK",
+            "sys_display": "MYTHLEAK: WE HAVE THE RECIEPTS",
+            "dom_slug": "NEWS",
+            "dom_display": "THE JUICE LINE",
+            "room_slug": "HEADLINES",
+            "room_display": "WHAT'S THE DIRT?",
+            "mod_slug": "MCS-000",
+            "mod_display": "-MOUSE-"
+        },
+        "ref_material": [],
+        "tps": {
+            "tUID": "1755230400.tps",
+            "ingest_unix": 1755230400,
+            "event_unix": 1755230400,
+            "timezone": "America\/New_York"
+        }
+    }
+}

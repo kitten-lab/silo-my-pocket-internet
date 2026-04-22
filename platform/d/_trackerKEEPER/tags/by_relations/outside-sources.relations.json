@@ -1,0 +1,44 @@
+{
+    "name": "outside-sources",
+    "gravity": 1,
+    "tps_metadata": {
+        "added": {
+            "cUID": "crate.734389605CB2DEB7",
+            "unix": 1776886650
+        },
+        "updated": {
+            "cUID": "crate.734389605CB2DEB7",
+            "unix": 1776886650
+        }
+    },
+    "contents": {
+        "mentions": {
+            "gravity": 1,
+            "tps_metadata": {
+                "added": {
+                    "cUID": "crate.734389605CB2DEB7",
+                    "unix": 1776886650
+                },
+                "updated": {
+                    "cUID": "crate.734389605CB2DEB7",
+                    "unix": 1776886650
+                }
+            },
+            "bin": {
+                "mythleak": {
+                    "gravity": 1,
+                    "tps_metadata": {
+                        "added": {
+                            "cUID": "crate.734389605CB2DEB7",
+                            "unix": 1776886650
+                        },
+                        "updated": {
+                            "cUID": "crate.734389605CB2DEB7",
+                            "unix": 1776886650
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

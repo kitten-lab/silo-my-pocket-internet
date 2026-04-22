@@ -1,0 +1,24 @@
+{
+    "name": "mentions",
+    "gravity": 12,
+    "tps_metadata": [],
+    "mentions": {
+        "mythleak": {
+            "weight": 12,
+            "bin": {
+                "the-holy": 1,
+                "prime-lord-of-developments": 1,
+                "princess": 1,
+                "goddess": 1,
+                "skyline": 1,
+                "stockholm-syndrome": 1,
+                "self-blame-rituals": 1,
+                "the-loom": 1,
+                "frogs": 1,
+                "acts-of-god": 1,
+                "regret": 1,
+                "outside-sources": 1
+            }
+        }
+    }
+}

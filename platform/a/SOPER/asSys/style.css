@@ -1,0 +1,149 @@
+
+:root { 
+    --backgroundColor: #ffffff;
+    --accentColor-dark: rgb(48, 62, 52);
+    --accentColor-light2: rgba(106, 124, 99, 0.24);
+    --accentColor-light: rgb(191, 208, 184);
+    --skyFont-family: Zen Dots;
+}
+
+body {
+    background: var(--backgroundColor);
+    margin: 0;
+    color: var(--accentColor-dark);
+    font-family:Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
+    font-size: .8rem;
+    font-weight: 300;
+    /* font-family:'Zen Dots', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/
+}
+
+h1, h6 {
+    margin: 3px;
+}
+main {
+    margin: 0.5rem;
+  gap: 10px;            /* Adds space between items */
+    display: flex;
+}
+
+.NAVIGATION {
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+}
+
+.MAIN {
+    flex: 1;
+    padding: 1rem;  
+  border: 1px solid var(--accentColor-light2);
+}
+
+.soper_frag {
+    padding: 2px;
+    border-bottom: 1px solid var(--accentColor-light2);
+}
+.section_container {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+}
+
+.fragments {
+    overflow-y: auto;
+    padding: 5px;
+}
+
+.inputs {
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    height: 3rem;
+  border-bottom: 1px solid var(--accentColor-light2);
+    width: 100%;
+}
+
+header h1 {
+    display: inline-block;
+    position: absolute;
+    margin: 1rem 2rem;
+    font-weight: 300;
+    letter-spacing: .5rem;
+    font-size: 1rem;
+}
+input,textarea {
+    width: 200px !important;
+}
+footer {
+    font-size: .5rem;
+    padding: .7rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5.5rem;
+    text-transform: uppercase;
+  border-top: 1px solid var(--accentColor-light2);
+    width: 100%;
+}
+
+nav {
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+nav ul {
+  list-style-type: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  text-decoration: none; /* Removes link underline */
+  color: blue;
+}
+nav li a::before {
+    content: "- ";
+}
+
+
+nav li {
+  text-decoration: none; /* Removes link underline */
+  display: block;        /* Makes the entire area clickable */
+  padding: 12px;
+}
+
+
+.editor {
+  position: relative;
+  font-family: monospace;
+}
+textarea .e, pre {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  margin: 0;
+  padding: 10px;
+  font: inherit;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+textarea .e {
+  background: transparent;
+  color: transparent;
+  caret-color: white;
+  z-index: 2;
+}
+pre {
+  z-index: 1;
+}
+.token { color: #fff; }
+.operator { color: #666; }
+.bucket { color: #4af; }

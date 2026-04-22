@@ -14,6 +14,7 @@ $route = $router_1 . $GLOBALS[$SITE]['SYS_SLUG'] . '/';
     $CHEST = $route . $GLOBALS[$SITE]['DOM_SLUG'] . '-' . $GLOBALS[$SITE]['ROOM_SLUG'] . '.post.json';    
   
 
+if(file_exists($CHEST)) {
 $CHEST_THINGS = json_decode(file_get_contents($CHEST), true);
 usort($CHEST_THINGS, function($a, $b) {
     return $b['tps']['event_unix'] <=> $a['tps']['event_unix'];
@@ -28,5 +29,6 @@ foreach ($CHEST_THINGS as $TIMBER => $contents) {
   echo "<div><a href='?w=" . $GLOBALS[$SITE]['ROOM_SLUG'] . '&id=' . $unix . "'>";
   echo $contents['payload']['post']['topic'] . "</a> posted by " . $contents['import_env']['mod_slug'];
   echo "</div>";
+}
 }
 ?>
