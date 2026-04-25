@@ -1,7 +1,14 @@
 <?php $SITE = $GLOBALS['SITE'];
 
-require_once $GLOBALS['INTERA']['TOOLS'] . 'skyGenesis/functions.php'; //GET SHADOW PROD TOGGLE
-require_once __DIR__ . '/-SIG-postBASIC.php'; //GET SHADOW PROD TOGGLE
+require_once __DIR__ . '/-SIG-postBASIC.php'; // ASSISTANT SETTINGS
+require_once __DIR__ . '/-CRATE-postBASIC.php'; // CRATE FILLER SETTINGS
+
+require_once $GLOBALS['INTERA']['SYSTEM'] . 'shadowENVO.php';
+    $IS_IT = $GLOBALS['TOOL']['SHADOWENVO'];
+        $sha_env = shadowENVO($IS_IT);
+            if ($IS_IT == true) {
+                echo "<div class='sha_env'>shadow mode on</div>";
+}
 
 $FIG = getFIG("postBasic", "ViewList"); 
 

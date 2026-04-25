@@ -17,27 +17,24 @@ $FIG = getFIG("postBASIC", "MakePost");
 
 
 
-<span class="">
-    <label for="POST__TIMBER_LEAF"><?= $FIG['Content']; ?></label><br>
-    <textarea 
-    rows="10" cols="60"
-    name="POST__TIMBER_LEAF" 
-    placeholder="<?= $FIG['Content_plhldr']; ?>" 
-    required></textarea>
-    <br>
-</span>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <span class="">
+        <label for="POST__TIMBER_LEAF"><?= $FIG['Content']; ?></label><br>
+        <textarea 
+        rows="10" cols="60"
+        name="POST__TIMBER_LEAF" 
+        placeholder="<?= $FIG['Content_plhldr']; ?>" 
+        required></textarea>
+        <br>
+    </span>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
     <label for="POST__TAGS"><?= $FIG['Tags']; ?></label><br>
     <textarea 
     rows="10" cols="60"
     name="POST__TAGS" id="tag-input" placeholder="type your thread..." /></textarea>
-
-
-
 
 <span class="">
     <label for="POST__EVENT_UNIX"><?= $FIG['UNIX']; ?></label><br>

@@ -28,14 +28,18 @@ $FIG = getFIG("postBASIC", "MakePost");
     required></textarea>
     <br>
 </span>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
     <label for="POST__TAGS"><?= $FIG['Tags']; ?></label><br>
     <textarea 
-    id="tagTRACKER"
     rows="10" cols="60"
-        name="POST__TAGS" 
-        placeholder="Tags">
-        </textarea>
-    <br>
+    name="POST__TAGS" id="tag-input" placeholder="type your thread..." /></textarea>
+
+
 <span class="">
     <label for="POST__EVENT_UNIX"><?= $FIG['UNIX']; ?></label><br>
     <input 
@@ -78,3 +82,4 @@ $(function() {
     });
 });
 </script>
+<script src="../../../k/tools/postBASIC/getTAGGED.js"></script>

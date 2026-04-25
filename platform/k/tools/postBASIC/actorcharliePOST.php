@@ -1,11 +1,17 @@
 <?php
-require_once $GLOBALS['INTERA']['SYSTEM'] . 'rehydrateSelf.php'; // MOISTURIZE ME
+
 require_once $GLOBALS['INTERA']['SYSTEM'] . 'chestersCrates.php'; // CHEST CRATING SYSTEM
-require_once $GLOBALS['INTERA']['TOOLS'] . 'skyGenesis/functions.php'; // GET SHADOW PROD TOGGLE
+
 require_once __DIR__ . '/-SIG-postBASIC.php'; // ASSISTANT SETTINGS
 require_once __DIR__ . '/-CRATE-postBASIC.php'; // CRATE FILLER SETTINGS
 
-    $sha_env = SHADOW_PROD_ENV(false);
+require_once $GLOBALS['INTERA']['SYSTEM'] . 'shadowENVO.php';
+    $IS_IT = $GLOBALS['TOOL']['SHADOWENVO'];
+        $sha_env = shadowENVO($IS_IT);
+            if ($IS_IT == true) {
+                echo "<div class='sha_env'>shadow mode on</div>";
+}
+
     $a = $GLOBALS[$SITE];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

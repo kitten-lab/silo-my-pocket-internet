@@ -30,10 +30,10 @@ function tpsREPORTS($sha_env, $tpstime, $ms, $event_time, $syear){
 
 
     $router_1 = ROUTE('d', $sha_env);
-    $tpsFiles = $router_1 . '_DEWEY/tps_reports/' . $syear . '/' . substr($tpstime, 0, 6) . '-block/';
+    $tpsFiles = $router_1 . '_SATORA/tps_reports/' . $syear . '/' . substr($tpstime, 0, -4) . '-block/';
         aleph($tpsFiles);
     
-    $tpsReport = $tpsFiles . '/' . substr($tpstime, 0, 6) . '-.tps.json';
+    $tpsReport = $tpsFiles . '/' . substr($tpstime, 0, -4) . '-.tps.json';
     $tpsjson = file_get_contents($tpsReport);
     $tpss = json_decode($tpsjson, true);
 
@@ -261,10 +261,10 @@ function catalogUNIX($sha_env, $tpstime){
     //--## router settings ------- ##
 
     $ROUTE__LINE = ROUTE('d', $sha_env);
-    $ROUTE = $ROUTE__LINE . '/_DEWEY/lookup/by_tps/' . $year . '/' . substr($tpstime, 0, 6)  . '-block/';
+    $ROUTE = $ROUTE__LINE . '/_DEWEY/lookup/by_tps/' . $year . '/' . substr($tpstime, 0, -4)  . '-block/';
     if (!is_dir($ROUTE)) { mkdir($ROUTE, 0775, true); }   
 
-    $UNIX_CHEST = $ROUTE . substr($tpstime, 0, 6) . '.lookup.json';
+    $UNIX_CHEST = $ROUTE . substr($tpstime, 0, -4) . '.lookup.json';
     $json = file_get_contents($UNIX_CHEST);
     $payload = json_decode($json, true);
 
@@ -281,7 +281,7 @@ function catalogUNIX($sha_env, $tpstime){
 }
 
 //==============================================================================================
-function charlieINDEX($sha_env, $group, $add, $level){
+function charlieCATALOG($sha_env, $group, $add, $level){
 
     $router_1 = ROUTE('d', $sha_env);
         $catalog_rt = $router_1 . '_DEWEY/catalogs/';
@@ -307,7 +307,7 @@ function charlieINDEX($sha_env, $group, $add, $level){
 }
 
 
-function chesterLOOKUP($tpstime, $sha_env, $add, $level,$level2,$level3){
+function charlieLOOKUP($tpstime, $sha_env, $add, $level,$level2,$level3){
     //GET YOUR COMMONS! 
     $tUID = $GLOBALS['tUID'];
     $cUID = $GLOBALS['cUID'];
@@ -329,18 +329,44 @@ function chesterLOOKUP($tpstime, $sha_env, $add, $level,$level2,$level3){
             $oc = [];
         }
 
+        if (!isset($oc['SHELF'][$$level])) {
+            $oc['SHELF'][$$level] = [
+                'METADATA' => [
+                    'GRAVITY' => 0,
+                    'FIRST_USED' => time(),                
+                ]
+            ];
+        }
 
-            if (!isset($oc[$$level]['gravity'])) $oc[$$level]['gravity'] ?? [];
-            $oc[$$level]['gravity']++;
+        if (!isset($oc['SHELF'][$$level][$$level2])) {
+            $oc['SHELF'][$$level][$$level2] = [
+                'METADATA' => [
+                    'GRAVITY' => 0,
+                    'FIRST_USED' => time(),                
+                ]
+            ];
+        }
 
-            if (!isset($oc[$$level][$$level2]['gravity'])) $oc[$$level][$$level2]['gravity'] ?? [];
-            $oc[$$level][$$level2]['gravity']++;
+        if (!isset($oc['SHELF'][$$level][$$level2][$$level3])) {
+            $oc['SHELF'][$$level][$$level2][$$level3] = [
+                'METADATA' => [
+                    'GRAVITY' => 0,
+                    'FIRST_USED' => time(),                
+                ]
+            ];
+        }
 
-            if (!isset($oc[$$level][$$level2][$$level3]['gravity'])) $oc[$$level][$$level2][$$level3]['gravity'] ?? [];
-            $oc[$$level][$$level2][$$level3]['gravity']++;
+            if (!isset($oc['SHELF'][$$level]['METADATA']['GRAVITY'])) $oc['SHELF'][$$level]['METADATA']['GRAVITY'] ?? [];
+            $oc['SHELF'][$$level]['METADATA']['GRAVITY']++;
+
+            if (!isset($oc['SHELF'][$$level][$$level2]['METADATA']['GRAVITY'])) $oc['SHELF'][$$level][$$level2]['METADATA']['GRAVITY'] ?? [];
+            $oc['SHELF'][$$level][$$level2]['METADATA']['GRAVITY']++;
+
+            if (!isset($oc['SHELF'][$$level][$$level2][$$level3]['GRAVITY'])) $oc['SHELF'][$$level][$$level2][$$level3]['METADATA']['GRAVITY'] ?? [];
+            $oc['SHELF'][$$level][$$level2][$$level3]['METADATA']['GRAVITY']++;
             
-            if (!isset($oc[$$level][$$level2][$$level3]['reported_by'][$MOD][$tpstime][$cUID]))
-             $oc[$$level][$$level2][$$level3]['reported_by'][$MOD][$tpstime][] = $cUID;
+            if (!isset($oc['SHELF'][$$level][$$level2][$$level3]['METADATA']['INSTANCES'][$tpstime][$MOD][$cUID]))
+             $oc['SHELF'][$$level][$$level2][$$level3]['METADATA']['INSTANCES'][$tpstime][$MOD][] = $cUID;
             
 
 
@@ -366,12 +392,12 @@ function charliesTHREADS($sha_env, $tpstime){
     $router_1 = ROUTE('d', $sha_env);
     $add = tagSPLICER($RAW_TAGS);
 
-    charlieINDEX($sha_env, 'a-node', $add, 'entity');
-    charlieINDEX($sha_env, 'b-node', $add, 'objects');
-    charlieINDEX($sha_env, 'c-node', $add, 'tag');
-    chesterLOOKUP($tpstime, $sha_env, $add, 'entity','objects', 'tag');
-    chesterLOOKUP($tpstime, $sha_env, $add, 'objects', 'entity', 'tag');
-    chesterLOOKUP($tpstime, $sha_env, $add, 'tag', 'entity', 'objects');
+    charlieCATALOG($sha_env, 'a-node', $add, 'entity');
+    charlieCATALOG($sha_env, 'b-node', $add, 'objects');
+    charlieCATALOG($sha_env, 'c-node', $add, 'tag');
+    charlieLOOKUP($tpstime, $sha_env, $add, 'entity','objects', 'tag');
+    charlieLOOKUP($tpstime, $sha_env, $add, 'objects', 'entity', 'tag');
+    charlieLOOKUP($tpstime, $sha_env, $add, 'tag', 'entity', 'objects');
 
 
     foreach ($add as $entity => $objs){
@@ -380,47 +406,33 @@ function charliesTHREADS($sha_env, $tpstime){
 
         $catalog_rt = $router_1 . '_CHARLIE/tags/by_entity/';
             aleph($catalog_rt);
-            $MTAG_CHEST = $catalog_rt . $entity . '.entity.json';
+            $MTAG_CHEST = $catalog_rt . $entity . '.ven.json';
             $json1 = file_get_contents($MTAG_CHEST);
             $tc = json_decode($json1, true);
 
         
     if (!$tc) {
         $tc = [
-            'name' => $entity,
-            'gravity' => 0,
-            'tps_metadata' => [],
+            'ENTITY' => $entity,
+            'GRAVITY' => 0,
+            'ALIAS' => [],
+            'NOTES' => [],
+            'METADATA' => [],
         ];
     }
 
-    if (!isset($tc['contents'][$object]))
-    $tc['contents'][$object] = [
-            'gravity' => 0,
-            'tps_metadata' => [],
+    if (!isset($tc['SHELF'][$object]))
+    $tc['SHELF'][$object] = [
+            'GRAVITY' => 0,
+            'BIN' => []
             ];
 
-    if (!isset($tc['contents'][$object]['bin'][$tag]))
-    $tc['contents'][$object]['bin'][$tag] = [
-            'gravity' => 0,
-            'tps_metadata' => [],
-            ];
+    if (!isset($tc['SHELF'][$object]['BIN']))
+    $tc['SHELF'][$object]['BIN'][$tag] = 0;
 
-    if (!isset($tc['tps_metadata']['added']))
-        $tc['tps_metadata']['added'] = ['cUID' => $cUID, 'unix' => time()];
-
-    if (!isset($tc['contents'][$object]['tps_metadata']['added']))
-        $tc['contents'][$object]['tps_metadata']['added']= ['cUID' => $cUID, 'unix' => time()];
-
-    if (!isset($tc['contents'][$object]['bin'][$tag]['tps_metadata']['added']))
-        $tc['contents'][$object]['bin'][$tag]['tps_metadata']['added'] = ['cUID' => $cUID, 'unix' => time()];
-        
-        $tc['tps_metadata']['updated'] = ['cUID' => $cUID, 'unix' => time()];
-        $tc['contents'][$object]['tps_metadata']['updated']= ['cUID' => $cUID, 'unix' => time()];
-        $tc['contents'][$object]['bin'][$tag]['tps_metadata']['updated'] = ['cUID' => $cUID, 'unix' => time()];
-
-    $tc['contents'][$object]['bin'][$tag]['gravity']++;
-    $tc['contents'][$object]['gravity']++;
-    $tc['gravity']++;
+    $tc['SHELF'][$object]['GRAVITY']++;
+    $tc['SHELF'][$object]['BIN'][$tag]++;
+    $tc['GRAVITY']++;
 
 
     file_put_contents($MTAG_CHEST, json_encode($tc, JSON_PRETTY_PRINT));
@@ -436,49 +448,35 @@ function charliesTHREADS($sha_env, $tpstime){
             foreach ($tags as $tag){
 
 
-    $catalog_rt = $router_1 . '_CHARLIE/tags/by_relations/';
+    $catalog_rt = $router_1 . '_CHARLIE/tags/by_relativity/';
             aleph($catalog_rt);
-            $impact_catalog = $catalog_rt . $tag . '.relations.json';
+            $impact_catalog = $catalog_rt . $tag . '.rel.json';
             $json5 = file_get_contents($impact_catalog);
             $impact = json_decode($json5, true);
 
     
     if (!$impact) {
         $impact = [
-            'name' => $tag,
-            'gravity' => 0,
-            'tps_metadata' => []
+            'ENTITY' => $tag,
+            'GRAVITY' => 0,
+            'METADATA' => [],
         ];
     }
 
-    if (!isset($impact['contents'][$object]))
-    $impact['contents'][$object] = [
-            'gravity' => 0,
-            'tps_metadata' => []
+    if (!isset($impact['SHELF'][$entity]))
+    $impact['SHELF'][$entity] = [
+            'GRAVITY' => 0,
+            'BIN' => []
             ];
 
-    if (!isset($impact['contents'][$object]['bin'][$entity]))
-    $impact['contents'][$object]['bin'][$entity] = [
-            'gravity' => 0,
-            'tps_metadata' => [],
-            ];
 
-    if (!isset($impact['tps_metadata']['added']))
-        $impact['tps_metadata']['added'] = ['cUID' => $cUID, 'unix' => time()];
+    if (!isset($tc['SHELF'][$entity]['BIN']))
+    $tc['SHELF'][$entity]['BIN'][$object] = 0;
 
-    if (!isset($impact['contents'][$object]['tps_metadata']['added']))
-        $impact['contents'][$object]['tps_metadata']['added']= ['cUID' => $cUID, 'unix' => time()];
+    $impact['SHELF'][$entity]['BIN'][$object]++;
+    $impact['SHELF'][$entity]['GRAVITY']++;
+    $impact['GRAVITY']++;
 
-    if (!isset($impact['contents'][$object]['bin'][$entity]['tps_metadata']['added']))
-        $impact['contents'][$object]['bin'][$entity]['tps_metadata']['added'] = ['cUID' => $cUID, 'unix' => time()];
-        
-        $impact['tps_metadata']['updated'] = ['cUID' => $cUID, 'unix' => time()];
-        $impact['contents'][$object]['tps_metadata']['updated']= ['cUID' => $cUID, 'unix' => time()];
-        $impact['contents'][$object]['bin'][$entity]['tps_metadata']['updated'] = ['cUID' => $cUID, 'unix' => time()];
-
-    $impact['contents'][$object]['bin'][$entity]['gravity']++;
-    $impact['contents'][$object]['gravity']++;
-    $impact['gravity']++;
 
         file_put_contents($impact_catalog, json_encode($impact, JSON_PRETTY_PRINT));
 
@@ -493,25 +491,27 @@ function charliesTHREADS($sha_env, $tpstime){
 
     $catalog_rt = $router_1 . '_CHARLIE/tags/by_insect/';
             aleph($catalog_rt);
-            $impact2_catalog = $catalog_rt . $object . '.insect.json';
+            $impact2_catalog = $catalog_rt . $object . '.ins.json';
             $json5 = file_get_contents($impact2_catalog);
             $impac2 = json_decode($json5, true);
     if (!$impac2) {
         $impac2 = [
-                'name' => $object,
-                'gravity' => 0,
-                'tps_metadata' => [],
+                'VENN' => $object,
+                'GRAVITY' => 0,
+                'METADATA' => [],
         ];
         
     }
-            if (!isset($impac2[$object][$entity])){
-                $impac2[$object][$entity] = [];
-            }
-                $impac2['gravity']++;
+            if (!isset($impac2['SHELF'][$entity]))
+            $impac2['SHELF'][$entity] = [
+                    'GRAVITY' => 0,
+                    'BIN' => []
+                    ];
+                $impac2['GRAVITY']++;
 
 
-                $impac2[$object][$entity]['gravity']++;
-                $impac2[$object][$entity]['bin'][$tag]++;
+                $impac2['SHELF'][$entity]['GRAVITY']++;
+                $impac2['SHELF'][$entity]['BIN'][$tag]++;
 
         file_put_contents($impact2_catalog, json_encode($impac2, JSON_PRETTY_PRINT));
 

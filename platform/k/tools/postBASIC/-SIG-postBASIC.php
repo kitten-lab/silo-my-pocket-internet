@@ -1,5 +1,6 @@
 <?php 
 $GLOBALS['TOOL'] = [
+    "SHADOWENVO" => true,
     "NAME" => "postBASIC",
     "FUNCTION" => "MakePost",
     "ACTOR" => $GLOBALS[$SITE]['MOD_SLUG'],
